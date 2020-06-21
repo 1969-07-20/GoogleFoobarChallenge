@@ -6,10 +6,7 @@ For fun, after completing the Google Foobar Challenge, I modifed the software in
 The following are the problem statements to the challenges I was given.
 
 
-# Problem Statement for Level 1, Challenge 1
-
-Prison Labor Dodgers
-====================
+# Level 1, Challenge 1:  Prison Labor Dodgers
 
 Commander Lambda is all about efficiency, including using her bunny prisoners for manual labor. But no one's been properly monitoring the labor shifts for a while, and they've gotten quite mixed up. You've been given the task of fixing them, but after you wrote up new shifts, you realized that some prisoners had been transferred to a different block and aren't available for their assigned shifts. And manually sorting through each shift list to compare against prisoner block lists will take forever - remember, Commander Lambda loves efficiency!
 
@@ -20,10 +17,7 @@ For example, given the lists x = [13, 5, 6, 2, 5] and y = [5, 2, 5, 13], the fun
 In each test case, the lists x and y will always contain n non-unique integers where n is at least 1 but never more than 99, and one of the lists will contain an additional unique integer which should be returned by the function.  The same n non-unique integers will be present on both lists, but they might appear in a different order, like in the examples above. Commander Lambda likes to keep her numbers short, so every prisoner ID will be between -1000 and 1000.
 
 
-# Problem Statement for Level 2, Challenge 1
-
-Power Hungry
-============
+# Level 2, Challenge 1:  Power Hungry
 
 Commander Lambda's space station is HUGE. And huge space stations take a LOT of power. Huge space stations with doomsday devices take even more power. To help meet the station's power needs, Commander Lambda has installed solar panels on the station's outer surface. But the station sits in the middle of a quasar quantum flux field, which wreaks havoc on the solar panels. You and your team of henchmen have been assigned to repair the solar panels, but you'd rather not take down all of the panels at once if you can help it, since they do help power the space station and all!
 
@@ -32,11 +26,7 @@ You need to figure out which sets of panels in any given array you can take offl
 Each array of solar panels contains at least 1 and no more than 50 panels, and each panel will have a power output level whose absolute value is no greater than 1000 (some panels are malfunctioning so badly that they're draining energy, but you know a trick with the panels' wave stabilizer that lets you combine two negative-output panels to produce the positive output of the multiple of their power values). The final products may be very large, so give the solution as a string representation of the number.
 
 
-
-# Problem Statement for Level 2, Challenge 2
-
-Gearing Up for Destruction
-==========================
+# Level 2, Challenge 2:  Gearing Up for Destruction
 
 As Commander Lambda's personal assistant, you've been assigned the task of configuring the LAMBCHOP doomsday device's axial orientation gears. It should be pretty simple - just add gears to create the appropriate rotation ratio. But the problem is, due to the layout of the LAMBCHOP and the complicated system of beams and pipes supporting it, the pegs that will support the gears are fixed in place.
 
@@ -49,11 +39,7 @@ For example, if the pegs are placed at [4, 30, 50], then the first gear could ha
 The list pegs will be given sorted in ascending order and will contain at least 2 and no more than 20 distinct positive integers, all between 1 and 10000 inclusive.
 
 
-
-# Problem Statement for Level 3, Challenge 1
-
-Bomb, Baby!
-===========
+# Level 3, Challenge 1:  Bomb, Baby!
 
 You're so close to destroying the LAMBCHOP doomsday device you can taste it! But in order to do so, you need to deploy special self-replicating bombs designed for you by the brightest scientists on Bunny Planet. There are two types: Mach bombs (M) and Facula bombs (F). The bombs, once released into the LAMBCHOP's inner workings, will automatically deploy to all the strategic points you've identified and destroy them at the same time. 
 
@@ -70,11 +56,7 @@ And finally, you were only able to smuggle one of each type of bomb - one Mach, 
 You need to know how many replication cycles (generations) it will take to generate the correct amount of bombs to destroy the LAMBCHOP. Write a function solution(M, F) where M and F are the number of Mach and Facula bombs needed. Return the fewest number of generations (as a string) that need to pass before you'll have the exact number of bombs necessary to destroy the LAMBCHOP, or the string "impossible" if this can't be done! M and F will be string representations of positive integers no larger than 10^50. For example, if M = "2" and F = "1", one generation would need to pass, so the solution would be "1". However, if M = "2" and F = "4", it would not be possible.
 
 
-
-# Problem Statement for Level 3, Challenge 2
-
-The Grandest Staircase Of Them All
-==================================
+# Level 3, Challenge 2:  The Grandest Staircase Of Them All
 
 With her LAMBCHOP doomsday device finished, Commander Lambda is preparing for her debut on the galactic stage - but in order to make a grand entrance, she needs a grand staircase! As her personal assistant, you've been tasked with figuring out how to build the best staircase EVER. 
 
@@ -118,11 +100,7 @@ But when N = 5, there are two ways you can build a staircase from the given bric
 Write a function called solution(n) that takes a positive integer n and returns the number of different staircases that can be built from exactly n bricks. n will always be at least 3 (so you can have a staircase at all), but no more than 200, because Commander Lambda's not made of money!
 
 
-
-# Problem Statement for Level 3, Challenge 3
-
-Queue To Do
-===========
+# Level 3, Challenge 3:  Queue To Do
 
 You're almost ready to make your move to destroy the LAMBCHOP doomsday device, but the security checkpoints that guard the underlying systems of the LAMBCHOP are going to be a problem. You were able to take one down without tripping any alarms, which is great! Except that as Commander Lambda's assistant, you've learned that the checkpoints are about to come under automated review, which means that your sabotage will be discovered and your cover blown - unless you can trick the automated review system.
 
@@ -146,11 +124,7 @@ All worker IDs (including the first worker) are between 0 and 2000000000 inclusi
 With this information, write a function solution(start, length) that will cover for the missing security checkpoint by outputting the same checksum the guards would normally submit before lunch. You have just enough time to find out the ID of the first worker to be checked (start) and the length of the line (length) before the automatic review occurs, so your program must generate the proper checksum with just those two values.
 
 
-
-# Problem Statement for Level 4, Challenge 1
-
-Distract the Guards
-===================
+# Level 4, Challenge 1:  Distract the Guards
 
 The time for the mass escape has come, and you need to distract the guards so that the bunny prisoners can make it out! Unfortunately for you, they're watching the bunnies closely. Fortunately, this means they haven't realized yet that the space station is about to explode due to the destruction of the LAMBCHOP doomsday device. Also fortunately, all that time you spent working as first a minion and then a henchman means that you know the guards are fond of bananas. And gambling. And thumb wrestling.
 
@@ -169,11 +143,7 @@ Write a function solution(banana_list) which, given a list of positive integers 
 The number of guards will be at least 1 and not more than 100, and the number of bananas each guard starts with will be a positive integer no more than 1073741823 (i.e. 2^30 -1). Some of them stockpile a LOT of bananas.
 
 
-
-# Problem Statement for Level 4, Challenge 2
-
-Bringing a Gun to a Guard Fight
-===============================
+# Level 4, Challenge 2:  Bringing a Gun to a Guard Fight
 
 Uh-oh - you've been cornered by one of Commander Lambdas elite guards! Fortunately, you grabbed a beam weapon from an abandoned guard post while you were running through the station, so you have a chance to fight your way out. But the beam weapon is potentially dangerous to you as well as to the elite guard: its beams reflect off walls, meaning you'll have to be very careful where you shoot to avoid bouncing a shot toward yourself!
 
@@ -186,11 +156,7 @@ The room has integer dimensions [1 < x_dim <= 1250, 1 < y_dim <= 1250]. You and 
 For example, if you and the elite guard were positioned in a room with dimensions [3, 2], your_position [1, 1], guard_position [2, 1], and a maximum shot distance of 4, you could shoot in seven different directions to hit the elite guard (given as vector bearings from your location): [1, 0], [1, 2], [1, -2], [3, 2], [3, -2], [-3, 2], and [-3, -2]. As specific examples, the shot at bearing [1, 0] is the straight line horizontal shot of distance 1, the shot at bearing [-3, -2] bounces off the left wall and then the bottom wall before hitting the elite guard with a total shot distance of sqrt(13), and the shot at bearing [1, 2] bounces off just the top wall before hitting the elite guard with a total shot distance of sqrt(5).
 
 
-
-# Problem Statement for Level 5, Challenge 1
-
-Dodge the Lasers!
-=================
+# Level 5, Challenge 1:  Dodge the Lasers!
 
 Oh no! You've managed to escape Commander Lambdas collapsing space station in an escape pod with the rescued bunny prisoners - but Commander Lambda isnt about to let you get away that easily. She's sent her elite fighter pilot squadron after you - and they've opened fire!
 

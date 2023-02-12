@@ -114,6 +114,64 @@ You have maps of parts of the space station, each starting at a work area exit a
 Write a function solution(map) that generates the length of the shortest path from the station door to the escape pod, where you are allowed to remove one wall as part of your remodeling plans. The path length is the total number of nodes you pass through, counting both the entrance and exit nodes. The starting and ending positions are always passable (0). The map will always be solvable, though you may or may not need to remove a wall. The height and width of the map can be from 2 to 20. Moves can only be made in cardinal directions; no diagonal moves are allowed.
 
 
+# Doomsday Fuel
+
+Making fuel for the LAMBCHOP's reactor core is a tricky process because of the exotic matter involved. It starts as raw ore, then during processing, begins randomly changing between forms, eventually reaching a stable form. There may be multiple stable forms that a sample could ultimately reach, not all of which are useful as fuel. 
+
+Commander Lambda has tasked you to help the scientists increase fuel creation efficiency by predicting the end state of a given ore sample. You have carefully studied the different structures that the ore can take and which transitions it undergoes. It appears that, while random, the probability of each structure transforming is fixed. That is, each time the ore is in 1 state, it has the same probabilities of entering the next state (which might be the same state).  You have recorded the observed transitions in a matrix. The others in the lab have hypothesized more exotic forms that the ore can become, but you haven't seen all of them.
+
+Write a function solution(m) that takes an array of array of nonnegative ints representing how many times that state has gone to the next state and return an array of ints for each terminal state giving the exact probabilities of each terminal state, represented as the numerator for each state, then the denominator for all of them at the end and in simplest form. The matrix is at most 10 by 10. It is guaranteed that no matter which state the ore is in, there is a path from that state to a terminal state. That is, the processing will always eventually end in a stable state. The ore starts in state 0. The denominator will fit within a signed 32-bit integer during the calculation, as long as the fraction is simplified regularly. 
+
+For example, consider the matrix m:
+
+```
+[
+  [0,1,0,0,0,1],  # s0, the initial state, goes to s1 and s5 with equal probability
+  [4,0,0,3,2,0],  # s1 can become s0, s3, or s4, but with different probabilities
+  [0,0,0,0,0,0],  # s2 is terminal, and unreachable (never observed in practice)
+  [0,0,0,0,0,0],  # s3 is terminal
+  [0,0,0,0,0,0],  # s4 is terminal
+  [0,0,0,0,0,0],  # s5 is terminal
+]
+```
+
+So, we can consider different paths to terminal states, such as:
+```
+s0 -> s1 -> s3
+s0 -> s1 -> s0 -> s1 -> s0 -> s1 -> s4
+s0 -> s1 -> s0 -> s5
+```
+Tracing the probabilities of each, we find that
+```
+s2 has probability 0
+s3 has probability 3/14
+s4 has probability 1/7
+s5 has probability 9/14
+```
+So, putting that together, and making a common denominator, gives an answer in the form of
+[s2.numerator, s3.numerator, s4.numerator, s5.numerator, denominator] which is
+```
+[0, 3, 2, 9, 14].
+```
+
+
+# Ion Flux Relabeling
+
+Oh no! Commander Lambda's latest experiment to improve the efficiency of the LAMBCHOP doomsday device has backfired spectacularly. The Commander had been improving the structure of the ion flux converter tree, but something went terribly wrong and the flux chains exploded. Some of the ion flux converters survived the explosion intact, but others had their position labels blasted off. Commander Lambda is having her henchmen rebuild the ion flux converter tree by hand, but you think you can do it much more quickly -- quickly enough, perhaps, to earn a promotion!
+
+Flux chains require perfect binary trees, so Lambda's design arranged the ion flux converters to form one. To label them, Lambda performed a post-order traversal of the tree of converters and labeled each converter with the order of that converter in the traversal, starting at 1. For example, a tree of 7 converters would look like the following:
+
+```
+   7
+ 3   6
+1 2 4 5
+```
+
+Write a function solution(h, q) - where h is the height of the perfect tree of converters and q is a list of positive integers representing different flux converters - which returns a list of integers p where each element in p is the label of the converter that sits on top of the respective converter in q, or -1 if there is no such converter.  For example, solution(3, [1, 4, 7]) would return the converters above the converters at indexes 1, 4, and 7 in a perfect binary tree of height 3, which is [3, 6, -1].
+
+The domain of the integer h is 1 <= h <= 30, where h = 1 represents a perfect binary tree containing only the root, h = 2 represents a perfect binary tree with the root and two leaf nodes, h = 3 represents a perfect binary tree with the root, two internal nodes and four leaf nodes (like the example above), and so forth.  The lists q and p contain at least one but no more than 10000 distinct integers, all of which will be between 1 and 2^h-1, inclusive.
+
+
 # Level 4, Challenge 1:  Running with Bunnies
 
 You and the bunny workers need to get out of this collapsing death trap of a space station -- and fast! Unfortunately, some of the bunnies have been weakened by their long work shifts and can't run very fast. Their friends are trying to help them, but this escape would go a lot faster if you also pitched in. The defensive bulkhead doors have begun to close, and if you don't make it through in time, you'll be trapped! You need to grab as many bunnies as you can and get through the bulkheads before they close.

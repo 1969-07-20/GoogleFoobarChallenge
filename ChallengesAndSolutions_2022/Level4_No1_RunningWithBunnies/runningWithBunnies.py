@@ -1,6 +1,6 @@
 '''
-The function solution(times, time_limit) computes solutions to the Prepare the
-Bunnies' Escape problem.  Given 'times' a 2D array with travel times between
+The function solution(times, time_limit) computes solutions to the Running With
+the Bunnies challenge.  Given 'times' a 2D array with travel times between
 bunny locations as well as the entrance and exit, and 'time_limit' the maximum
 time allowed, solution() returns the list of bunny IDs of the set of maximum
 bunnies that can be carried to the exit during the time limit.

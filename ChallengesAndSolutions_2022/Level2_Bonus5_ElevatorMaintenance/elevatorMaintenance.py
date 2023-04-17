@@ -1,0 +1,87 @@
+""" This file implements a solution to the 'Elevator Maintenance' challenge.
+
+This solution uses a recursive method to perform the sorting.  Consider a list
+['2.1', '1.1.1', '2', '1.11'].  The version strings with '1' as the major
+version number will be sorted before all version strings with '2' as the major
+version.
+
+However, those version strings which have a common leading version component
+(i.e. everything before the first '.'), will be sorted according to everything
+after the first '.'.  This implies a recursive procedure where the those entries
+with a common beginning component are sorted separately after the leading
+component has been stripped off.  The order in which the recursive sorting takes
+place is according to the order of the leading component.  After the recursive
+sorting is done, the leading component is reattached.
+
+In the above example, the version strings are broken into a leading component
+and a remainder as follows:
+
+'2.1' --> '2' + '1'
+'1.1.1' --> '1' + '1.1'
+'2' --> '2' + ''
+'1.11' -> '1' + '11'
+
+Then the remainders of those strings which begin with '1' are sorted, i.e.
+['1.1', '11'], separately from those that begin with '2', i.e. ['1', ''].
+After recursive sorting, these strings are ['1.1', '11'] and ['', '1'],
+whereupon the beginning components are reattached and the sub-lists combined to
+get the final sorted result ['1.1.1', '1.11', '2', '2.1'].
+"""
+
+import re
+
+
+def version_sort(list_i):
+    """version_sort(list_i) is a recursive function which sorts list_i according
+    to the version rules of sorting.  This function sorts by stripping the
+    leading component from each item in the list and then recursively sorting
+    the remaining components in groups which have a common leading component.
+    The leading component is then re-appended to the sorted sub-list.
+    """
+
+    #  Step 0:  Default output
+    list_o = []
+
+    #  Step 1:  Process the prefixes of all items in the input list
+    re_prefix = re.compile(r'^(\d+)\.?(.*)')
+
+    prefixes = {}
+
+    for item in list_i:
+        m = re_prefix.match(item)
+
+        if m:
+            prefix = int(m.group(1))
+            remainder = m.group(2)
+
+            if prefix not in prefixes:
+                prefixes[prefix] = []
+
+            prefixes[prefix].append(remainder)
+
+        else:
+            list_o.append('')
+
+    #  Step 2:  Process each prefix in order
+    for prefix in sorted(prefixes.keys()):
+
+        #  Recursively process the suffixes that go with this prefix
+        sub_list_o = version_sort(prefixes[prefix])
+
+        for suffix in sub_list_o:
+            if '' == suffix:
+                list_o.append(str(prefix))
+            else:
+                list_o.append('%s.%s' % (prefix, suffix))
+
+    return list_o
+
+
+def solution(list_i):
+    """Function solution(list_i) returns a list which is the result when
+    the rules of sorting version numbers to the list of version strings in
+    list_i.
+    """
+
+    return version_sort(list_i)
+

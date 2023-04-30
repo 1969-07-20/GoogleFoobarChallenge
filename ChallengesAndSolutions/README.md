@@ -1,5 +1,5 @@
 # Google Foobar Challenge (2020 and 2022)
-This directory contains my solutions to the challenges I was given the two times I took the Google Foobar Challenge (in 2020 and 2022).
+This directory contains my solutions to the challenges I was given the two times I took the Google Foobar Challenge (in 2020 and 2022).  This includes the challenges I received after I completed Level 5 to the point where I exausted the available challenges.
 
 
 For fun, after completing the Google Foobar Challenge in 2020, I modifed the software in the Apollo 11's Guidance Computer to also include my solution to my Level 5 challenge.  This can be found in a separate repo ([Comanche055 Dodge the Lasers](https://github.com/1969-07-20/Comanche055_DodgeTheLasers)).  [A Youtube video](https://www.youtube.com/watch?v=Sa_WKo_Ap9Q&t=1s) demonstrates the modified Apollo Guidance Computer (AGC) software running on an AGC emulator computing solutions to the Dodge the Lasers challenge.  [An excellent introduction to the Apollo Guidance Computer](https://www.youtube.com/watch?v=xx7Lfh5SKUQ) is also available on Youtube.

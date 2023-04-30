@@ -1,8 +1,3 @@
-from datetime import timedelta, datetime
-from datetime import date
-from dateutil import tz
-
-
 #  Determining the specified ID is predicated upon finding the first N primes
 #  where is the number of primes required to create the first i+5 characters
 #  of the string from which the ID is extracted.  If these primes are known

@@ -313,6 +313,7 @@ So, putting that together, and making a common denominator, gives an answer in t
 [s2.numerator, s3.numerator, s4.numerator, s5.numerator, denominator] which is
 ```
 [0, 3, 2, 9, 14].
+```
 
 
 # Level 3:  Find the Access Codes

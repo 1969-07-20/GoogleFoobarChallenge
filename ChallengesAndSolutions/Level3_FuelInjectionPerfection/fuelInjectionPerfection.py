@@ -41,11 +41,11 @@ def solution(n):
         val = n % 4
 
         if val == 0:
-            n /= 2
+            n = n // 2
         elif val == 1:
             n -= 1
         elif val == 2:
-            n /= 2
+            n = n // 2
         else:
             if n == 3:
                 n -= 1

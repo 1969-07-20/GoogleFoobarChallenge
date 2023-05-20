@@ -110,15 +110,15 @@ def solution(pegs):
     #  Reduce fraction
     greatest_common_factor = gcd(r0_numer, r0_denom)
 
-    r0_numer /= greatest_common_factor
-    r0_denom /= greatest_common_factor
+    r0_numer //= greatest_common_factor
+    r0_denom //= greatest_common_factor
 
 
     #  Using the calculated value of the first gear, calculate the sizes of the
     #  rest.  Return [-1,-1] if any gear is infeasible, i.e. the size is not in
     #  [1,gap-1]
     peg_lst = pegs[0]
-    radius_lst = r0_numer / r0_denom
+    radius_lst = r0_numer // r0_denom
 
     gap = pegs[1] - pegs[0]
     if (radius_lst < 1) or (radius_lst > (gap - 1)):

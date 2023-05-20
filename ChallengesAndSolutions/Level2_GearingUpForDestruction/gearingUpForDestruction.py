@@ -136,12 +136,11 @@ def solution(pegs):
         radius_lst = radius_nxt
 
 
+    #  Ensure the denominator is positive
+    if 0 > r0_denom:
+        r0_denom = -r0_denom
+        r0_numer = -r0_numer
+
+
     #  Candidate solution passes viability test, return it
     return [r0_numer, r0_denom]
-
-
-# print(solution([4, 30, 50]))
-# #  Output: 12,1
-
-# print(solution([4, 17, 50]))
-# #  Output: -1,-1

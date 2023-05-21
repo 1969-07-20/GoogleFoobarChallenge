@@ -290,6 +290,18 @@ def solution(dimensions, my_position, trainer_position, max_distance):
             #  Process replica if trainer is within the range of the beam
             if distance_squared <= max_distance_squared:
 
+                #  Handle special case where trainer and I have the same x coordinate
+                if x0 == x1:
+                    if 0 == rep_x and 0 == rep_y:
+                        dir_str = '0:1'
+
+                        if dir_str not in viable_dirs:
+                            viable_dirs[dir_str] = 0
+
+                        viable_dirs[dir_str] += 1
+
+                    continue
+
                 #  Get coefficients of line through me and this reflection of trainer
                 [a0, b0, c0] = points_to_eqn_1(x0, y0, x1, y1)
 

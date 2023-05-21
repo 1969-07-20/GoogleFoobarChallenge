@@ -117,7 +117,7 @@ def solution(start, length):
 
                 #  Express the first ID's location as a pair (interval number,
                 #  position within interval)
-                int_beg = id_beg / int_length[i]
+                int_beg = id_beg // int_length[i]
                 res_beg = id_beg & bit_mask0[i]
 
                 #  Get the index of the first whole interval
@@ -128,7 +128,7 @@ def solution(start, length):
 
                 #  Express the last ID's location ID as a pair (interval number,
                 #  position within interval)
-                int_end = id_end / int_length[i]
+                int_end = id_end // int_length[i]
                 res_end = id_end & bit_mask0[i]
 
                 #  Get the index of the last whole interval
@@ -143,9 +143,9 @@ def solution(start, length):
                     num_int = whl_end - whl_beg + 1
 
                     if ((num_int % 2) == 1) and ((whl_beg % 2) == 1):
-                        count = int_length[i] * ((num_int / 2) + 1)
+                        count = int_length[i] * ((num_int // 2) + 1)
                     else:
-                        count = int_length[i] * (num_int / 2)
+                        count = int_length[i] * (num_int // 2)
 
                 #  Add number of bits in the first partial interval
                 if (int_beg < whl_beg) and ((int_beg % 2) == 1):

@@ -172,21 +172,15 @@ def find_path(maze, dist0, dist1):
                     if dist1[r0][c0] is not None:
                         d1E = dist1[r0][c0]
 
-                #  Evaluate distance of north to south path (if any)
-                if min_dist > (d0N + d1S + 1):
-                    min_dist = (d0N + d1S + 1)
+                #  Find the minimum distance to the entrance
+                min0 = min([d0N, d0S, d0E, d0W])
 
-                #  Evaluate distance of south to north path (if any)
-                if min_dist > (d0S + d1N + 1):
-                    min_dist = (d0S + d1N + 1)
+                #  Find the minimum distance to the exit
+                min1 = min([d1N, d1S, d1E, d1W])
 
-                #  Evaluate distance of west to east path (if any)
-                if min_dist > (d0W + d1E + 1):
-                    min_dist = (d0W + d1E + 1)
-
-                #  Evaluate distance of east to west path (if any)
-                if min_dist > (d0E + d1W) + 1:
-                    min_dist = (d0E + d1W + 1)
+                #  See if this distance is better than previous minimum
+                if min_dist > (min0 + min1) + 1:
+                    min_dist = (min0 + min1) + 1
 
     return min_dist
 

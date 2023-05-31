@@ -1,0 +1,81 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["vmxibkgrlm"],
+        "output":  "encryption"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["wrw blf hvv ozhg mrtsg'h vkrhlwv?"],
+        "output":  "did you see last night's episode?"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!"],
+        "output":  "Yeah! I can't believe Lance lost his job at the colony!!"
+    },
+    {
+        "desc":    "Decrypt message which has every letter of the alphabet",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["Tsv jfrxp yildm ulc qfnkh levi gsv ozab wlt."],
+        "output":  "The quick brown fox jumps over the lazy dog."
+    },
+    {
+        "desc":    "Corner case:  zero length message",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [""],
+        "output":  ""
+    },
+    {
+        "desc":    "Corner case:  a) every character is character which does not change, b) numerals",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["~!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"],
+        "output":  "~!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    },
+    {
+        "desc":   "Patterns:  Caps at the beginning, middle and end of 'words'",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  ["Zbc Wef gSi jkO mn Lp JI sG uv Dx BA"],
+        "output": "Zyx Wvu tSr qpO nm Lk JI hG fe Dc BA"
+    },
+    {
+        "desc":   "Patterns:  In various position relative to one other caps",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  ["ABx DvF tHI qKLn NlkQ RhTf edXbZ"],
+        "output": "ABc DeF gHI jKLm NopQ RsTu vwXyZ"
+    },
+
+    {
+        "desc":    "Long message",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["Ylf'ev xzftsg gdl lu blfi uvoold nrmrlmh kzhhrmt xlwvw mlgvh yzxp zmw uligs -- dsrov gsvb'iv lm wfgb, ml ovhh! Wlihv, blf'iv kivggb hfiv rg'h mlg qly-ivozgvw -- gsvb'iv ylgs sftv uzmh lu gsv hkzxv hlzk lkviz 'Lzmxv & Jzmrxv'. Ylf pmld sld nfxs Clnnzmwvi Lznywz szgvh dzhgv, hl ru blf xzm kilev gszg gsvhv nrmrlmh ziv dzhgrmt grnv kzhhrmt mlm-qly-ivozgvw mlgvh, rg'oo kfg blf gszg nfxs xolhvi gl z kilnlgrlm."],
+        "output":  "You've caught two of your fellow minions passing coded notes back and forth -- while they're on duty, no less! Worse, you're pretty sure it's not job-related -- they're both huge fans of the space soap opera 'Lance & Janice'. You know how much Commander Lambda hates waste, so if you can prove that these minions are wasting time passing non-job-related notes, it'll put you that much closer to a promotion."
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/fox0088/I-love-Lance-Janice/blob/master/ILoveLance%26Janice.py",
+        "input":   ["Czm blf fhv blfi mvd zxxvhh gl urmzoob glkkov Clnnzmwvi Lznywz'h vero vnkriv?"],
+        "output":  "Can you use your new access to finally topple Commander Lambda's evil empire?"
+    },
+    {
+        "desc":    "Generic case:  modified last letter",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_1/1_LanceAndJanice/solution.py",
+        "input":   ["Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmB!!"],
+        "output":  "Yeah! I can't believe Lance lost his job at the colonB!!"
+    },
+    {
+        "desc":    "Corner case:  all punctuation",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_1/1_LanceAndJanice/solution.py",
+        "input":   ["!@#%$__--+.,"],
+        "output":  "!@#%$__--+.,"
+    },
+    {
+        "desc":    "Corner case:  all caps",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_1/1_LanceAndJanice/solution.py",
+        "input":   ["THIS IS A CAPS TEST"],
+        "output":  "THIS IS A CAPS TEST"
+    }
+]

@@ -1,0 +1,128 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["4"],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["15"],
+        "output":  5
+    },
+    {
+        "desc":    "Corner case:  Minimum sized input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["1"],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  Minimum sized input",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/fuel_injection_perfection/test.py",
+        "input":   ["2"],
+        "output":  1
+    },
+    {
+        "desc":    "'Medium' sized case",
+        "source":  "https://gist.github.com/thorstenhirsch/f14842aaeb2d2073e18ec91211ec3875",
+        "input":   ["99"],
+        "output":  9
+    },
+    {
+        "desc":    "Power of 2 minus 1",
+        "source":  "https://gist.github.com/thorstenhirsch/f14842aaeb2d2073e18ec91211ec3875",
+        "input":   ["127"],
+        "output":  8
+    },
+    {
+        "desc":    "Power of 2 minus 1",
+        "source":  "https://gist.github.com/thorstenhirsch/f14842aaeb2d2073e18ec91211ec3875",
+        "input":   ["32767"],
+        "output":  16
+    },
+    {
+        "desc":    "Power of 2",
+        "source":  "https://gist.github.com/thorstenhirsch/f14842aaeb2d2073e18ec91211ec3875",
+        "input":   ["32768"],
+        "output":  15
+    },
+    {
+        "desc":    "Power of 2 plus 1",
+        "source":  "https://gist.github.com/thorstenhirsch/f14842aaeb2d2073e18ec91211ec3875",
+        "input":   ["32769"],
+        "output":  16
+    },
+    {
+        "desc":    "Large number:  308 digits",
+        "source":  "https://gist.github.com/thorstenhirsch/f14842aaeb2d2073e18ec91211ec3875",
+        "input":   ["98798671555555555555555555555555529666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777888888888888888844444444444444444444422222222222222222222222222222222222222222222222222222222222222224444444444444444444444411111111111111115555555555555555555555555"],
+        "output":  1373
+    },
+    {
+        "desc":    "Corner case:  309 digit number",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"],
+        "output":  1356
+    },
+    {
+        "desc":    "Generic small case - power of two",
+        "source":  "https://blog.finxter.com/googles-foobar",
+        "input":   ["16"],
+        "output":  4
+    },
+    {
+        "desc":    "Generic small case - one less than power of two",
+        "source":  "https://blog.finxter.com/googles-foobar",
+        "input":   ["31"],
+        "output":  6
+    },
+    {
+        "desc":    "Generic small case - power of two",
+        "source":  "https://blog.finxter.com/googles-foobar",
+        "input":   ["32"],
+        "output":  5
+    },
+    {
+        "desc":    "Generic small case - one more than power of two",
+        "source":  "https://blog.finxter.com/googles-foobar",
+        "input":   ["33"],
+        "output":  6
+    },
+    {
+        "desc":    "Generic large case",
+        "source":  "https://blog.finxter.com/googles-foobar",
+        "input":   ["124480579411363943422977485485450829978158403576349485507396127987323092328068524587695005561434534623452345436346456353425362283769712245781118297614280332424240701048410620648401132628401374562794562558123463462235342526466804149296501029546541499918765438784295157088047123009825235235168758962399"],
+        "output":  1321
+    },
+    {
+        "desc":    "Generic case:  2^1000",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376"],
+        "output":  1000
+    },
+    {
+        "desc":    "Generic case:  2^1000 + 2^5",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069408"],
+        "output":  1001
+    },
+    {
+        "desc":    "Generic case:  2^1000 - 2^5",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069344"],
+        "output":  1001
+    },
+    {
+        "desc":    "Generic case:  largish input value",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["1501671032001899511813121461391626322617014826383913117815863191573563170391901724123396910714912916819910423158464141466410694132121918818117579129883111144491561741881629910412434118211747416091179162208839571311266211318917882167136121534413538165"],
+        "output":  1101
+    },
+    {
+        "desc":    "Generic case:  largish input value",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["160190118111671325041988517916264241031305190170921708427441021231454431707414410218871351451832491075112519981186133123551751401011211277925144288617628274252918410319356170109951371834554107682717140201941641773214731175173202589561897311260847517814010179187"],
+        "output":  1148
+    }
+]

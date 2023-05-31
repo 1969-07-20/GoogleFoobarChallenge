@@ -1,0 +1,128 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["4", "7"],
+        "output":  "4"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["2", "1"],
+        "output":  "1"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["2", "4"],
+        "output":  "impossible"
+    },
+    {
+        "desc":    "Corner case:  Minimum size",
+        "source":  "https://github.com/zorro021/bomb-baby/blob/main/bomb-baby.py",
+        "input":   ["1", "1"],
+        "output":  "0"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/zorro021/bomb-baby/blob/main/bomb-baby.py",
+        "input":   ["11", "3"],
+        "output":  "5"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/Burke0/Foobar-Challenge-LAMBCHOP/blob/main/solution.py",
+        "input":   ["1147289", "7"],
+        "output":  "163902"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/Burke0/Foobar-Challenge-LAMBCHOP/blob/main/solution.py",
+        "input":   ["2000000", "400000000000"],
+        "output":  "impossible"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/bomb_baby/test.py",
+        "input":   ["4", "31"],
+        "output":  "10"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/bomb_baby/test.py",
+        "input":   ["9", "68"],
+        "output":  "12"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/bomb_baby/test.py",
+        "input":   ["95", "302"],
+        "output":  "14"
+    },
+    {
+        "desc":    "Generic case:  Medium case",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level3/bomb_baby/solution.py",
+        "input":   ["498454011879264", "308061521170129"],
+        "output":  "70"
+    },
+    {
+        "desc":    "Generic case:  Largish case",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level3/bomb_baby/solution.py",
+        "input":   ["9366947731425726508977331996039353971111632790877", "5789092068864820527338372482892113982249794889765"],
+        "output":  "234"
+    },
+    {
+        "desc":    "Corner case: largest",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level3/bomb_baby/solution.py",
+        "input":   ["1", "100000000000000000000000000000000000000000000000000"],
+        "output":  "99999999999999999999999999999999999999999999999999"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["3364619", "1595674"],
+        "output":  "45"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["47032", "33215"],
+        "output":  "36"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["13054", "4411"],
+        "output":  "44"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["11643", "22680"],
+        "output":  "impossible"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["2391", "3295"],
+        "output":  "19"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["11204", "35961"],
+        "output":  "32"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["3436", "986"],
+        "output":  "impossible"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["3791", "273"],
+        "output":  "31"
+    }
+]

@@ -1,0 +1,178 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["77"],
+        "output":  "4208"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["5"],
+        "output":  "19"
+    },
+    {
+        "desc":    "Corner case:  Maximum input (100 digits)",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/tree/main/Level_5/9_DodgeTheLasers",
+        "input":   ["10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"],
+        "output_maybe":  "70710678118654752143350645116549947070840466124095050755453529494069282968337833969770392878674272517953662957768365280642962041509630934104758541368362044363113819683359518041450836040875813896192000",
+        "output":  "70710678118654752440084436210484903928483593768847403658833986899536623923105351942519376716382078638821760123411090095254685423841027253480565451739737157454059823250037671948325191776995310741236436"
+    },
+    {
+        "desc":    "Corner case:  Maximum input (101 digits)",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/tree/main/Level_5/9_DodgeTheLasers",
+        "input":   ["12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901"],
+        "output":  "107774236924039859632044810881278020158277641612068310357589977725221362646591451082548927428153331053477645008279833575656700346327082289577362441794327936796969132662041870868815485920720321329378915"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/JDMatrix/Google_Foobar/blob/master/Level_5/Dodge_the_Lasers/solution.py",
+        "input":   ["10000"],
+        "output":  "70712749"
+    },
+    {
+        "desc":    "Generic case:  4th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12"],
+        "output":  "104"
+    },
+    {
+        "desc":    "Generic case:  4th Pell number + 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["13"],
+        "output":  "122"
+    },
+    {
+        "desc":    "Generic case:  5th Pell number - 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["28"],
+        "output":  "560"
+    },
+    {
+        "desc":    "Generic case:  5th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["29"],
+        "output":  "601"
+    },
+    {
+        "desc":    "Generic case:  8th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["408"],
+        "output":  "117792"
+    },
+    {
+        "desc":    "Generic case:  8th Pell number + 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["409"],
+        "output":  "118370"
+    },
+    {
+        "desc":    "Generic case:  9th Pell number - 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["984"],
+        "output":  "684864"
+    },
+    {
+        "desc":    "Generic case:  9th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["985"],
+        "output":  "686257"
+    },
+    {
+        "desc":    "Generic case:  24th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["543339720"],
+        "output":  "208750686136423200"
+    },
+    {
+        "desc":    "Generic case:  24th Pell number + 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["543339721"],
+        "output":  "208750686904821602"
+    },
+    {
+        "desc":    "Generic case:  25th Pell number - 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["1311738120"],
+        "output":  "1216688159147630400"
+    },
+    {
+        "desc":    "Generic case:  25th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["1311738121"],
+        "output":  "1216688161002708241"
+    },
+
+    {
+        "desc":    "Generic case:  76th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["43592029839838017630000520932"],
+        "output":  "1343690313907486019247504484239727487895293949180880907624"
+    },
+    {
+        "desc":    "Generic case:  76th Pell number + 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["43592029839838017630000520933"],
+        "output":  "1343690313907486019247504484301375927706165532096881778682"
+    },
+    {
+        "desc":    "Generic case:  77th Pell number - 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["105240469650709600546001391988"],
+        "output":  "7831601072837114347716281079874597103951503015435380842480"
+    },
+    {
+        "desc":    "Generic case:  77th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["105240469650709600546001391989"],
+        "output":  "7831601072837114347716281080023429603442050633611382755401"
+    },
+    {
+        "desc":    "Generic case:  200th Pell number - 2 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12693812353994620481037986488739368440399451028645237163046012909971924256726"],
+        "output":  "113938146518719843652374138326831310805801583667151962848254051497697258025134225287410190968020293148220968480338425264423679699516318072868945098384801"
+    },
+    {
+        "desc":    "Generic case:  200th Pell number - 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12693812353994620481037986488739368440399451028645237163046012909971924256727"],
+        "output":  "113938146518719843652374138326831310805801583667151962848254051497697258025152177048999429303719313134702062357785656767903788155882389431033678941856736"
+    },
+    {
+        "desc":    "Generic case:  200th Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12693812353994620481037986488739368440399451028645237163046012909971924256728"],
+        "output":  "113938146518719843652374138326831310805801583667151962848254051497697258025170128810588667639418333121183156235232888271383896612248460789198412785328672"
+    },
+    {
+        "desc":    "Generic case:  200th Pell number + 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12693812353994620481037986488739368440399451028645237163046012909971924256729"],
+        "output":  "113938146518719843652374138326831310805801583667151962848254051497697258025188080572177905975117353107664250112680119774864005068614532147363146628800610"
+    },
+    {
+        "desc":    "Generic case:  200th Pell number + 2 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12693812353994620481037986488739368440399451028645237163046012909971924256730"],
+        "output":  "113938146518719843652374138326831310805801583667151962848254051497697258025206032333767144310816373094145343990127351278344113524980603505527880472272549"
+    },
+    {
+        "desc":    "Generic case:  200th Pell number + 3 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["12693812353994620481037986488739368440399451028645237163046012909971924256731"],
+        "output":  "113938146518719843652374138326831310805801583667151962848254051497697258025223984095356382646515393080626437867574582781824221981346674863692614315744490"
+    },
+    {
+        "desc":    "Generic case:  201st Pell number - 1 (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["30645573943232956180057972969833245887630954508753693529117371074705767728664"],
+        "output":  "664080183713012427172088135395121965722857026722756541551951633119102046237943591233285265803165881954292857947283997765003821039894349900823954253838144"
+    },
+    {
+        "desc":    "Generic case:  201st Pell number (calculation is tricky at Pell numbers +/-1)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["30645573943232956180057972969833245887630954508753693529117371074705767728665"],
+        "output":  "664080183713012427172088135395121965722857026722756541551951633119102046237986930619582493379826977913751430561612028170541219970586513284808631945823537"
+    }
+]

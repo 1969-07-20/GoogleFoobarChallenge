@@ -1,0 +1,119 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [">----<"],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["<<>><"],
+        "output":  4
+    },
+    {
+        "desc":    "Corner case:  No salutes",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["-<-<>--"],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  minimum length input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["<"],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  null input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["-"],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  maximum length input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "cmnt":    ["---------1---------2---------3---------4---------5---------6---------7---------8---------9---------0"],
+        "input":   ["-->--<->--->->-<--->>--<-->---<<>->-->-->--<----------<--->>>-----<->-<----<-->-<--->>>>-<>>>-----<<"],
+        "output":  346
+    },
+    {
+        "desc":    "Corner case:  large output",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "cmnt":    ["---------1---------2---------3---------4---------5---------6---------7---------8---------9---------0"],
+        "input":   ["><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><"],
+        "output":  2550
+    },
+    {
+        "desc":    "Corner case:  maximum output",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "cmnt":    ["---------1---------2---------3---------4---------5---------6---------7---------8---------9---------0"],
+        "input":   [">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"],
+        "output":  5000
+    },
+    {
+        "desc":    "Corner case:  Everybody going left",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["-<-<<--"],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  Everybody going right",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["->->>--"],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://stackoverflow.com/questions/42378334/google-foo-bar-challenge-help-minion-salutes",
+        "input":   ["<-->-<--<>-<<-->--<-->"],
+        "output":  18
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://stackoverflow.com/questions/42378334/google-foo-bar-challenge-help-minion-salutes",
+        "input":   ["<<><>><>><<><>>>"],
+        "output":  40
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/ivanseed/google-foobar-help/blob/master/challenges/en_route_salute/en_route_salute.md",
+        "input":   ["--->-><-><-->-"],
+        "output":  10
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/ivanseed/google-foobar-help/blob/master/challenges/en_route_salute/en_route_salute.md",
+        "input":   ["-<-><-->-"],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/ivanseed/google-foobar-help/blob/master/challenges/en_route_salute/en_route_salute.md",
+        "input":   ["-<->><-->>-<<->->"],
+        "output":  20
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/argcag/foobar1/blob/main/foobar1.py",
+        "input":   ["<><>---><<"],
+        "output":  14
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/povstenko/en-route-salute/blob/main/solution.py",
+        "input":   ["<<->>-<"],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/killianward/google-foobar-hallway-salutes/blob/master/hallway_salutes.py",
+        "input":   ["-<><><<-"],
+        "output":  10
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://gist.github.com/Shisir/2fc55ec2c874d8b8f5ed727ddb68acb6",
+        "input":   ["--->-><-><-->-"],
+        "output":  10
+    }
+]

@@ -1,0 +1,68 @@
+[
+    {
+        "desc":    "Generic case - line length 3",
+        "source":  "Problem statement",
+        "input":   [0, 3],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case - line length 4",
+        "source":  "Problem statement",
+        "input":   [17, 4],
+        "output":  14
+    },
+    {
+        "desc":    "Generic case - line length 5",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_3/4_QueueToDo/solution.py",
+        "input":   [35, 5],
+        "output":  57
+    },
+    {
+        "desc":    "Generic case - line length 1000",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_3/4_QueueToDo/solution.py",
+        "input":   [11, 1000],
+        "output":  532896
+    },
+    {
+        "desc":    "Generic case - line length 20000",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_3/4_QueueToDo/solution.py",
+        "input":   [1, 20000],
+        "output":  391607840
+    },
+    {
+        "desc":    "Corner case - minimum length line",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [347, 1],
+        "output":  347
+    },
+    {
+        "desc":    "Corner case - maximum length line (floor(sqrt(2000000001)))",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [0, 44721],
+        "output":  627342256
+    },
+    {
+        "desc":    "Generic case:  large line length",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [339926817, 17344],
+        "output":  147158464
+    },
+    {
+        "desc":    "Generic case:  large line length",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [129601958, 4950],
+        "output":  140176767
+    },
+    {
+        "desc":    "Generic case:  large line length",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1042653120, 16233],
+        "output":  963455784
+    },
+    {
+        "desc":    "Generic case:  large line length",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1330362528, 15532],
+        "output":  149369354
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [3, [7, 3, 5, 1]],
+        "output":  [-1,7,6,3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [5, [19, 14, 28]],
+        "output":  [21,15,29]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [3, [1, 4, 7]],
+        "output":  [3, 6, -1]
+    },
+    {
+        "desc":    "Corner case:  minimum height tree",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1, [1]],
+        "output":  [-1]
+    },
+    {
+        "desc":    "Corner case:  maximum height tree",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [30, [8, 89734, 1073741823, 1067418163]],
+        "output":  [10, 89735, -1, 1067418164]
+    },
+    {
+        "desc":    "Generic case:  small",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [2, [1, 2, 3]],
+        "output":  [3, 3, -1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/adamfarnsworth/IonFluxRelabeling",
+        "input":   [5, [1, 6, 10, 12, 15, 22, 30, 18, 20, 26, 29]],
+        "output":  [3, 7, 14, 13, 31, 30, 31, 22, 21, 28, 30]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/mohanlns/ion-flux-relabeling-google-foobar-2k17/blob/master/ion_flux_relabeling.py",
+        "input":   [4, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]],
+        "output":  [3, 3, 7, 6, 6, 7, 15, 10, 10, 14, 13, 13, 14, 15, -1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [5, [11, 26, 1, 27]],
+        "output":  [13, 28, 3, 28]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [10, [777, 175, 888, 996, 2, 234]],
+        "output":  [779, 176, 889, 997, 3, 235]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [14, [14867, 1360, 5554, 503, 5626, 5053, 3553]],
+        "output":  [14869, 1362, 5556, 504, 5627, 5054, 3561]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [23, [2670416, 5741385, 1790039, 477501]],
+        "output":  [2670418, 5741386, 1790040, 477503]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [27, [47934972, 132109517, 1260952, 61174672, 107704275, 49112634, 66118812, 129805429, 117389731, 4211850, 76562249, 130910543, 47761308]],
+        "output":  [47934974, 132109518, 1260953, 61174673, 107704279, 49112635, 66118814, 129805430, 117389733, 4211851, 76562251, 130910544, 47761310]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [14, [405, 15317, 5485, 4313, 467, 11384, 16184, 14381, 13155, 10326, 11306]],
+        "output":  [407, 15318, 5489, 4314, 475, 11385, 16185, 14382, 13156, 10330, 11307]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [21, [776097, 1478739, 1868227, 1540356, 974362, 1665787, 405440, 77487, 54162, 1713929]],
+        "output":  [776098, 1478743, 1868231, 1540360, 974364, 1665791, 405441, 77495, 54163, 1713931]
+    }
+]

@@ -1,0 +1,128 @@
+[
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[1, 1]],
+        "output":  2
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[1, 7, 3, 21, 13, 19]],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  One guard",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[10]],
+        "output":  1
+    },
+    {
+        "desc":    "Corner case:  Maximum number of bananas",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[1, 1073741823]],
+        "output":  2
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_4/7_DistractTheTrainers/solution.py",
+        "input":   [[7, 4]],
+        "output":  0
+    },
+    {
+        "desc":    "18 trainers/guards",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_4/7_DistractTheTrainers/solution.py",
+        "input":   [[1, 10, 7, 3, 21, 13, 109, 21, 13, 19, 1, 7, 3, 21, 13, 19, 3, 54]],
+        "output":  0
+    },
+    {
+        "desc":    "17 trainers/guards",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_4/7_DistractTheTrainers/solution.py",
+        "input":   [[1, 7, 3, 21, 13, 109, 21, 13, 19, 1, 7, 3, 21, 13, 19, 3, 54]],
+        "output":  1
+    },
+    {
+        "desc":    "Sum not a power of two",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_4/7_DistractTheTrainers/solution.py",
+        "input":   [[5, 4]],
+        "output":  0
+    },
+    {
+        "desc":    "Sum is a power of two",
+        "source":  "https://github.com/ken-power/Foobar_Challenge/blob/main/Level_4/7_DistractTheTrainers/solution.py",
+        "input":   [[12, 4]],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[379087424, 712630806, 202150357, 726476624]],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[766077136, 851552964]],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[1736, 32128, 10099, 14263, 20262, 1693, 862, 12926, 8215]],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[27424, 2897]],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[847562793, 171022697, 442270084, 383362763]],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[28712, 19409, 6361, 16764, 16730, 28384, 2941, 23383, 13819, 10303, 29068, 685, 1499, 4494, 17509]],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[5829, 3575, 25840, 28194, 18822, 32458, 20592, 6519, 12058, 6223, 3388, 26629]],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[670826052, 799507790, 241487675, 277320130, 930490495, 409788555, 30386611]],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[995491469, 356490433, 470425872, 749565775, 452963827, 859594138, 194230882]],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[486024084, 430034555, 711330855, 92108322, 399685873, 888808633, 515290137, 606554750, 154366730, 288583732, 847355118, 38888308]],
+        "output":  0
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[30104485, 66889949, 744277005, 436886073, 652544827, 501820569, 67179198, 251887854, 1058209778, 710462771, 938760300, 429059371, 306975507, 326662071, 829025741]],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[7682, 18914, 12969, 29818, 18708, 24048, 1449, 31525, 8016, 12572, 29750, 14030, 12825, 20361, 31264, 17777, 920, 28403, 14240, 17980, 1243, 32501, 6833, 19779, 26739, 17983, 13042, 31436, 22574, 2758, 6065, 2748, 3582, 32488, 3908, 5292, 562, 4452, 26922, 17246, 17616, 18459, 942, 270, 19663, 21660, 3253, 23340, 12601, 28637, 9528, 19177, 8424, 25514]],
+        "output":  0
+    }
+]

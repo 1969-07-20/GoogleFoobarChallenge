@@ -1,0 +1,154 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[2, 0, 2, 2, 0]],
+        "output":  "8"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[-2, -3, 4, -5]],
+        "output":  "60"
+    },
+    {
+        "desc":    "Corner case:  All zeros",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[0, 0, 0]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Corner case:  Negative answer (one non-zero value which is negative)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[0, -2, 0]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Corner case:  Positive answer (all non-zero values are negative)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[-5, -3, 0]],
+        "output":  "15"
+    },
+    {
+        "desc":    "Corner case:  Positive answer (the single non-zero value is positive)",
+        "source":  "https://github.com/FoxHub/Google-FooBar/blob/master/Level-2/foobar_2-2_power_hungry.py",
+        "input":   [[0, 0, 4]],
+        "output":  "4"
+    },
+    {
+        "desc":    "Corner case:  Large input",
+        "source":  "https://github.com/FoxHub/Google-FooBar/blob/master/Level-2/foobar_2-2_power_hungry.py",
+        "input":   [[1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000]],
+        "output":  "1000000000000000000000000000000000000000000000000000000"
+    },
+    {
+        "desc":    "Corner case:  Zero result (input all zeros)",
+        "source":  "https://stackoverflow.com/questions/59525299/google-foobar-challenge-power-hungry-failing-test-no-3-hidden-out-of-5-test",
+        "input":   [[0, 0, 0, 0]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Corner case:  Negative result (input a single negative value)",
+        "source":  "https://stackoverflow.com/questions/59525299/google-foobar-challenge-power-hungry-failing-test-no-3-hidden-out-of-5-test",
+        "input":   [[-5]],
+        "output":  "-5"
+    },
+    {
+        "desc":    "Corner case:  Zero result (input all zeros except for one negative value)",
+        "source":  "https://stackoverflow.com/questions/59525299/google-foobar-challenge-power-hungry-failing-test-no-3-hidden-out-of-5-test",
+        "input":   [[0, 0, 0, -10]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Result greater than 2^32",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[1024, 1024, 1024, 1024]],
+        "output":  "1099511627776"
+    },
+    {
+        "desc": "Maximum number of panels (50)",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [
+            [
+                2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+            ]
+        ],
+        "output": "1125899906842624"
+    },
+    {
+        "desc":    "Single value - negative",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[-1]],
+        "output":  "-1"
+    },
+    {
+        "desc":    "Single value - zero",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[0]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Single value - positive",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[1]],
+        "output":  "1"
+    },
+    {
+        "desc":    "Two values, both negative",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[-1, -3]],
+        "output":  "3"
+    },
+    {
+        "desc":    "One negative value, one zero",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[-1, 0]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Throw out one of three identical negative values",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[-10, -10, -10, 20]],
+        "output":  "2000"
+    },
+    {
+        "desc":    "Throw out one negative value but keep the one with the largest magnitude",
+        "source":  "https://github.com/lcsm29/goog-foobar/blob/main/level2/power_hungry/solution.py",
+        "input":   [[-10, -10, -11, 20]],
+        "output":  "2200"
+    },
+    {
+        "desc":    "Odd number of negative values -- throw out smallest magnitude negative value",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/power_hungry/test.py",
+        "input":   [[0, 2, 2, -4, -2, -2]],
+        "output":  "32"
+    },
+    {
+        "desc":    "Several positive values",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/power_hungry/test.py",
+        "input":   [[1, 1, 1, 1, 1, 1]],
+        "output":  "1"
+    },
+    {
+        "desc":    "Several negative values",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/power_hungry/test.py",
+        "input":   [[-1, -1, -1, -1, -1, -1, -1]],
+        "output":  "1"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/rudisimo/google-foobar/blob/master/solutions/power_hungry/test.py",
+        "input":   [[0, -1]],
+        "output":  "0"
+    },
+    {
+        "desc":    "Large case",
+        "source":  "https://stackoverflow.com/questions/59525299/google-foobar-challenge-power-hungry-failing-test-no-3-hidden-out-of-5-test",
+        "input":   [[696, 254, 707, 730, 252, 144, 18, -678, 921, 681, -665, 421, -501, 204, 742, -609, 672, -72, 339, -555, -736, 230, -450, 375, 941, 50, 897, -192, -912, -915, 609, 100, -933, 458, -893, 932, -590, -209, 107, 473, -311, 73, 68, -229, 480, 41, -235, 558, -615, -289, -643]],
+        "output":   "112783193423281396421025291063982496313759557506029207349556366834514274891010648892576460433185005069070271452630069726538629120"
+    }
+]

@@ -1,0 +1,128 @@
+[
+    {
+        "desc":    "Corner Case:  Min input range",
+        "source":  "Problem statement",
+        "input":   [3],
+        "output":  1
+    },
+    {
+        "desc":    "Corner Case:  Only one way",
+        "source":  "Problem statement",
+        "input":   [4],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case:  small typical value",
+        "source":  "Problem statement",
+        "input":   [5],
+        "output":  2
+    },
+    {
+        "desc":    "Corner Case:  Max input range",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [200],
+        "output":  487067745
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [7],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [9],
+        "output":  7
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [10],
+        "output":  9
+    },
+    {
+        "desc":    "Generic case:  Smallish typical case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [13],
+        "output":  17
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [15],
+        "output":  26
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [23],
+        "output":  103
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [31],
+        "output":  339
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [42],
+        "output":  1425
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [43],
+        "output":  1609
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [63],
+        "output":  14847
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [78],
+        "output":  64233
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [99],
+        "output":  409173
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [128],
+        "output":  4013543
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [130],
+        "output":  4654669
+    },
+    {
+        "desc":    "Generic case:  Largish typical case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [137],
+        "output":  7755775
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [187],
+        "output":  219358314
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [199],
+        "output":  458482687
+    }
+]

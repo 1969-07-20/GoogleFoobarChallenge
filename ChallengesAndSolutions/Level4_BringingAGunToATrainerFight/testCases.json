@@ -1,0 +1,128 @@
+[
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[3,2], [1,1], [2,1], 4],
+        "output":  7
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[300,275], [150,150], [185,100], 500],
+        "output":  9
+    },
+    {
+        "desc":    "Corner case:  Laser cannot reach opponent (barely)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[1026, 1215], [528, 1166], [764, 131], 1060],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  location of combatants have same x-coordinate",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[300,275], [150,150], [150,100], 1500],
+        "output":  65
+    },
+    {
+        "desc":    "Corner case:  location of combatants have same y-coordinate",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[300,275], [150,150], [185,150], 1500],
+        "output":  79
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py",
+        "input":   [[10, 10], [4, 4], [3, 3], 5000],
+        "output":  739323
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py",
+        "input":   [[23, 10], [6, 4], [3, 2], 23],
+        "output":  8
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py",
+        "input":   [[300, 275], [150, 150], [180, 100], 500],
+        "output":  9
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py",
+        "input":   [[3, 2], [1, 1], [2, 1], 4],
+        "output":  7
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py",
+        "input":   [[1250, 1250], [1000, 1000], [500, 400], 10000],
+        "output":  196
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/fox0088/Bringing-a-gun-to-a-guard-fight/blob/master/GuardFight.py",
+        "input":   [[3,3], [1,1], [2,2], 5],
+        "output":  7
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "https://github.com/wrbyepct/Bringing-a-gun-to-a-trainer-fight/blob/master/solution/solution_revised.py",
+        "input":   [[2, 5], [1, 2], [1, 4], 11],
+        "output":  27
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[560, 1163], [141, 468], [134, 308], 5538],
+        "output":  147
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[380, 53], [88, 2], [216, 35], 8375],
+        "output":  10924
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[661, 346], [510, 206], [602, 131], 8277],
+        "output":  946
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[390, 1137], [67, 997], [14, 1031], 898],
+        "output":  12
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[1026, 1215], [528, 1166], [764, 131], 9133],
+        "output":  216
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[895, 165], [166, 43], [721, 151], 3483],
+        "output":  270
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[730, 120], [487, 36], [707, 58], 968],
+        "output":  31
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[121, 1024], [69, 635], [102, 186], 6901],
+        "output":  1194
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[770, 699], [397, 128], [426, 334], 7551],
+        "output":  331
+    }
+]

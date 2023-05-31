@@ -1,0 +1,56 @@
+[
+    {
+        "desc":  "Corner Case:  Min input range",
+        "source": "Problem statement",
+        "input":  [0],
+        "output":  "23571"
+    },
+    {
+        "desc":  "Generic Case:  Small typical value",
+        "source": "Problem statement",
+        "input":  [3],
+        "output":  "71113"
+    },
+    {
+        "desc": "Corner Case:  a) Max input range  b) Answer begins with 0",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [10000],
+        "output": "02192"
+    },
+    {
+        "desc": "Generic case:  Small typical value",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [37],
+        "output": "37983"
+    },
+    {
+        "desc": "Generic case:  Medium typical value",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [472],
+        "output": "99710"
+    },
+    {
+        "desc": "Generic case:  Medium typical value",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [3897],
+        "output": "61816"
+    },
+    {
+        "desc": "Generic case:  Large typical value",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [6000],
+        "output": "24511"
+    },
+    {
+        "desc": "Generic case:  Large typical value",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input": [9738],
+        "output": "71973"
+    },
+    {
+        "desc": "Generic case",
+        "source": "https://github.com/wishnu002/Google_Foobar_re-ID/blob/main/foobar_lvl1_reID.py",
+        "input": [15],
+        "output": "93137"
+    }
+]

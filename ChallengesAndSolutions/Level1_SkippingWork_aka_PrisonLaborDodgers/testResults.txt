@@ -1,0 +1,565 @@
+OfflineTester:  version 0.1.0 (2023-05-29a)
+
+Challenge:  Level1_SkippingWork_aka_PrisonLaborDodgers
+
+
+
+TEST CASE 0:
+       Description:  Generic case:  Unique element in first list
+  Test case source:  Problem statement
+             Input:  [[13, 5, 6, 2, 5], [5, 2, 5, 13]]
+    Correct output:  6
+
+TEST CASE 1:
+       Description:  Generic case:  Unique element in second list
+  Test case source:  Problem statement
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, -4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  -4
+
+TEST CASE 2:
+       Description:  Corner case:  minimum length input
+  Test case source:  Problem statement
+             Input:  [[27, 0], [27]]
+    Correct output:  0
+
+TEST CASE 3:
+       Description:  Corner case:  maximum length input
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [[-33, -6, -41, -36, 45, -38, -28, -25, 33, 26, -13, -12, -9, 43, 47, -14, 9, -43, -42, 37, 2, 35, 4, 11, 18, 19, 39, 15, -22, 38, 6, 14, -4, 17, -5, -16, 12, -11, 7, -15, -29, 28, -1, -17, -35, 30, -18, 48, -21, 31, 23, -31, 20, 32, -45, 10, 40, 34, 25, -10, 41, -44, 49, -2, 44, 22, -24, 29, -19, 46, 21, 0, -46, -27, -48, 8, 24, 27, -26, -34, -37, 13, 16, -23, -32, -20, 3, -8, 1, -39, 42, 5, -49, -7, -47, 36, -30, -3, -40], [-33, -6, -41, -36, 45, -38, -28, -25, 33, 26, -13, -12, -9, 43, 47, -14, 9, -43, -42, 37, 2, 35, 4, 11, 18, 19, 39, 15, -22, 38, 6, 14, -4, 17, -5, -16, 12, -11, 7, -15, -29, 28, -1, -17, -35, 30, -18, 48, -21, 31, 23, -31, 20, 32, -45, 10, 40, 34, 25, -10, 41, -44, 49, -2, 22, -24, 29, -19, 46, 21, 0, -46, -27, -48, 8, 24, 27, -26, -34, -37, 13, 16, -23, -32, -20, 3, -8, 1, -39, 42, 5, -49, -7, -47, 36, -30, -3, -40]]
+    Correct output:  44
+
+TEST CASE 4:
+       Description:  Generic case:  unique element at beginning of list
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [[23, 14, 27, 1, 4, 2, 50, 3, 1], [2, 4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  23
+
+TEST CASE 5:
+       Description:  Generic case:  unique element at end of list
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1, -23], [2, 4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  -23
+
+TEST CASE 6:
+       Description:  Generic case:  unique element is one with smallest value
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, 3, 1, -1000, 1, 14, 27, 50]]
+    Correct output:  -1000
+
+TEST CASE 7:
+       Description:  Generic case:  unique element is one with largest value
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1], [2, 1000, 4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  1000
+Loading solutions
+
+
+SOLUTIONS
+solution1:  Status:  LOADED  Source:  https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level1_SkippingWork/skippingWork.py 
+solution2:  Status:  LOADED  Source:  https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level1_PrisonLaborDodgers/prisonLaborDodgers.py 
+solution3:  Status:  LOADED  Source:  https://stackoverflow.com/questions/66281099/python-test-cases-fails-in-google-foobar-challenge (Amir Khan) 
+solution4:  Status:  LOADED  Source:  https://stackoverflow.com/questions/72351618/google-foo-bar-hiring-challenge-skipping-work (Turhan Ergene) 
+solution5:  Status:  LOADED  Source:  https://stackoverflow.com/questions/72351618/google-foo-bar-hiring-challenge-skipping-work (Timur Shtatland) 
+solution6:  Status:  LOADED  Source:  https://github.com/lcsm29/goog-foobar/blob/main/level1/skipping_work/solution.py 
+solution7:  Status:  LOADED  Source:  https://gitlab.com/DevAlone/google_foobar_solutions/-/blob/master/level%201/Prison%20Labor%20Dodgers/main.py 
+solution8:  Status:  LOADED  Source:  https://rajat19.github.io/foobar/prison-labor-dodgers 
+solution9:  Status:  LOADED  Source:  https://github.com/rudisimo/google-foobar/blob/master/solutions/prison_labor_dodgers/solution.py 
+solutionA:  Status:  LOADED  Source:  https://github.com/lcsm29/goog-foobar/blob/main/level1/prison_labor_dodgers/solution.py 
+solutionB:  Status:  LOADED  Source:  https://gist.github.com/gggauravgandhi/28eeebb5f6266270317e3db7dadeae7f 
+
+
+============================================
+TEST CASE 0:
+============================================
+
+             Input:  [[13, 5, 6, 2, 5], [5, 2, 5, 13]]
+    Correct output:  6
+
+  solution1:  pass       6
+  solution2:  pass       6
+  solution3:  pass       6
+  solution4:  pass       6
+  solution5:  pass       6
+  solution6:  pass       6
+  solution7:  pass       6
+  solution8:  pass       6
+  solution9:  pass       6
+  solutionA:  pass       6
+  solutionB:  pass       6
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.01e-05) FOR TEST CASE 0
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.05e-05   1.03e+00     .                            |+                            .
+ solution2:  1.03e-05   1.02e+00     .                            |+                            .
+ solution3:  1.01e-05   1.00e+00     .                            +                             .
+ solution4:  1.04e-05   1.03e+00     .                            |+                            .
+ solution5:  1.02e-05   1.01e+00     .                            +                             .
+ solution6:  1.02e-05   1.01e+00     .                            +                             .
+ solution7:  1.00e-05   9.92e-01     .                            +                             .
+ solution8:  1.00e-05   9.92e-01     .                            +                             .
+ solution9:  1.01e-05   1.00e+00     .                            +                             .
+ solutionA:  1.01e-05   9.99e-01     .                            +                             .
+ solutionB:  1.00e-05   9.93e-01     .                            +                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.01e-05 kb) FOR TEST CASE 0
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.52e-01    3.06e-01     .    +---------------------------------|                   .
+ solution2:  1.76e-01    3.55e-01     .        +-----------------------------|                   .
+ solution3:  7.84e-01    1.58e+00     .                  .                   |------------+      .
+ solution4:  3.04e-01    6.13e-01     .                  .     +-------------|                   .
+ solution5:  6.48e-01    1.31e+00     .                  .                   |------+            .
+ solution6:  1.60e-01    3.23e-01     .      +-------------------------------|                   .
+ solution7:  2.64e-01    5.32e-01     .                  . +-----------------|                   .
+ solution8:  6.48e-01    1.31e+00     .                  .                   |------+            .
+ solution9:  6.48e-01    1.31e+00     .                  .                   |------+            .
+ solutionA:  4.96e-01    1.00e+00     .                  .                   +                   .
+ solutionB:  6.48e-01    1.31e+00     .                  .                   |------+            .
+                                      /                  /                   x                   x
+                                      4                  2                   1                   2
+                                                                                                  
+
+
+============================================
+TEST CASE 1:
+============================================
+
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, -4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  -4
+
+  solution1:  pass       -4
+  solution2:  pass       -4
+  solution3:  pass       -4
+  solution4:  pass       -4
+  solution5:  pass       -4
+  solution6:  pass       -4
+  solution7:  pass       -4
+  solution8:  pass       -4
+  solution9:  pass       -4
+  solutionA:  pass       -4
+  solutionB:  pass       -4
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.22e-05) FOR TEST CASE 1
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.21e-05   9.92e-01     .                            +                             .
+ solution2:  1.21e-05   9.92e-01     .                            +                             .
+ solution3:  1.21e-05   9.94e-01     .                            +                             .
+ solution4:  1.24e-05   1.02e+00     .                            |+                            .
+ solution5:  1.22e-05   1.00e+00     .                            +                             .
+ solution6:  1.18e-05   9.67e-01     .                           +|                             .
+ solution7:  1.20e-05   9.87e-01     .                           +|                             .
+ solution8:  1.22e-05   1.00e+00     .                            +                             .
+ solution9:  1.23e-05   1.01e+00     .                            +                             .
+ solutionA:  1.22e-05   1.00e+00     .                            +                             .
+ solutionB:  1.23e-05   1.01e+00     .                            +                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.22e-05 kb) FOR TEST CASE 1
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.16e-01    1.42e-01     .          . +---------------------------------|           .
+ solution2:  2.40e-01    1.58e-01     .          .   +-------------------------------|           .
+ solution3:  2.32e+00    1.53e+00     .          .           .           .           |------+    .
+ solution4:  3.04e-01    2.00e-01     .          .       +---------------------------|           .
+ solution5:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solution6:  1.60e-01    1.05e-01     .       +--------------------------------------|           .
+ solution7:  7.76e-01    5.11e-01     .          .           .           +-----------|           .
+ solution8:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solution9:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solutionA:  1.52e+00    1.00e+00     .          .           .           .           +           .
+ solutionB:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+                                      /          /           /           /           x           x
+                                      1          8           4           2           1           2
+                                      6                                                           
+
+
+============================================
+TEST CASE 2:
+============================================
+
+             Input:  [[27, 0], [27]]
+    Correct output:  0
+
+  solution1:  pass       0
+  solution2:  pass       0
+  solution3:  pass       0
+  solution4:  pass       0
+  solution5:  pass       0
+  solution6:  FAIL <--   None
+  solution7:  pass       0
+  solution8:  pass       0
+  solution9:  pass       0
+  solutionA:  pass       0
+  solutionB:  pass       0
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.84e-06) FOR TEST CASE 2
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  8.77e-06   9.92e-01     .                            +                             .
+ solution2:  8.88e-06   1.00e+00     .                            +                             .
+ solution3:  8.90e-06   1.01e+00     .                            +                             .
+ solution4:  8.93e-06   1.01e+00     .                            +                             .
+ solution5:  8.87e-06   1.00e+00     .                            +                             .
+ solution6:  1.53e-05   1.73e+00     .                            |----------------------+      .
+ solution7:  8.73e-06   9.87e-01     .                           +|                             .
+ solution8:  8.74e-06   9.88e-01     .                           +|                             .
+ solution9:  8.68e-06   9.81e-01     .                           +|                             .
+ solutionA:  8.79e-06   9.94e-01     .                            +                             .
+ solutionB:  8.84e-06   1.00e+00     .                            +                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.84e-06 kb) FOR TEST CASE 2
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.04e-01    1.82e-01     .      +------------------------------------|              .
+ solution2:  1.28e-01    2.24e-01     .           +-------------------------------|              .
+ solution3:  7.84e-01    1.37e+00     .             .              .              |-----+        .
+ solution4:  3.04e-01    5.31e-01     .             .              .+-------------|              .
+ solution5:  6.48e-01    1.13e+00     .             .              .              |-+            .
+ solution6:  --------    --------     .             .              .              .              .
+ solution7:  2.64e-01    4.62e-01     .             .            +----------------|              .
+ solution8:  6.48e-01    1.13e+00     .             .              .              |-+            .
+ solution9:  6.48e-01    1.13e+00     .             .              .              |-+            .
+ solutionA:  4.96e-01    8.67e-01     .             .              .           +--|              .
+ solutionB:  6.48e-01    1.13e+00     .             .              .              |-+            .
+                                      /             /              /              x              x
+                                      8             4              2              1              2
+                                                                                                  
+
+
+============================================
+TEST CASE 3:
+============================================
+
+             Input:  [[-33, -6, -41, -36, 45, -38, -28, -25, 33, 26, -13, -12, -9, 43, 47, -14, 9, -43, -42, 37, 2, 35, 4, 11, 18, 19, 39, 15, -22, 38, 6, 14, -4, 17, -5, -16, 12, -11, 7, -15, -29, 28, -1, -17, -35, 30, -18, 48, -21, 31, 23, -31, 20, 32, -45, 10, 40, 34, 25, -10, 41, -44, 49, -2, 44, 22, -24, 29, -19, 46, 21, 0, -46, -27, -48, 8, 24, 27, -26, -34, -37, 13, 16, -23, -32, -20, 3, -8, 1, -39, 42, 5, -49, -7, -47, 36, -30, -3, -40], [-33, -6, -41, -36, 45, -38, -28, -25, 33, 26, -13, -12, -9, 43, 47, -14, 9, -43, -42, 37, 2, 35, 4, 11, 18, 19, 39, 15, -22, 38, 6, 14, -4, 17, -5, -16, 12, -11, 7, -15, -29, 28, -1, -17, -35, 30, -18, 48, -21, 31, 23, -31, 20, 32, -45, 10, 40, 34, 25, -10, 41, -44, 49, -2, 22, -24, 29, -19, 46, 21, 0, -46, -27, -48, 8, 24, 27, -26, -34, -37, 13, 16, -23, -32, -20, 3, -8, 1, -39, 42, 5, -49, -7, -47, 36, -30, -3, -40]]
+    Correct output:  44
+
+  solution1:  pass       44
+  solution2:  pass       44
+  solution3:  pass       44
+  solution4:  pass       44
+  solution5:  pass       44
+  solution6:  pass       44
+  solution7:  pass       44
+  solution8:  pass       44
+  solution9:  pass       44
+  solutionA:  pass       44
+  solutionB:  pass       44
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (5.43e-05) FOR TEST CASE 3
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  6.57e-05   1.21e+00     .                            |-------+                     .
+ solution2:  5.78e-05   1.07e+00     .                            |--+                          .
+ solution3:  5.43e-05   1.00e+00     .                            +                             .
+ solution4:  9.64e-05   1.78e+00     .                            |-----------------------+     .
+ solution5:  5.43e-05   1.00e+00     .                            +                             .
+ solution6:  7.13e-05   1.31e+00     .                            |-----------+                 .
+ solution7:  5.27e-05   9.72e-01     .                           +|                             .
+ solution8:  5.39e-05   9.93e-01     .                            +                             .
+ solution9:  5.39e-05   9.93e-01     .                            +                             .
+ solutionA:  5.27e-05   9.71e-01     .                           +|                             .
+ solutionB:  5.33e-05   9.83e-01     .                           +|                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (5.43e-05 kb) FOR TEST CASE 3
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.66e+00    8.76e-02     .    +-----------------------------------------|           .
+ solution2:  1.68e+00    8.88e-02     .    +-----------------------------------------|           .
+ solution3:  2.13e+01    1.12e+00     .          .           .           .           |-+         .
+ solution4:  3.04e-01    1.61e-02     <<---------------------------------------------|           .
+ solution5:  2.11e+01    1.12e+00     .          .           .           .           |-+         .
+ solution6:  1.60e-01    8.46e-03     <<---------------------------------------------|           .
+ solution7:  1.05e+01    5.55e-01     .          .           .           . +---------|           .
+ solution8:  2.11e+01    1.12e+00     .          .           .           .           |-+         .
+ solution9:  2.11e+01    1.12e+00     .          .           .           .           |-+         .
+ solutionA:  1.89e+01    1.00e+00     .          .           .           .           +           .
+ solutionB:  2.11e+01    1.12e+00     .          .           .           .           |-+         .
+                                      /          /           /           /           x           x
+                                      1          8           4           2           1           2
+                                      6                                                           
+
+
+============================================
+TEST CASE 4:
+============================================
+
+             Input:  [[23, 14, 27, 1, 4, 2, 50, 3, 1], [2, 4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  23
+
+  solution1:  pass       23
+  solution2:  pass       23
+  solution3:  pass       23
+  solution4:  pass       23
+  solution5:  pass       23
+  solution6:  pass       23
+  solution7:  pass       23
+  solution8:  pass       23
+  solution9:  pass       23
+  solutionA:  pass       23
+  solutionB:  pass       23
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.21e-05) FOR TEST CASE 4
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.26e-05   1.04e+00     .                            |-+                           .
+ solution2:  1.23e-05   1.01e+00     .                            |+                            .
+ solution3:  1.21e-05   9.99e-01     .                            +                             .
+ solution4:  1.24e-05   1.03e+00     .                            |+                            .
+ solution5:  1.21e-05   9.97e-01     .                            +                             .
+ solution6:  1.18e-05   9.70e-01     .                           +|                             .
+ solution7:  1.19e-05   9.82e-01     .                           +|                             .
+ solution8:  1.20e-05   9.93e-01     .                            +                             .
+ solution9:  1.25e-05   1.03e+00     .                            |+                            .
+ solutionA:  1.21e-05   1.00e+00     .                            +                             .
+ solutionB:  1.24e-05   1.02e+00     .                            |+                            .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.21e-05 kb) FOR TEST CASE 4
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.16e-01    1.42e-01     .          . +---------------------------------|           .
+ solution2:  2.40e-01    1.58e-01     .          .   +-------------------------------|           .
+ solution3:  2.06e+00    1.36e+00     .          .           .           .           |----+      .
+ solution4:  3.04e-01    2.00e-01     .          .       +---------------------------|           .
+ solution5:  1.93e+00    1.27e+00     .          .           .           .           |---+       .
+ solution6:  1.60e-01    1.05e-01     .       +--------------------------------------|           .
+ solution7:  7.76e-01    5.11e-01     .          .           .           +-----------|           .
+ solution8:  1.93e+00    1.27e+00     .          .           .           .           |---+       .
+ solution9:  1.93e+00    1.27e+00     .          .           .           .           |---+       .
+ solutionA:  1.52e+00    1.00e+00     .          .           .           .           +           .
+ solutionB:  1.93e+00    1.27e+00     .          .           .           .           |---+       .
+                                      /          /           /           /           x           x
+                                      1          8           4           2           1           2
+                                      6                                                           
+
+
+============================================
+TEST CASE 5:
+============================================
+
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1, -23], [2, 4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  -23
+
+  solution1:  pass       -23
+  solution2:  pass       -23
+  solution3:  pass       -23
+  solution4:  pass       -23
+  solution5:  pass       -23
+  solution6:  FAIL <--   None
+  solution7:  pass       -23
+  solution8:  pass       -23
+  solution9:  pass       -23
+  solutionA:  pass       -23
+  solutionB:  pass       -23
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.21e-05) FOR TEST CASE 5
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.22e-05   1.01e+00     .                            +                             .
+ solution2:  1.21e-05   9.96e-01     .                            +                             .
+ solution3:  1.22e-05   1.01e+00     .                            +                             .
+ solution4:  1.24e-05   1.02e+00     .                            |+                            .
+ solution5:  1.21e-05   9.99e-01     .                            +                             .
+ solution6:  1.57e-05   1.29e+00     .                            |----------+                  .
+ solution7:  1.20e-05   9.85e-01     .                           +|                             .
+ solution8:  1.21e-05   1.00e+00     .                            +                             .
+ solution9:  1.23e-05   1.01e+00     .                            |+                            .
+ solutionA:  1.21e-05   9.96e-01     .                            +                             .
+ solutionB:  1.21e-05   9.96e-01     .                            +                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.21e-05 kb) FOR TEST CASE 5
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.16e-01    1.25e-01     +-------------------------------------------|              .
+ solution2:  2.40e-01    1.39e-01     . +-----------------------------------------|              .
+ solution3:  2.06e+00    1.20e+00     .             .              .              |---+          .
+ solution4:  3.04e-01    1.76e-01     .      +------------------------------------|              .
+ solution5:  1.93e+00    1.12e+00     .             .              .              |-+            .
+ solution6:  --------    --------     .             .              .              .              .
+ solution7:  7.76e-01    4.50e-01     .             .            +----------------|              .
+ solution8:  1.93e+00    1.12e+00     .             .              .              |-+            .
+ solution9:  1.93e+00    1.12e+00     .             .              .              |-+            .
+ solutionA:  1.52e+00    8.82e-01     .             .              .           +--|              .
+ solutionB:  1.93e+00    1.12e+00     .             .              .              |-+            .
+                                      /             /              /              x              x
+                                      8             4              2              1              2
+                                                                                                  
+
+
+============================================
+TEST CASE 6:
+============================================
+
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, 3, 1, -1000, 1, 14, 27, 50]]
+    Correct output:  -1000
+
+  solution1:  pass       -1000
+  solution2:  pass       -1000
+  solution3:  pass       -1000
+  solution4:  pass       -1000
+  solution5:  pass       -1000
+  solution6:  pass       -1000
+  solution7:  pass       -1000
+  solution8:  pass       -1000
+  solution9:  pass       -1000
+  solutionA:  pass       -1000
+  solutionB:  pass       -1000
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.22e-05) FOR TEST CASE 6
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.23e-05   1.01e+00     .                            +                             .
+ solution2:  1.24e-05   1.02e+00     .                            |+                            .
+ solution3:  1.22e-05   9.99e-01     .                            +                             .
+ solution4:  1.26e-05   1.03e+00     .                            |+                            .
+ solution5:  1.21e-05   9.93e-01     .                            +                             .
+ solution6:  1.22e-05   9.99e-01     .                            +                             .
+ solution7:  1.22e-05   1.00e+00     .                            +                             .
+ solution8:  1.23e-05   1.00e+00     .                            +                             .
+ solution9:  1.22e-05   9.98e-01     .                            +                             .
+ solutionA:  1.24e-05   1.02e+00     .                            |+                            .
+ solutionB:  1.22e-05   9.96e-01     .                            +                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.22e-05 kb) FOR TEST CASE 6
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.16e-01    1.42e-01     .          . +---------------------------------|           .
+ solution2:  2.40e-01    1.58e-01     .          .   +-------------------------------|           .
+ solution3:  2.32e+00    1.53e+00     .          .           .           .           |------+    .
+ solution4:  3.04e-01    2.00e-01     .          .       +---------------------------|           .
+ solution5:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solution6:  1.60e-01    1.05e-01     .       +--------------------------------------|           .
+ solution7:  7.76e-01    5.11e-01     .          .           .           +-----------|           .
+ solution8:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solution9:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solutionA:  1.52e+00    1.00e+00     .          .           .           .           +           .
+ solutionB:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+                                      /          /           /           /           x           x
+                                      1          8           4           2           1           2
+                                      6                                                           
+
+
+============================================
+TEST CASE 7:
+============================================
+
+             Input:  [[14, 27, 1, 4, 2, 50, 3, 1], [2, 1000, 4, 3, 1, 1, 14, 27, 50]]
+    Correct output:  1000
+
+  solution1:  pass       1000
+  solution2:  pass       1000
+  solution3:  pass       1000
+  solution4:  pass       1000
+  solution5:  pass       1000
+  solution6:  pass       1000
+  solution7:  pass       1000
+  solution8:  pass       1000
+  solution9:  pass       1000
+  solutionA:  pass       1000
+  solutionB:  pass       1000
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.23e-05) FOR TEST CASE 7
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.30e-05   1.06e+00     .                            |-+                           .
+ solution2:  1.25e-05   1.02e+00     .                            |+                            .
+ solution3:  1.25e-05   1.01e+00     .                            |+                            .
+ solution4:  1.28e-05   1.04e+00     .                            |-+                           .
+ solution5:  1.22e-05   9.90e-01     .                            +                             .
+ solution6:  1.20e-05   9.79e-01     .                           +|                             .
+ solution7:  1.20e-05   9.76e-01     .                           +|                             .
+ solution8:  1.23e-05   9.99e-01     .                            +                             .
+ solution9:  1.23e-05   1.00e+00     .                            +                             .
+ solutionA:  1.23e-05   1.00e+00     .                            +                             .
+ solutionB:  1.24e-05   1.01e+00     .                            +                             .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.23e-05 kb) FOR TEST CASE 7
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.16e-01    1.42e-01     .          . +---------------------------------|           .
+ solution2:  2.40e-01    1.58e-01     .          .   +-------------------------------|           .
+ solution3:  2.32e+00    1.53e+00     .          .           .           .           |------+    .
+ solution4:  3.04e-01    2.00e-01     .          .       +---------------------------|           .
+ solution5:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solution6:  1.60e-01    1.05e-01     .       +--------------------------------------|           .
+ solution7:  7.76e-01    5.11e-01     .          .           .           +-----------|           .
+ solution8:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solution9:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+ solutionA:  1.52e+00    1.00e+00     .          .           .           .           +           .
+ solutionB:  2.18e+00    1.44e+00     .          .           .           .           |-----+     .
+                                      /          /           /           /           x           x
+                                      1          8           4           2           1           2
+                                      6                                                           
+

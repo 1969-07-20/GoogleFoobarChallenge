@@ -1,0 +1,134 @@
+[
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[[0, 2, 2, 2, -1], [9, 0, 2, 2, -1], [9, 3, 0, 2, -1], [9, 3, 2, 0, -1], [9, 3, 2, 2, 0]], 1],
+        "output":  [1, 2]
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[[0, 1, 1, 1, 1], [1, 0, 1, 1, 1], [1, 1, 0, 1, 1], [1, 1, 1, 0, 1], [1, 1, 1, 1, 0]], 3],
+        "output":  [0, 1]
+    },
+    {
+        "desc":    "Infinite:  negative cycle.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[0, 2, 2, 2, -1], [9, 0, 2, 2, 0], [9, 3, 0, 2, 0], [9, 3, 2, 0, 0], [-1, 3, 2, 2, 0]], -500],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Max bunnies. None rescuable.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1]], 1],
+        "output":  []
+    },
+    {
+        "desc":    "One bunny.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[1, 1, 1], [1, 1, 1], [1, 1, 1]], 2],
+        "output":  [0]
+    },
+    {
+        "desc":    "Multiple revisits.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[0, 5, 11, 11, 1], [10, 0, 1, 5, 1], [10, 1, 0, 4, 0], [10, 1, 5, 0, 1], [10, 10, 10, 10, 0]], 10],
+        "output":  [0, 1]
+    },
+    {
+        "desc":    "Multiple revisits 2.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[0, 10, 10, 10, 1], [0, 0, 10, 10, 10], [0, 10, 0, 10, 10], [0, 10, 10, 0, 10], [1, 1, 1, 1, 0]], 5],
+        "output":  [0, 1]
+    },
+    {
+        "desc":    "'Time travel'.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 1],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "No bunnies.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[2, 2], [2, 2]], 1],
+        "output":  []
+    },
+    {
+        "desc":    "Backwards bunny path.",
+        "source":  "From https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-2_running_with_bunnies.py",
+        "input":   [[[0, 10, 10, 1, 10], [10, 0, 10, 10, 1], [10, 1, 0, 10, 10], [10, 10, 1, 0, 10], [1, 10, 10, 10, 0]], -6],
+        "output":  []
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 1, 1, 1, 1, 1], [1, 0, 1, 1, 1, 2], [1, 1, 0, 1, 1, 1], [1, 1, 1, 0, 1, 1], [1, 1, 1, 1, 0, -1], [1, 1, 1, 1, 1, 0]], 3],
+        "output":  [0, 1, 2, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 1, 5, 5, 2], [10, 0, 2, 6, 10], [10, 10, 0, 1, 5], [10, 10, 10, 0, 1], [10, 10, 10, 10, 0]], 5],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 1, 3, 4, 2], [10, 0, 2, 3, 4], [10, 10, 0, 1, 2], [10, 10, 10, 0, 1], [10, 10, 10, 10, 0]], 4],
+        "output":  []
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 1, 10, 10, 10], [10, 0, 1, 1, 2], [10, 1, 0, 10, 10], [10, 1, 10, 0, 10], [10, 10, 10, 10, 0]], 7],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 20, 20, 20, -1], [90, 0, 20, 20, 0], [90, 30, 0, 20, 0], [90, 30, 20, 0, 0], [-1, 30, 20, 20, 0]], 0],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[2, 2], [2, 2]], 5],
+        "output":  []
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 10, 10, 1, 10], [10, 0, 10, 10, 1], [10, 1, 0, 10, 10], [10, 10, 1, 0, 10], [1, 10, 10, 10, 0]], 6],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 0, 1, 1, 1], [0, 0, 0, 1, 1], [0, 0, 0, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 0],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[1, 1, 1, 1, 1], [-1, 1, 1, 1, 1], [-1, 1, 1, 1, 1], [-1, 1, 1, 1, 1], [-1, 1, 1, 1, 1]], 1],
+        "output":  [0, 1, 2]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 1, 5, 5, 5, 5], [5, 0, 1, 5, 5, 5], [5, 5, 0, 5, 5, -1], [5, 5, 1, 0, 5, 5], [5, 5, 1, 5, 0, 5], [5, 5, 1, 1, 1, 0]], 3],
+        "output":  [0, 1, 2, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, 1, 5, 5, 5, 5, 5], [5, 0, 1, 5, 5, 5, 5], [5, 5, 0, 5, 5, 0, -1], [5, 5, 1, 0, 5, 5, 5], [5, 5, 1, 5, 0, 5, 5], [5, 5, 0, 5, 5, 0, 0], [5, 5, 1, 1, 1, 0, 0]], 3],
+        "output":  [0, 1, 2, 3, 4]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "From https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Running_with_Bunnies/solution.py",
+        "input":   [[[0, -1, 0, 9, 9, 9, 9, 9], [9, 0, 1, 9, 9, 9, 9, 9], [0, 9, 0, 0, 9, 9, 1, 1], [9, 9, 9, 0, 1, 9, 9, 9], [9, 9, 9, 9, 0, -1, 9, 9], [9, 9, 0, 9, 9, 0, 9, 9], [9, 9, -1, 9, 9, 9, 0, 9], [9, 9, 9, 9, 9, 9, 9, 0]], 1],
+        "output":  [0, 1, 2, 3, 4, 5]
+    }
+]

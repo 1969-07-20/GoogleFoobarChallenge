@@ -1,0 +1,74 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["abcabcabcabc"],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["abccbaabccba"],
+        "output":  2
+    },
+    {
+        "desc":    "No pattern",
+        "source":  " https://uxdesign.cc/an-approach-to-problem-solving-a-google-foobar-case-study-6e6b39936803",
+        "input":   ["lsdkgfjosien"],
+        "output":  1
+    },
+    {
+        "desc":    "Single character difference in pattern",
+        "source":  " https://uxdesign.cc/an-approach-to-problem-solving-a-google-foobar-case-study-6e6b39936803",
+        "input":   ["abcdabcy"],
+        "output":  1
+    },
+    {
+        "desc":    "Single character difference in length of pattern",
+        "source":  " https://uxdesign.cc/an-approach-to-problem-solving-a-google-foobar-case-study-6e6b39936803",
+        "input":   ["abcdefgabcdef"],
+        "output":  1
+    },
+    {
+        "desc":    "Repeated single character.  Number of instances divisible by multiple numbers",
+        "source":  " https://uxdesign.cc/an-approach-to-problem-solving-a-google-foobar-case-study-6e6b39936803",
+        "input":   ["aaaaaaaa"],
+        "output":  8
+    },
+    {
+        "desc":    "Single character constraining number of repeats of substring.",
+        "source":  " https://uxdesign.cc/an-approach-to-problem-solving-a-google-foobar-case-study-6e6b39936803",
+        "input":   ["aaaabaaaab"],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case:  Three-fold symmetry (non-power of two)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["abcabcabc"],
+        "output":  3
+    },
+    {
+        "desc":    "Generic case:  Five-fold symmetry",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["ababababab"],
+        "output":  5
+    },
+    {
+        "desc":    "Corner case:  Minimum length input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["z"],
+        "output":  1
+    },
+    {
+        "desc":    "Corner case:  Maximum length input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxo"],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case:  Use every letter between a and z (and seven-fold symmetry)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"],
+        "output":  7
+    }
+]

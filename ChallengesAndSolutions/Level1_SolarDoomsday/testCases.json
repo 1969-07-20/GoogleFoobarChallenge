@@ -1,0 +1,74 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [12],
+        "output":  [9, 1, 1, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [15324],
+        "output":  [15129, 169, 25, 1]
+    },
+    {
+        "desc":    "Corner case:  Minimum input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1],
+        "output":  [1]
+    },
+    {
+        "desc":    "Corner case:  Maximum input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1000000],
+        "output":  [1000000]
+    },
+    {
+        "desc":    "Generic case:  Single square greater than 1",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [169],
+        "output":  [169]
+    },
+    {
+        "desc":    "Generic case:  Output is a single square which is the sum of a pair of smaller squares",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [25],
+        "output":  [25]
+    },
+    {
+        "desc":    "Generic case:  Output is a pair of numbers greater than 1",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [13],
+        "output":  [9, 4]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [987654],
+        "output":  [986049, 1600, 4, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [123456],
+        "output":  [123201, 225, 25, 4, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [32679],
+        "output":  [32400, 256, 16, 4, 1, 1, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [4592],
+        "output":  [4489, 100, 1, 1, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [160090],
+        "output":  [160000, 81, 9]
+    }
+]

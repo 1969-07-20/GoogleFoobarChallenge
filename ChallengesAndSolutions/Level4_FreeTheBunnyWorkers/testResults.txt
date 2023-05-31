@@ -1,0 +1,1448 @@
+OfflineTester:  version 0.1.0 (2023-05-29a)
+
+Challenge:  Level4_FreeTheBunnyWorkers
+
+
+
+TEST CASE 0:
+       Description:  Generic case
+  Test case source:  Problem statement
+             Input:  [2, 1]
+    Correct output:  [[0], [0]]
+
+TEST CASE 1:
+       Description:  Generic case
+  Test case source:  Problem statement
+             Input:  [4, 4]
+    Correct output:  [[0], [1], [2], [3]]
+
+TEST CASE 2:
+       Description:  Generic case
+  Test case source:  Problem statement
+             Input:  [5, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+
+TEST CASE 3:
+       Description:  Generic case
+  Test case source:  Problem statement
+             Input:  [3, 1]
+    Correct output:  [[0], [0], [0]]
+
+TEST CASE 4:
+       Description:  Generic case
+  Test case source:  Problem statement
+             Input:  [2, 2]
+    Correct output:  [[0], [1]]
+
+TEST CASE 5:
+       Description:  Generic case
+  Test case source:  Problem statement
+             Input:  [3, 2]
+    Correct output:  [[0, 1], [0, 2], [1, 2]]
+
+TEST CASE 6:
+       Description:  Corner case:  minumum value for num_required
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [7, 0]
+    Correct output:  [[], [], [], [], [], [], []]
+
+TEST CASE 7:
+       Description:  Corner case:  maximum value for num_required
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [6, 6]
+    Correct output:  [[0], [1], [2], [3], [4], [5]]
+
+TEST CASE 8:
+       Description:  Corner case:  minumum value for num_bunnies
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [1, 1]
+    Correct output:  [[0]]
+
+TEST CASE 9:
+       Description:  Corner case:  minumum value for num_bunnies
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [9, 2]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+
+TEST CASE 10:
+       Description:  Corner case:  maximum sized output
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [9, 5]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+
+TEST CASE 11:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [4, 2]
+    Correct output:  [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+
+TEST CASE 12:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [7, 2]
+    Correct output:  [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+
+TEST CASE 13:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [5, 4]
+    Correct output:  [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+
+TEST CASE 14:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [7, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+
+TEST CASE 15:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [8, 6]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+
+TEST CASE 16:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [4, 1]
+    Correct output:  [[0], [0], [0], [0]]
+
+TEST CASE 17:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [6, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+
+TEST CASE 18:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [5, 2]
+    Correct output:  [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+
+TEST CASE 19:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [8, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+
+TEST CASE 20:
+       Description:  Generic case
+  Test case source:  https://github.com/1969-07-20/GoogleFoobarChallenge
+             Input:  [9, 8]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+Loading solutions
+
+
+SOLUTIONS
+solution1:  Status:  LOADED  Source:  https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level4_FreeTheBunnyWorkers/freeTheBunnyWorkers.py 
+solution2:  Status:  LOADED  Source:  https://github.com/arinkverma/google-foobar/blob/master/4.1_bunny.py 
+solution3:  Status:  LOADED  Source:  https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-1_free_the_bunny_prisoners.py 
+solution4:  Status:  LOADED  Source:  https://github.com/hirenvasani/foobar/blob/master/free_the_bunny_prisoners.py 
+solution5:  Status:  LOADED  Source:  https://github.com/rajakodumuri/Google-Foobar.git 
+solution6:  Status:  LOADED  Source:  https://github.com/oasys/google-foobar/blob/main/free-the-bunny-workers/solution.py 
+solution7:  Status:  LOADED  Source:  https://www.derekmoran.dev/software-development/google-foobar-level-4b 
+solution8:  Status:  LOADED  Source:  https://vitaminac.github.io/Google-Foobar-Free-the-Bunny-Prisoners 
+solution9:  Status:  LOADED  Source:  https://gist.github.com/hariketsheth/9a300b79b2c5ec24bd49c57bf36e8954 
+solutionA:  Status:  LOADED  Source:  https://gitlab.com/DevAlone/google_foobar_solutions/-/blob/master/level%204/Free%20the%20Bunny%20Prisoners/main.py 
+solutionB:  Status:  LOADED  Source:  https://github.com/franklinvp/foobar/blob/master/foobar2020/solutionProblem3.py 
+
+
+============================================
+TEST CASE 0:
+============================================
+
+             Input:  [2, 1]
+    Correct output:  [[0], [0]]
+
+  solution1:  pass       [[0], [0]]
+  solution2:  pass       [[0], [0]]
+  solution3:  pass       [[0], [0]]
+  solution4:  pass       [[0], [0]]
+  solution5:  pass       [[0], [0]]
+  solution6:  pass       [[0], [0]]
+  solution7:  pass       [[0], [0]]
+  solution8:  pass       [[0], [0]]
+  solution9:  pass       [[0], [0]]
+  solutionA:  pass       [[0], [0]]
+  solutionB:  pass       [[0], [0]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.30e-06) FOR TEST CASE 0
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  9.23e-06   1.11e+00     .                            |----+                        .
+ solution2:  8.19e-06   9.86e-01     .                           +|                             .
+ solution3:  7.89e-06   9.50e-01     .                          +-|                             .
+ solution4:  8.32e-06   1.00e+00     .                            +                             .
+ solution5:  8.33e-06   1.00e+00     .                            +                             .
+ solution6:  8.30e-06   1.00e+00     .                            +                             .
+ solution7:  9.36e-06   1.13e+00     .                            |----+                        .
+ solution8:  8.00e-06   9.64e-01     .                          +-|                             .
+ solution9:  7.90e-06   9.51e-01     .                          +-|                             .
+ solutionA:  8.12e-06   9.78e-01     .                           +|                             .
+ solutionB:  8.81e-06   1.06e+00     .                            |--+                          .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.30e-06 kb) FOR TEST CASE 0
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  4.02e-01    1.00e+00     .                            +                             .
+ solution2:  4.00e-01    1.00e+00     .                            +                             .
+ solution3:  2.96e-01    7.40e-01     .               +------------|                             .
+ solution4:  4.00e-01    1.00e+00     .                            +                             .
+ solution5:  3.36e-01    8.40e-01     .                     +------|                             .
+ solution6:  7.12e-01    1.78e+00     .                            |------------------------+    .
+ solution7:  6.64e-01    1.66e+00     .                            |---------------------+       .
+ solution8:  2.96e-01    7.40e-01     .               +------------|                             .
+ solution9:  2.96e-01    7.40e-01     .               +------------|                             .
+ solutionA:  2.80e-01    7.00e-01     .             +--------------|                             .
+ solutionB:  6.00e-01    1.50e+00     .                            |----------------+            .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 1:
+============================================
+
+             Input:  [4, 4]
+    Correct output:  [[0], [1], [2], [3]]
+
+  solution1:  pass       [[0], [1], [2], [3]]
+  solution2:  pass       [[0], [1], [2], [3]]
+  solution3:  pass       [[0], [1], [2], [3]]
+  solution4:  pass       [[0], [1], [2], [3]]
+  solution5:  pass       [[0], [1], [2], [3]]
+  solution6:  pass       [[0], [1], [2], [3]]
+  solution7:  pass       [[0], [1], [2], [3]]
+  solution8:  pass       [[0], [1], [2], [3]]
+  solution9:  pass       [[0], [1], [2], [3]]
+  solutionA:  pass       [[0], [1], [2], [3]]
+  solutionB:  pass       [[0], [1], [2], [3]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.67e-06) FOR TEST CASE 1
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.31e-05   1.51e+00     .                            |----------------+            .
+ solution2:  8.61e-06   9.93e-01     .                            +                             .
+ solution3:  8.17e-06   9.43e-01     .                         +--|                             .
+ solution4:  8.67e-06   1.00e+00     .                            +                             .
+ solution5:  8.69e-06   1.00e+00     .                            +                             .
+ solution6:  8.80e-06   1.02e+00     .                            |+                            .
+ solution7:  9.79e-06   1.13e+00     .                            |----+                        .
+ solution8:  8.27e-06   9.53e-01     .                          +-|                             .
+ solution9:  8.27e-06   9.54e-01     .                          +-|                             .
+ solutionA:  8.40e-06   9.69e-01     .                           +|                             .
+ solutionB:  1.03e-05   1.19e+00     .                            |------+                      .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.67e-06 kb) FOR TEST CASE 1
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  8.80e-01    1.90e+00     .                  |-----------------+ .                   .
+ solution2:  4.64e-01    1.00e+00     .                  +                   .                   .
+ solution3:  3.52e-01    7.59e-01     .          +-------|                   .                   .
+ solution4:  4.64e-01    1.00e+00     .                  +                   .                   .
+ solution5:  4.16e-01    8.97e-01     .               +--|                   .                   .
+ solution6:  8.08e-01    1.74e+00     .                  |---------------+   .                   .
+ solution7:  9.60e-01    2.07e+00     .                  |--------------------+                  .
+ solution8:  3.52e-01    7.59e-01     .          +-------|                   .                   .
+ solution9:  3.52e-01    7.59e-01     .          +-------|                   .                   .
+ solutionA:  3.76e-01    8.10e-01     .            +-----|                   .                   .
+ solutionB:  7.44e-01    1.60e+00     .                  |-------------+     .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 2:
+============================================
+
+             Input:  [5, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (9.99e-06) FOR TEST CASE 2
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.94e-05   1.94e+00     .                            |---------------------------+ .
+ solution2:  9.99e-06   1.00e+00     .                            +                             .
+ solution3:  9.39e-06   9.41e-01     .                         +--|                             .
+ solution4:  9.89e-06   9.90e-01     .                            +                             .
+ solution5:  1.34e-05   1.34e+00     .                            |-----------+                 .
+ solution6:  1.04e-05   1.04e+00     .                            |-+                           .
+ solution7:  1.49e-05   1.49e+00     .                            |----------------+            .
+ solution8:  9.26e-06   9.27e-01     .                         +--|                             .
+ solution9:  9.28e-06   9.30e-01     .                         +--|                             .
+ solutionA:  9.45e-06   9.46e-01     .                          +-|                             .
+ solutionB:  1.52e-05   1.53e+00     .                            |-----------------+           .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (9.99e-06 kb) FOR TEST CASE 2
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.86e+00    2.19e+00     .                  |---------------------+                 .
+ solution2:  8.48e-01    1.00e+00     .                  +                   .                   .
+ solution3:  5.92e-01    6.98e-01     .        +---------|                   .                   .
+ solution4:  8.48e-01    1.00e+00     .                  +                   .                   .
+ solution5:  1.31e+00    1.55e+00     .                  |------------+      .                   .
+ solution6:  1.06e+00    1.25e+00     .                  |------+            .                   .
+ solution7:  1.00e+00    1.18e+00     .                  |----+              .                   .
+ solution8:  5.92e-01    6.98e-01     .        +---------|                   .                   .
+ solution9:  5.92e-01    6.98e-01     .        +---------|                   .                   .
+ solutionA:  6.64e-01    7.83e-01     .           +------|                   .                   .
+ solutionB:  1.05e+00    1.24e+00     .                  |-----+             .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 3:
+============================================
+
+             Input:  [3, 1]
+    Correct output:  [[0], [0], [0]]
+
+  solution1:  pass       [[0], [0], [0]]
+  solution2:  pass       [[0], [0], [0]]
+  solution3:  pass       [[0], [0], [0]]
+  solution4:  pass       [[0], [0], [0]]
+  solution5:  pass       [[0], [0], [0]]
+  solution6:  pass       [[0], [0], [0]]
+  solution7:  pass       [[0], [0], [0]]
+  solution8:  pass       [[0], [0], [0]]
+  solution9:  pass       [[0], [0], [0]]
+  solutionA:  pass       [[0], [0], [0]]
+  solutionB:  pass       [[0], [0], [0]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.20e-06) FOR TEST CASE 3
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.02e-05   1.25e+00     .                            |--------+                    .
+ solution2:  8.20e-06   1.00e+00     .                            +                             .
+ solution3:  7.87e-06   9.60e-01     .                          +-|                             .
+ solution4:  8.18e-06   9.98e-01     .                            +                             .
+ solution5:  8.46e-06   1.03e+00     .                            |+                            .
+ solution6:  8.31e-06   1.01e+00     .                            |+                            .
+ solution7:  1.03e-05   1.25e+00     .                            |---------+                   .
+ solution8:  7.92e-06   9.67e-01     .                           +|                             .
+ solution9:  7.88e-06   9.61e-01     .                          +-|                             .
+ solutionA:  8.01e-06   9.77e-01     .                           +|                             .
+ solutionB:  8.74e-06   1.07e+00     .                            |--+                          .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.20e-06 kb) FOR TEST CASE 3
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  4.51e-01    1.04e+00     .             |+             .              .              .
+ solution2:  4.32e-01    1.00e+00     .             +              .              .              .
+ solution3:  3.36e-01    7.78e-01     .        +----|              .              .              .
+ solution4:  4.32e-01    1.00e+00     .             +              .              .              .
+ solution5:  3.68e-01    8.52e-01     .          +--|              .              .              .
+ solution6:  7.44e-01    1.72e+00     .             |-----------+  .              .              .
+ solution7:  2.07e+00    4.80e+00     .             |---------------------------------+          .
+ solution8:  3.36e-01    7.78e-01     .        +----|              .              .              .
+ solution9:  3.36e-01    7.78e-01     .        +----|              .              .              .
+ solutionA:  3.12e-01    7.22e-01     .      +------|              .              .              .
+ solutionB:  6.32e-01    1.46e+00     .             |-------+      .              .              .
+                                      /             x              x              x              x
+                                      2             1              2              4              8
+                                                                                                  
+
+
+============================================
+TEST CASE 4:
+============================================
+
+             Input:  [2, 2]
+    Correct output:  [[0], [1]]
+
+  solution1:  pass       [[0], [1]]
+  solution2:  pass       [[0], [1]]
+  solution3:  pass       [[0], [1]]
+  solution4:  pass       [[0], [1]]
+  solution5:  pass       [[0], [1]]
+  solution6:  pass       [[0], [1]]
+  solution7:  pass       [[0], [1]]
+  solution8:  pass       [[0], [1]]
+  solution9:  pass       [[0], [1]]
+  solutionA:  pass       [[0], [1]]
+  solutionB:  pass       [[0], [1]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.18e-06) FOR TEST CASE 4
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  9.45e-06   1.16e+00     .                            |-----+                       .
+ solution2:  8.18e-06   1.00e+00     .                            +                             .
+ solution3:  7.90e-06   9.66e-01     .                           +|                             .
+ solution4:  8.28e-06   1.01e+00     .                            |+                            .
+ solution5:  8.10e-06   9.90e-01     .                            +                             .
+ solution6:  8.20e-06   1.00e+00     .                            +                             .
+ solution7:  8.99e-06   1.10e+00     .                            |---+                         .
+ solution8:  7.88e-06   9.64e-01     .                          +-|                             .
+ solution9:  7.79e-06   9.52e-01     .                          +-|                             .
+ solutionA:  7.95e-06   9.72e-01     .                           +|                             .
+ solutionB:  8.98e-06   1.10e+00     .                            |---+                         .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.18e-06 kb) FOR TEST CASE 4
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  5.76e-01    1.44e+00     .                            |---------------+             .
+ solution2:  4.00e-01    1.00e+00     .                            +                             .
+ solution3:  2.88e-01    7.20e-01     .              +-------------|                             .
+ solution4:  4.00e-01    1.00e+00     .                            +                             .
+ solution5:  2.88e-01    7.20e-01     .              +-------------|                             .
+ solution6:  7.44e-01    1.86e+00     .                            |-------------------------+   .
+ solution7:  6.16e-01    1.54e+00     .                            |-----------------+           .
+ solution8:  2.88e-01    7.20e-01     .              +-------------|                             .
+ solution9:  2.88e-01    7.20e-01     .              +-------------|                             .
+ solutionA:  3.12e-01    7.80e-01     .                 +----------|                             .
+ solutionB:  6.80e-01    1.70e+00     .                            |----------------------+      .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 5:
+============================================
+
+             Input:  [3, 2]
+    Correct output:  [[0, 1], [0, 2], [1, 2]]
+
+  solution1:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution2:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution3:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution4:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution5:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution6:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution7:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution8:  pass       [[0, 1], [0, 2], [1, 2]]
+  solution9:  pass       [[0, 1], [0, 2], [1, 2]]
+  solutionA:  pass       [[0, 1], [0, 2], [1, 2]]
+  solutionB:  pass       [[0, 1], [0, 2], [1, 2]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.59e-06) FOR TEST CASE 5
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.09e-05   1.27e+00     .                            |---------+                   .
+ solution2:  8.65e-06   1.01e+00     .                            +                             .
+ solution3:  8.23e-06   9.58e-01     .                          +-|                             .
+ solution4:  8.59e-06   1.00e+00     .                            +                             .
+ solution5:  9.15e-06   1.07e+00     .                            |--+                          .
+ solution6:  8.54e-06   9.94e-01     .                            +                             .
+ solution7:  1.01e-05   1.18e+00     .                            |------+                      .
+ solution8:  8.10e-06   9.43e-01     .                         +--|                             .
+ solution9:  8.11e-06   9.44e-01     .                          +-|                             .
+ solutionA:  8.28e-06   9.64e-01     .                          +-|                             .
+ solutionB:  1.00e-05   1.17e+00     .                            |------+                      .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.59e-06 kb) FOR TEST CASE 5
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  7.67e-01    1.65e+00     .                            |--------------------+        .
+ solution2:  4.64e-01    1.00e+00     .                            +                             .
+ solution3:  3.28e-01    7.07e-01     .             +--------------|                             .
+ solution4:  4.64e-01    1.00e+00     .                            +                             .
+ solution5:  5.44e-01    1.17e+00     .                            |------+                      .
+ solution6:  7.76e-01    1.67e+00     .                            |---------------------+       .
+ solution7:  9.20e-01    1.98e+00     .                            |----------------------------+.
+ solution8:  3.28e-01    7.07e-01     .             +--------------|                             .
+ solution9:  3.28e-01    7.07e-01     .             +--------------|                             .
+ solutionA:  3.44e-01    7.41e-01     .               +------------|                             .
+ solutionB:  8.08e-01    1.74e+00     .                            |-----------------------+     .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 6:
+============================================
+
+             Input:  [7, 0]
+    Correct output:  [[], [], [], [], [], [], []]
+
+  solution1:  pass       [[], [], [], [], [], [], []]
+  solution2:  pass       [[], [], [], [], [], [], []]
+  solution3:  pass       [[], [], [], [], [], [], []]
+  solution4:  pass       [[], [], [], [], [], [], []]
+  solution5:  pass       [[], [], [], [], [], [], []]
+  solution6:  pass       [[], [], [], [], [], [], []]
+  solution7:  pass       [[], [], [], [], [], [], []]
+  solution8:  pass       [[], [], [], [], [], [], []]
+  solution9:  pass       [[], [], [], [], [], [], []]
+  solutionA:  pass       [[], [], [], [], [], [], []]
+  solutionB:  pass       [[], [], [], [], [], [], []]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (7.82e-06) FOR TEST CASE 6
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  7.68e-06   9.82e-01     .                           +|                             .
+ solution2:  8.30e-06   1.06e+00     .                            |--+                          .
+ solution3:  7.82e-06   1.00e+00     .                            +                             .
+ solution4:  8.22e-06   1.05e+00     .                            |-+                           .
+ solution5:  7.78e-06   9.96e-01     .                            +                             .
+ solution6:  8.71e-06   1.12e+00     .                            |----+                        .
+ solution7:  7.74e-06   9.90e-01     .                            +                             .
+ solution8:  7.77e-06   9.95e-01     .                            +                             .
+ solution9:  7.81e-06   9.99e-01     .                            +                             .
+ solutionA:  8.09e-06   1.04e+00     .                            |+                            .
+ solutionB:  8.03e-06   1.03e+00     .                            |+                            .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (7.82e-06 kb) FOR TEST CASE 6
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.56e-01    8.00e-01     .            +-----|                   .                   .
+ solution2:  3.44e-01    1.07e+00     .                  |-+                 .                   .
+ solution3:  2.64e-01    8.25e-01     .             +----|                   .                   .
+ solution4:  3.44e-01    1.07e+00     .                  |-+                 .                   .
+ solution5:  2.56e-01    8.00e-01     .            +-----|                   .                   .
+ solution6:  6.48e-01    2.02e+00     .                  |-------------------+                   .
+ solution7:  4.96e-01    1.55e+00     .                  |------------+      .                   .
+ solution8:  2.64e-01    8.25e-01     .             +----|                   .                   .
+ solution9:  2.64e-01    8.25e-01     .             +----|                   .                   .
+ solutionA:  3.20e-01    1.00e+00     .                  +                   .                   .
+ solutionB:  5.28e-01    1.65e+00     .                  |-------------+     .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 7:
+============================================
+
+             Input:  [6, 6]
+    Correct output:  [[0], [1], [2], [3], [4], [5]]
+
+  solution1:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution2:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution3:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution4:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution5:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution6:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution7:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution8:  pass       [[0], [1], [2], [3], [4], [5]]
+  solution9:  pass       [[0], [1], [2], [3], [4], [5]]
+  solutionA:  pass       [[0], [1], [2], [3], [4], [5]]
+  solutionB:  pass       [[0], [1], [2], [3], [4], [5]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.67e-06) FOR TEST CASE 7
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  2.39e-05   2.76e+00     .                  |----------------------------+          .
+ solution2:  8.67e-06   1.00e+00     .                  +                   .                   .
+ solution3:  8.30e-06   9.57e-01     .                 +|                   .                   .
+ solution4:  8.67e-06   1.00e+00     .                  +                   .                   .
+ solution5:  9.03e-06   1.04e+00     .                  |+                  .                   .
+ solution6:  9.62e-06   1.11e+00     .                  |--+                .                   .
+ solution7:  1.03e-05   1.18e+00     .                  |----+              .                   .
+ solution8:  8.30e-06   9.57e-01     .                 +|                   .                   .
+ solution9:  8.29e-06   9.55e-01     .                 +|                   .                   .
+ solutionA:  8.45e-06   9.74e-01     .                 +|                   .                   .
+ solutionB:  1.12e-05   1.29e+00     .                  |------+            .                   .
+                                     /                  x                   x                   x
+                                     2                  1                   2                   4
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.67e-06 kb) FOR TEST CASE 7
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.26e+00    2.24e+00     .                  |----------------------+                .
+ solution2:  5.60e-01    1.00e+00     .                  +                   .                   .
+ solution3:  4.48e-01    8.00e-01     .            +-----|                   .                   .
+ solution4:  5.60e-01    1.00e+00     .                  +                   .                   .
+ solution5:  5.28e-01    9.43e-01     .                +-|                   .                   .
+ solution6:  9.04e-01    1.61e+00     .                  |-------------+     .                   .
+ solution7:  7.76e-01    1.39e+00     .                  |--------+          .                   .
+ solution8:  4.48e-01    8.00e-01     .            +-----|                   .                   .
+ solution9:  4.48e-01    8.00e-01     .            +-----|                   .                   .
+ solutionA:  4.72e-01    8.43e-01     .             +----|                   .                   .
+ solutionB:  8.72e-01    1.56e+00     .                  |------------+      .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 8:
+============================================
+
+             Input:  [1, 1]
+    Correct output:  [[0]]
+
+  solution1:  pass       [[0]]
+  solution2:  pass       [[0]]
+  solution3:  pass       [[0]]
+  solution4:  pass       [[0]]
+  solution5:  pass       [[0]]
+  solution6:  pass       [[0]]
+  solution7:  pass       [[0]]
+  solution8:  pass       [[0]]
+  solution9:  pass       [[0]]
+  solutionA:  pass       [[0]]
+  solutionB:  pass       [[0]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.01e-06) FOR TEST CASE 8
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  8.81e-06   1.10e+00     .                            |---+                         .
+ solution2:  8.09e-06   1.01e+00     .                            +                             .
+ solution3:  7.80e-06   9.74e-01     .                           +|                             .
+ solution4:  8.08e-06   1.01e+00     .                            +                             .
+ solution5:  8.01e-06   1.00e+00     .                            +                             .
+ solution6:  7.99e-06   9.98e-01     .                            +                             .
+ solution7:  8.67e-06   1.08e+00     .                            |--+                          .
+ solution8:  7.79e-06   9.72e-01     .                           +|                             .
+ solution9:  7.90e-06   9.86e-01     .                           +|                             .
+ solutionA:  7.91e-06   9.87e-01     .                           +|                             .
+ solutionB:  8.55e-06   1.07e+00     .                            |--+                          .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.01e-06 kb) FOR TEST CASE 8
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  3.35e-01    1.00e+00     .                  +                   .                   .
+ solution2:  3.36e-01    1.00e+00     .                  +                   .                   .
+ solution3:  2.56e-01    7.64e-01     .           +------|                   .                   .
+ solution4:  3.36e-01    1.00e+00     .                  +                   .                   .
+ solution5:  2.64e-01    7.88e-01     .           +------|                   .                   .
+ solution6:  6.48e-01    1.93e+00     .                  |------------------+.                   .
+ solution7:  6.96e-01    2.08e+00     .                  |--------------------+                  .
+ solution8:  2.56e-01    7.64e-01     .           +------|                   .                   .
+ solution9:  2.56e-01    7.64e-01     .           +------|                   .                   .
+ solutionA:  2.48e-01    7.40e-01     .          +-------|                   .                   .
+ solutionB:  6.00e-01    1.79e+00     .                  |----------------+  .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 9:
+============================================
+
+             Input:  [9, 2]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 8], [0, 1, 2, 3, 4, 5, 7, 8], [0, 1, 2, 3, 4, 6, 7, 8], [0, 1, 2, 3, 5, 6, 7, 8], [0, 1, 2, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8], [0, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.19e-05) FOR TEST CASE 9
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.24e-04   1.04e+01     .          |---------------------------------------+       .
+ solution2:  1.19e-05   1.00e+00     .          +           .           .           .           .
+ solution3:  1.07e-05   9.05e-01     .         +|           .           .           .           .
+ solution4:  1.18e-05   9.95e-01     .          +           .           .           .           .
+ solution5:  2.09e-05   1.76e+00     .          |---------+ .           .           .           .
+ solution6:  1.30e-05   1.10e+00     .          |-+         .           .           .           .
+ solution7:  1.05e-04   8.84e+00     .          |------------------------------------+          .
+ solution8:  1.07e-05   9.06e-01     .         +|           .           .           .           .
+ solution9:  1.08e-05   9.09e-01     .         +|           .           .           .           .
+ solutionA:  1.11e-05   9.34e-01     .         +|           .           .           .           .
+ solutionB:  1.92e-05   1.62e+00     .          |--------+  .           .           .           .
+                                     /          x           x           x           x           x
+                                     2          1           2           4           8           1
+                                                                                                6
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.19e-05 kb) FOR TEST CASE 9
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.25e+00    1.66e+00     .                            |---------------------+       .
+ solution2:  1.36e+00    1.00e+00     .                            +                             .
+ solution3:  9.52e-01    7.00e-01     .             +--------------|                             .
+ solution4:  1.36e+00    1.00e+00     .                            +                             .
+ solution5:  1.86e+00    1.36e+00     .                            |------------+                .
+ solution6:  1.35e+00    9.94e-01     .                            +                             .
+ solution7:  1.82e+00    1.34e+00     .                            |-----------+                 .
+ solution8:  9.52e-01    7.00e-01     .             +--------------|                             .
+ solution9:  9.52e-01    7.00e-01     .             +--------------|                             .
+ solutionA:  9.84e-01    7.24e-01     .              +-------------|                             .
+ solutionB:  1.50e+00    1.11e+00     .                            |---+                         .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 10:
+============================================
+
+             Input:  [9, 5]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 120, 121, 122, 123, 124], [0, 5, 6, 7, 8, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30, 35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 70, 71, 72, 73, 80, 81, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 100, 101, 102, 103, 105, 106, 107, 108, 109, 110, 115, 116, 117, 118, 120, 121, 122, 123, 125], [1, 5, 9, 10, 11, 15, 19, 20, 21, 25, 26, 27, 31, 32, 33, 35, 39, 40, 41, 45, 46, 47, 51, 52, 53, 55, 56, 57, 61, 62, 63, 65, 66, 67, 69, 70, 74, 75, 76, 80, 81, 82, 86, 87, 88, 90, 91, 92, 96, 97, 98, 100, 101, 102, 104, 105, 106, 107, 111, 112, 113, 115, 116, 117, 119, 120, 121, 122, 124, 125], [2, 6, 9, 12, 13, 16, 19, 22, 23, 25, 28, 29, 31, 32, 34, 36, 39, 42, 43, 45, 48, 49, 51, 52, 54, 55, 58, 59, 61, 62, 64, 65, 66, 68, 69, 71, 74, 77, 78, 80, 83, 84, 86, 87, 89, 90, 93, 94, 96, 97, 99, 100, 101, 103, 104, 105, 108, 109, 111, 112, 114, 115, 116, 118, 119, 120, 121, 123, 124, 125], [3, 7, 10, 12, 14, 17, 20, 22, 24, 26, 28, 30, 31, 33, 34, 37, 40, 42, 44, 46, 48, 50, 51, 53, 54, 56, 58, 60, 61, 63, 64, 65, 67, 68, 69, 72, 75, 77, 79, 81, 83, 85, 86, 88, 89, 91, 93, 95, 96, 98, 99, 100, 102, 103, 104, 106, 108, 110, 111, 113, 114, 115, 117, 118, 119, 120, 122, 123, 124, 125], [4, 8, 11, 13, 14, 18, 21, 23, 24, 27, 29, 30, 32, 33, 34, 38, 41, 43, 44, 47, 49, 50, 52, 53, 54, 57, 59, 60, 62, 63, 64, 66, 67, 68, 69, 73, 76, 78, 79, 82, 84, 85, 87, 88, 89, 92, 94, 95, 97, 98, 99, 101, 102, 103, 104, 107, 109, 110, 112, 113, 114, 116, 117, 118, 119, 121, 122, 123, 124, 125]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (4.00e-05) FOR TEST CASE 10
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.94e-04   4.86e+00     .             |---------------------------------+          .
+ solution2:  3.94e-05   9.85e-01     .             +              .              .              .
+ solution3:  3.56e-05   8.89e-01     .           +-|              .              .              .
+ solution4:  4.00e-05   1.00e+00     .             +              .              .              .
+ solution5:  9.24e-05   2.31e+00     .             |-----------------+           .              .
+ solution6:  5.49e-05   1.37e+00     .             |------+       .              .              .
+ solution7:  1.06e-04   2.65e+00     .             |--------------------+        .              .
+ solution8:  3.52e-05   8.81e-01     .           +-|              .              .              .
+ solution9:  3.57e-05   8.93e-01     .           +-|              .              .              .
+ solutionA:  3.64e-05   9.10e-01     .           +-|              .              .              .
+ solutionB:  1.14e-04   2.86e+00     .             |----------------------+      .              .
+                                     /             x              x              x              x
+                                     2             1              2              4              8
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (4.00e-05 kb) FOR TEST CASE 10
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.51e+01    2.18e+00     .                  |---------------------+                 .
+ solution2:  7.88e+00    1.14e+00     .                  |---+               .                   .
+ solution3:  5.82e+00    8.44e-01     .             +----|                   .                   .
+ solution4:  7.88e+00    1.14e+00     .                  |---+               .                   .
+ solution5:  1.81e+01    2.63e+00     .                  |---------------------------+           .
+ solution6:  7.14e+00    1.03e+00     .                  |+                  .                   .
+ solution7:  6.90e+00    1.00e+00     .                  +                   .                   .
+ solution8:  5.82e+00    8.44e-01     .             +----|                   .                   .
+ solution9:  5.82e+00    8.44e-01     .             +----|                   .                   .
+ solutionA:  6.78e+00    9.81e-01     .                  +                   .                   .
+ solutionB:  6.38e+00    9.24e-01     .                +-|                   .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 11:
+============================================
+
+             Input:  [4, 2]
+    Correct output:  [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+
+  solution1:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution2:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution3:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution4:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution5:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution6:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution7:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution8:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solution9:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solutionA:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+  solutionB:  pass       [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.84e-06) FOR TEST CASE 11
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.30e-05   1.47e+00     .                            |---------------+             .
+ solution2:  8.81e-06   9.98e-01     .                            +                             .
+ solution3:  8.41e-06   9.51e-01     .                          +-|                             .
+ solution4:  8.84e-06   1.00e+00     .                            +                             .
+ solution5:  1.02e-05   1.16e+00     .                            |-----+                       .
+ solution6:  8.97e-06   1.01e+00     .                            |+                            .
+ solution7:  1.20e-05   1.36e+00     .                            |------------+                .
+ solution8:  8.41e-06   9.52e-01     .                          +-|                             .
+ solution9:  8.37e-06   9.47e-01     .                          +-|                             .
+ solutionA:  8.56e-06   9.69e-01     .                           +|                             .
+ solutionB:  1.11e-05   1.26e+00     .                            |---------+                   .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.84e-06 kb) FOR TEST CASE 11
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  9.12e-01    1.84e+00     .                            |-------------------------+   .
+ solution2:  4.96e-01    1.00e+00     .                            +                             .
+ solution3:  3.68e-01    7.42e-01     .               +------------|                             .
+ solution4:  4.96e-01    1.00e+00     .                            +                             .
+ solution5:  6.08e-01    1.23e+00     .                            |--------+                    .
+ solution6:  8.08e-01    1.63e+00     .                            |--------------------+        .
+ solution7:  7.76e-01    1.56e+00     .                            |------------------+          .
+ solution8:  3.68e-01    7.42e-01     .               +------------|                             .
+ solution9:  3.68e-01    7.42e-01     .               +------------|                             .
+ solutionA:  3.76e-01    7.58e-01     .                +-----------|                             .
+ solutionB:  7.92e-01    1.60e+00     .                            |-------------------+         .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 12:
+============================================
+
+             Input:  [7, 2]
+    Correct output:  [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 6], [0, 1, 2, 3, 5, 6], [0, 1, 2, 4, 5, 6], [0, 1, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.04e-05) FOR TEST CASE 12
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  3.96e-05   3.79e+00     .                  |-------------------------------------+ .
+ solution2:  1.03e-05   9.90e-01     .                  +                   .                   .
+ solution3:  9.68e-06   9.27e-01     .                +-|                   .                   .
+ solution4:  1.04e-05   1.00e+00     .                  +                   .                   .
+ solution5:  1.58e-05   1.52e+00     .                  |-----------+       .                   .
+ solution6:  1.10e-05   1.05e+00     .                  |-+                 .                   .
+ solution7:  3.44e-05   3.30e+00     .                  |---------------------------------+     .
+ solution8:  9.59e-06   9.19e-01     .                +-|                   .                   .
+ solution9:  9.58e-06   9.17e-01     .                +-|                   .                   .
+ solutionA:  9.82e-06   9.41e-01     .                +-|                   .                   .
+ solutionB:  1.55e-05   1.48e+00     .                  |----------+        .                   .
+                                     /                  x                   x                   x
+                                     2                  1                   2                   4
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.04e-05 kb) FOR TEST CASE 12
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.70e+00    1.74e+00     .                            |----------------------+      .
+ solution2:  9.76e-01    1.00e+00     .                            +                             .
+ solution3:  7.44e-01    7.62e-01     .                +-----------|                             .
+ solution4:  9.76e-01    1.00e+00     .                            +                             .
+ solution5:  1.44e+00    1.48e+00     .                            |----------------+            .
+ solution6:  1.16e+00    1.19e+00     .                            |------+                      .
+ solution7:  1.75e+00    1.80e+00     .                            |------------------------+    .
+ solution8:  7.44e-01    7.62e-01     .                +-----------|                             .
+ solution9:  7.44e-01    7.62e-01     .                +-----------|                             .
+ solutionA:  7.28e-01    7.46e-01     .                +-----------|                             .
+ solutionB:  1.23e+00    1.26e+00     .                            |---------+                   .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 13:
+============================================
+
+             Input:  [5, 4]
+    Correct output:  [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+
+  solution1:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution2:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution3:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution4:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution5:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution6:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution7:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution8:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solution9:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solutionA:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+  solutionB:  pass       [[0, 1, 2, 3], [0, 4, 5, 6], [1, 4, 7, 8], [2, 5, 7, 9], [3, 6, 8, 9]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (9.46e-06) FOR TEST CASE 13
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.90e-05   2.00e+00     .                  |-------------------+                   .
+ solution2:  9.46e-06   1.00e+00     .                  +                   .                   .
+ solution3:  8.82e-06   9.31e-01     .                +-|                   .                   .
+ solution4:  9.46e-06   9.99e-01     .                  +                   .                   .
+ solution5:  1.16e-05   1.22e+00     .                  |-----+             .                   .
+ solution6:  1.02e-05   1.08e+00     .                  |-+                 .                   .
+ solution7:  1.24e-05   1.31e+00     .                  |-------+           .                   .
+ solution8:  8.83e-06   9.33e-01     .                +-|                   .                   .
+ solution9:  8.83e-06   9.33e-01     .                +-|                   .                   .
+ solutionA:  9.01e-06   9.52e-01     .                 +|                   .                   .
+ solutionB:  1.42e-05   1.51e+00     .                  |-----------+       .                   .
+                                     /                  x                   x                   x
+                                     2                  1                   2                   4
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (9.46e-06 kb) FOR TEST CASE 13
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.70e+00    2.72e+00     .                  |----------------------------+          .
+ solution2:  6.24e-01    1.00e+00     .                  +                   .                   .
+ solution3:  4.24e-01    6.79e-01     .       +----------|                   .                   .
+ solution4:  6.24e-01    1.00e+00     .                  +                   .                   .
+ solution5:  1.12e+00    1.79e+00     .                  |----------------+  .                   .
+ solution6:  9.04e-01    1.45e+00     .                  |----------+        .                   .
+ solution7:  1.13e+00    1.81e+00     .                  |----------------+  .                   .
+ solution8:  4.24e-01    6.79e-01     .       +----------|                   .                   .
+ solution9:  4.24e-01    6.79e-01     .       +----------|                   .                   .
+ solutionA:  5.04e-01    8.08e-01     .            +-----|                   .                   .
+ solutionB:  9.92e-01    1.59e+00     .                  |------------+      .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 14:
+============================================
+
+             Input:  [7, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.36e-05) FOR TEST CASE 14
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  4.64e-05   3.40e+00     .                  |----------------------------------+    .
+ solution2:  1.35e-05   9.87e-01     .                  +                   .                   .
+ solution3:  1.23e-05   9.00e-01     .               +--|                   .                   .
+ solution4:  1.36e-05   1.00e+00     .                  +                   .                   .
+ solution5:  2.52e-05   1.85e+00     .                  |-----------------+ .                   .
+ solution6:  1.49e-05   1.09e+00     .                  |--+                .                   .
+ solution7:  3.58e-05   2.62e+00     .                  |---------------------------+           .
+ solution8:  1.26e-05   9.20e-01     .                +-|                   .                   .
+ solution9:  1.24e-05   9.11e-01     .                +-|                   .                   .
+ solutionA:  1.27e-05   9.30e-01     .                +-|                   .                   .
+ solutionB:  2.72e-05   1.99e+00     .                  |-------------------+                   .
+                                     /                  x                   x                   x
+                                     2                  1                   2                   4
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.36e-05 kb) FOR TEST CASE 14
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  3.28e+00    1.95e+00     .                            |---------------------------+ .
+ solution2:  1.68e+00    1.00e+00     .                            +                             .
+ solution3:  1.18e+00    7.05e-01     .             +--------------|                             .
+ solution4:  1.68e+00    1.00e+00     .                            +                             .
+ solution5:  2.69e+00    1.60e+00     .                            |-------------------+         .
+ solution6:  1.74e+00    1.03e+00     .                            |+                            .
+ solution7:  2.15e+00    1.28e+00     .                            |----------+                  .
+ solution8:  1.18e+00    7.05e-01     .             +--------------|                             .
+ solution9:  1.18e+00    7.05e-01     .             +--------------|                             .
+ solutionA:  1.30e+00    7.76e-01     .                 +----------|                             .
+ solutionB:  1.67e+00    9.95e-01     .                            +                             .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 15:
+============================================
+
+             Input:  [8, 6]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], [0, 6, 7, 8, 9, 10, 21, 22, 23, 24, 25, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [1, 6, 11, 12, 13, 14, 21, 26, 27, 28, 29, 36, 37, 38, 39, 46, 47, 48, 49, 50, 51], [2, 7, 11, 15, 16, 17, 22, 26, 30, 31, 32, 36, 40, 41, 42, 46, 47, 48, 52, 53, 54], [3, 8, 12, 15, 18, 19, 23, 27, 30, 33, 34, 37, 40, 43, 44, 46, 49, 50, 52, 53, 55], [4, 9, 13, 16, 18, 20, 24, 28, 31, 33, 35, 38, 41, 43, 45, 47, 49, 51, 52, 54, 55], [5, 10, 14, 17, 19, 20, 25, 29, 32, 34, 35, 39, 42, 44, 45, 48, 50, 51, 53, 54, 55]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.71e-05) FOR TEST CASE 15
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  9.13e-05   5.33e+00     .             |-----------------------------------+        .
+ solution2:  1.70e-05   9.91e-01     .             +              .              .              .
+ solution3:  1.57e-05   9.19e-01     .           +-|              .              .              .
+ solution4:  1.71e-05   1.00e+00     .             +              .              .              .
+ solution5:  3.30e-05   1.93e+00     .             |-------------+.              .              .
+ solution6:  2.38e-05   1.39e+00     .             |------+       .              .              .
+ solution7:  3.26e-05   1.90e+00     .             |-------------+.              .              .
+ solution8:  1.57e-05   9.18e-01     .           +-|              .              .              .
+ solution9:  1.56e-05   9.13e-01     .           +-|              .              .              .
+ solutionA:  1.62e-05   9.43e-01     .            +|              .              .              .
+ solutionB:  4.56e-05   2.66e+00     .             |--------------------+        .              .
+                                     /             x              x              x              x
+                                     2             1              2              4              8
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.71e-05 kb) FOR TEST CASE 15
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  6.31e+00    2.45e+00     .                  |-------------------------+             .
+ solution2:  2.58e+00    1.00e+00     .                  +                   .                   .
+ solution3:  1.81e+00    7.02e-01     .        +---------|                   .                   .
+ solution4:  2.58e+00    1.00e+00     .                  +                   .                   .
+ solution5:  5.79e+00    2.25e+00     .                  |----------------------+                .
+ solution6:  2.70e+00    1.05e+00     .                  |+                  .                   .
+ solution7:  2.72e+00    1.06e+00     .                  |-+                 .                   .
+ solution8:  1.81e+00    7.02e-01     .        +---------|                   .                   .
+ solution9:  1.81e+00    7.02e-01     .        +---------|                   .                   .
+ solutionA:  2.26e+00    8.79e-01     .               +--|                   .                   .
+ solutionB:  2.26e+00    8.79e-01     .               +--|                   .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  
+
+
+============================================
+TEST CASE 16:
+============================================
+
+             Input:  [4, 1]
+    Correct output:  [[0], [0], [0], [0]]
+
+  solution1:  pass       [[0], [0], [0], [0]]
+  solution2:  pass       [[0], [0], [0], [0]]
+  solution3:  pass       [[0], [0], [0], [0]]
+  solution4:  pass       [[0], [0], [0], [0]]
+  solution5:  pass       [[0], [0], [0], [0]]
+  solution6:  pass       [[0], [0], [0], [0]]
+  solution7:  pass       [[0], [0], [0], [0]]
+  solution8:  pass       [[0], [0], [0], [0]]
+  solution9:  pass       [[0], [0], [0], [0]]
+  solutionA:  pass       [[0], [0], [0], [0]]
+  solutionB:  pass       [[0], [0], [0], [0]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.41e-06) FOR TEST CASE 16
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.20e-05   1.42e+00     .                            |--------------+              .
+ solution2:  8.40e-06   9.99e-01     .                            +                             .
+ solution3:  8.08e-06   9.61e-01     .                          +-|                             .
+ solution4:  8.41e-06   1.00e+00     .                            +                             .
+ solution5:  8.96e-06   1.07e+00     .                            |--+                          .
+ solution6:  8.61e-06   1.02e+00     .                            |+                            .
+ solution7:  1.17e-05   1.40e+00     .                            |-------------+               .
+ solution8:  7.99e-06   9.50e-01     .                          +-|                             .
+ solution9:  7.99e-06   9.50e-01     .                          +-|                             .
+ solutionA:  8.11e-06   9.64e-01     .                          +-|                             .
+ solutionB:  8.92e-06   1.06e+00     .                            |--+                          .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.41e-06 kb) FOR TEST CASE 16
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  4.84e-01    1.04e+00     .                            |-+                           .
+ solution2:  4.64e-01    1.00e+00     .                            +                             .
+ solution3:  3.76e-01    8.10e-01     .                   +--------|                             .
+ solution4:  4.64e-01    1.00e+00     .                            +                             .
+ solution5:  4.00e-01    8.62e-01     .                      +-----|                             .
+ solution6:  7.76e-01    1.67e+00     .                            |---------------------+       .
+ solution7:  8.24e-01    1.78e+00     .                            |-----------------------+     .
+ solution8:  3.76e-01    8.10e-01     .                   +--------|                             .
+ solution9:  3.76e-01    8.10e-01     .                   +--------|                             .
+ solutionA:  3.44e-01    7.41e-01     .               +------------|                             .
+ solutionB:  6.72e-01    1.45e+00     .                            |---------------+             .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 17:
+============================================
+
+             Input:  [6, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.15e-05) FOR TEST CASE 17
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  2.86e-05   2.48e+00     .                  |-------------------------+             .
+ solution2:  1.14e-05   9.86e-01     .                  +                   .                   .
+ solution3:  1.06e-05   9.21e-01     .                +-|                   .                   .
+ solution4:  1.15e-05   1.00e+00     .                  +                   .                   .
+ solution5:  1.82e-05   1.58e+00     .                  |------------+      .                   .
+ solution6:  1.21e-05   1.05e+00     .                  |-+                 .                   .
+ solution7:  2.19e-05   1.90e+00     .                  |-----------------+ .                   .
+ solution8:  1.07e-05   9.30e-01     .                +-|                   .                   .
+ solution9:  1.07e-05   9.25e-01     .                +-|                   .                   .
+ solutionA:  1.09e-05   9.41e-01     .                +-|                   .                   .
+ solutionB:  2.03e-05   1.76e+00     .                  |---------------+   .                   .
+                                     /                  x                   x                   x
+                                     2                  1                   2                   4
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.15e-05 kb) FOR TEST CASE 17
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  2.65e+00    1.95e+00     .                            |---------------------------+ .
+ solution2:  1.36e+00    1.00e+00     .                            +                             .
+ solution3:  1.05e+00    7.71e-01     .                 +----------|                             .
+ solution4:  1.36e+00    1.00e+00     .                            +                             .
+ solution5:  2.11e+00    1.55e+00     .                            |------------------+          .
+ solution6:  1.54e+00    1.14e+00     .                            |----+                        .
+ solution7:  1.89e+00    1.39e+00     .                            |-------------+               .
+ solution8:  1.05e+00    7.71e-01     .                 +----------|                             .
+ solution9:  1.05e+00    7.71e-01     .                 +----------|                             .
+ solutionA:  1.11e+00    8.18e-01     .                   +--------|                             .
+ solutionB:  1.50e+00    1.11e+00     .                            |---+                         .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 18:
+============================================
+
+             Input:  [5, 2]
+    Correct output:  [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+
+  solution1:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution2:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution3:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution4:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution5:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution6:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution7:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution8:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solution9:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solutionA:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+  solutionB:  pass       [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 3, 4], [0, 2, 3, 4], [1, 2, 3, 4]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (9.26e-06) FOR TEST CASE 18
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.71e-05   1.85e+00     .                            |-------------------------+   .
+ solution2:  9.26e-06   1.00e+00     .                            +                             .
+ solution3:  8.81e-06   9.52e-01     .                          +-|                             .
+ solution4:  9.26e-06   1.00e+00     .                            +                             .
+ solution5:  1.19e-05   1.29e+00     .                            |----------+                  .
+ solution6:  9.54e-06   1.03e+00     .                            |+                            .
+ solution7:  1.52e-05   1.64e+00     .                            |--------------------+        .
+ solution8:  8.70e-06   9.40e-01     .                         +--|                             .
+ solution9:  8.79e-06   9.49e-01     .                          +-|                             .
+ solutionA:  8.96e-06   9.67e-01     .                           +|                             .
+ solutionB:  1.23e-05   1.33e+00     .                            |-----------+                 .
+                                     /                            x                             x
+                                     2                            1                             2
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (9.26e-06 kb) FOR TEST CASE 18
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  1.14e+00    1.83e+00     .                            |-------------------------+   .
+ solution2:  6.24e-01    1.00e+00     .                            +                             .
+ solution3:  4.40e-01    7.05e-01     .             +--------------|                             .
+ solution4:  6.24e-01    1.00e+00     .                            +                             .
+ solution5:  7.68e-01    1.23e+00     .                            |--------+                    .
+ solution6:  8.40e-01    1.35e+00     .                            |------------+                .
+ solution7:  8.88e-01    1.42e+00     .                            |--------------+              .
+ solution8:  4.40e-01    7.05e-01     .             +--------------|                             .
+ solution9:  4.40e-01    7.05e-01     .             +--------------|                             .
+ solutionA:  4.40e-01    7.05e-01     .             +--------------|                             .
+ solutionB:  8.96e-01    1.44e+00     .                            |--------------+              .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 19:
+============================================
+
+             Input:  [8, 3]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21, 22, 23, 24, 25, 26], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 27], [0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27], [0, 1, 2, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27], [0, 3, 4, 6, 7, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27], [1, 3, 5, 6, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27], [2, 4, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.66e-05) FOR TEST CASE 19
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  7.87e-05   4.75e+00     .             |--------------------------------+           .
+ solution2:  1.62e-05   9.80e-01     .             +              .              .              .
+ solution3:  1.49e-05   8.97e-01     .           +-|              .              .              .
+ solution4:  1.66e-05   1.00e+00     .             +              .              .              .
+ solution5:  3.45e-05   2.08e+00     .             |---------------+             .              .
+ solution6:  1.86e-05   1.13e+00     .             |--+           .              .              .
+ solution7:  6.17e-05   3.72e+00     .             |---------------------------+ .              .
+ solution8:  1.48e-05   8.92e-01     .           +-|              .              .              .
+ solution9:  1.49e-05   8.98e-01     .           +-|              .              .              .
+ solutionA:  1.53e-05   9.21e-01     .           +-|              .              .              .
+ solutionB:  3.61e-05   2.18e+00     .             |----------------+            .              .
+                                     /             x              x              x              x
+                                     2             1              2              4              8
+                                                                                                 
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.66e-05 kb) FOR TEST CASE 19
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  4.46e+00    1.86e+00     .                            |--------------------------+  .
+ solution2:  2.58e+00    1.08e+00     .                            |--+                          .
+ solution3:  1.83e+00    7.66e-01     .                 +----------|                             .
+ solution4:  2.58e+00    1.08e+00     .                            |--+                          .
+ solution5:  4.74e+00    1.98e+00     .                            |----------------------------+.
+ solution6:  2.44e+00    1.02e+00     .                            |+                            .
+ solution7:  2.39e+00    1.00e+00     .                            +                             .
+ solution8:  1.83e+00    7.66e-01     .                 +----------|                             .
+ solution9:  1.83e+00    7.66e-01     .                 +----------|                             .
+ solutionA:  2.01e+00    8.39e-01     .                     +------|                             .
+ solutionB:  2.32e+00    9.70e-01     .                           +|                             .
+                                      /                            x                             x
+                                      2                            1                             2
+                                                                                                  
+
+
+============================================
+TEST CASE 20:
+============================================
+
+             Input:  [9, 8]
+    Correct output:  [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+
+  solution1:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution2:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution3:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution4:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution5:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution6:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution7:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution8:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solution9:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solutionA:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+  solutionB:  pass       [[0, 1, 2, 3, 4, 5, 6, 7], [0, 8, 9, 10, 11, 12, 13, 14], [1, 8, 15, 16, 17, 18, 19, 20], [2, 9, 15, 21, 22, 23, 24, 25], [3, 10, 16, 21, 26, 27, 28, 29], [4, 11, 17, 22, 26, 30, 31, 32], [5, 12, 18, 23, 27, 30, 33, 34], [6, 13, 19, 24, 28, 31, 33, 35], [7, 14, 20, 25, 29, 32, 34, 35]]
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.28e-05) FOR TEST CASE 20
+
+                        Time /
+ SOLUTION    Time (s)   Median
+ ---------   --------   --------     <-- FASTER                                        SLOWER -->
+ solution1:  1.37e-04   1.08e+01     .          |----------------------------------------+      .
+ solution2:  1.27e-05   9.98e-01     .          +           .           .           .           .
+ solution3:  1.16e-05   9.10e-01     .         +|           .           .           .           .
+ solution4:  1.28e-05   1.00e+00     .          +           .           .           .           .
+ solution5:  1.94e-05   1.52e+00     .          |------+    .           .           .           .
+ solution6:  1.87e-05   1.46e+00     .          |------+    .           .           .           .
+ solution7:  1.99e-05   1.56e+00     .          |-------+   .           .           .           .
+ solution8:  1.17e-05   9.13e-01     .         +|           .           .           .           .
+ solution9:  1.17e-05   9.14e-01     .         +|           .           .           .           .
+ solutionA:  1.20e-05   9.41e-01     .         +|           .           .           .           .
+ solutionB:  2.94e-05   2.31e+00     .          |--------------+        .           .           .
+                                     /          x           x           x           x           x
+                                     2          1           2           4           8           1
+                                                                                                6
+
+
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.28e-05 kb) FOR TEST CASE 20
+
+                         Peak /
+ SOLUTION    Peak (kb)   Median
+ ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
+ solution1:  4.24e+00    3.12e+00     .                  |-------------------------------+       .
+ solution2:  1.36e+00    1.00e+00     .                  +                   .                   .
+ solution3:  9.04e-01    6.65e-01     .       +----------|                   .                   .
+ solution4:  1.36e+00    1.00e+00     .                  +                   .                   .
+ solution5:  3.46e+00    2.54e+00     .                  |--------------------------+            .
+ solution6:  1.54e+00    1.14e+00     .                  |---+               .                   .
+ solution7:  1.27e+00    9.35e-01     .                +-|                   .                   .
+ solution8:  9.04e-01    6.65e-01     .       +----------|                   .                   .
+ solution9:  9.04e-01    6.65e-01     .       +----------|                   .                   .
+ solutionA:  1.18e+00    8.65e-01     .              +---|                   .                   .
+ solutionB:  1.54e+00    1.13e+00     .                  |---+               .                   .
+                                      /                  x                   x                   x
+                                      2                  1                   2                   4
+                                                                                                  

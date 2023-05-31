@@ -1,0 +1,50 @@
+[
+    {
+        "desc":    "Generic case:  Unique element in first list",
+        "source":  "Problem statement",
+        "input":   [[13, 5, 6, 2, 5], [5, 2, 5, 13]],
+        "output":  6
+    },
+    {
+        "desc":    "Generic case:  Unique element in second list",
+        "source":  "Problem statement",
+        "input":   [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, -4, 3, 1, 1, 14, 27, 50]],
+        "output":  -4
+    },
+    {
+        "desc":    "Corner case:  minimum length input",
+        "source":  "Problem statement",
+        "input":   [[27, 0], [27]],
+        "output":  0
+    },
+    {
+        "desc":    "Corner case:  maximum length input",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[-33, -6, -41, -36, 45, -38, -28, -25, 33, 26, -13, -12, -9, 43, 47, -14, 9, -43, -42, 37, 2, 35, 4, 11, 18, 19, 39, 15, -22, 38, 6, 14, -4, 17, -5, -16, 12, -11, 7, -15, -29, 28, -1, -17, -35, 30, -18, 48, -21, 31, 23, -31, 20, 32, -45, 10, 40, 34, 25, -10, 41, -44, 49, -2, 44, 22, -24, 29, -19, 46, 21, 0, -46, -27, -48, 8, 24, 27, -26, -34, -37, 13, 16, -23, -32, -20, 3, -8, 1, -39, 42, 5, -49, -7, -47, 36, -30, -3, -40], [-33, -6, -41, -36, 45, -38, -28, -25, 33, 26, -13, -12, -9, 43, 47, -14, 9, -43, -42, 37, 2, 35, 4, 11, 18, 19, 39, 15, -22, 38, 6, 14, -4, 17, -5, -16, 12, -11, 7, -15, -29, 28, -1, -17, -35, 30, -18, 48, -21, 31, 23, -31, 20, 32, -45, 10, 40, 34, 25, -10, 41, -44, 49, -2, 22, -24, 29, -19, 46, 21, 0, -46, -27, -48, 8, 24, 27, -26, -34, -37, 13, 16, -23, -32, -20, 3, -8, 1, -39, 42, 5, -49, -7, -47, 36, -30, -3, -40]],
+        "output":  44
+    },
+    {
+        "desc":    "Generic case:  unique element at beginning of list",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[23, 14, 27, 1, 4, 2, 50, 3, 1], [2, 4, 3, 1, 1, 14, 27, 50]],
+        "output":  23
+    },
+    {
+        "desc":    "Generic case:  unique element at end of list",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[14, 27, 1, 4, 2, 50, 3, 1, -23], [2, 4, 3, 1, 1, 14, 27, 50]],
+        "output":  -23
+    },
+    {
+        "desc":    "Generic case:  unique element is one with smallest value",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, 3, 1, -1000, 1, 14, 27, 50]],
+        "output":  -1000
+    },
+    {
+        "desc":    "Generic case:  unique element is one with largest value",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[14, 27, 1, 4, 2, 50, 3, 1], [2, 1000, 4, 3, 1, 1, 14, 27, 50]],
+        "output":  1000
+    }
+]

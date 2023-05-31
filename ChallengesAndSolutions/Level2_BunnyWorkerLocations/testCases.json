@@ -1,0 +1,68 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [5, 10],
+        "output":  "96"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [3, 2],
+        "output":  "9"
+    },
+    {
+        "desc":    "Corner case:  Min (column,row)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1, 1],
+        "output":  "1"
+    },
+    {
+        "desc":    "Corner case:  Max column",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [100000, 1],
+        "output":  "5000050000"
+    },
+    {
+        "desc":    "Corner case:  Max row",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1, 100000],
+        "output":  "4999950001"
+    },
+    {
+        "desc":    "Corner case:  Very large (column,row)",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [50001, 50000],
+        "output":  "5000000001"
+    },
+    {
+        "desc":    "Corner case:  Minimum column and row",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [1, 1],
+        "output":  "1"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [37, 53],
+        "output":  "3953"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [2337, 28753],
+        "output":  "483249753"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [837, 9087],
+        "output":  "49228840"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [78736, 387],
+        "output":  "3130184617"
+    }
+]

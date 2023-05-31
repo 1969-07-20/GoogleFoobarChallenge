@@ -1,0 +1,98 @@
+[
+   {
+       "desc":    "Typical case",
+       "source":  "Problem statement",
+       "input":   [[1, 2, 3, 4], 15],
+       "output":  [-1, -1]
+   },
+   {
+       "desc":    "Typical case",
+       "source":  "Problem statement",
+       "input":   [[4, 3, 10, 2, 8], 12],
+       "output":  [2, 3]
+   },
+   {
+       "desc":    "Corner case:  Message at the very beginning",
+       "source":  "Problem statement",
+       "input":   [[4, 3, 5, 7, 8], 12],
+       "output":  [0, 2]
+   },
+   {
+       "desc":    "Corner case:  Minimum length input and no message",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[6], 3],
+       "output":  [-1, -1]
+   },
+   {
+       "desc":    "Corner case:  Message at the very end",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[7, 9, 8, 6, 5, 3, 4], 12],
+       "output":  [4, 6]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://blog.finxter.com/googles-foobar",
+       "input":   [[4, 3, 10, 2, 8], 12],
+       "output":  [2, 3]
+   },
+   {
+       "desc":    "Corner case:  Minimum length input",
+       "source":  "https://blog.finxter.com/googles-foobar",
+       "input":   [[260], 260],
+       "output":  [0, 0]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[1, 82, 94, 14, 82, 27, 29, 28, 25, 67, 94, 1, 34, 36, 13], 244],
+       "output":  [6, 11]
+   },
+   {
+       "desc":    "Generic case:  Multiple matches [5, 6], [10, 12] and [39, 41]",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[83, 59, 100, 27, 39, 51, 34, 74, 33, 59, 22, 2, 2, 72, 93, 31, 20, 35, 2, 52, 60, 92, 68, 86, 8, 58, 71, 14, 18, 20, 1, 43, 9, 63, 77, 14, 29, 82, 37, 69, 15, 1, 47, 100, 27, 16, 78, 41, 17, 15, 91, 37], 85],
+       "output":  [5, 6]
+   },
+   {
+       "desc":    "Generic case:  Multiple matches [23, 25] and [29, 30]",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[8, 41, 36, 49, 15, 81, 36, 34, 65, 98, 2, 94, 10, 23, 84, 91, 38, 32, 87, 82, 41, 43, 28, 11, 73, 38, 53, 53, 60, 77, 45, 44, 25, 86, 14, 84, 19, 59, 20, 59, 43, 43, 74, 29, 4, 59, 20, 34, 9, 92, 1, 70, 67, 30, 9, 79, 1, 19, 74, 46, 21, 80, 40, 4, 30, 9, 44, 15, 99, 32, 66, 99, 91, 79, 84, 36, 53, 84, 46, 9, 76, 67, 49, 5, 48, 93, 90, 87, 13, 63, 18, 55, 71, 21], 122],
+       "output":  [23, 25]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[3, 17, 35, 21, 14, 81, 7, 25, 27, 36, 37, 75, 69, 47, 66, 26, 74, 35, 88, 91, 85, 55, 67, 66, 46, 91, 87, 51, 31, 84, 97, 48, 95, 15, 58, 27, 20, 94, 97, 64, 13, 37, 12, 12, 15, 90, 71, 80, 10, 20, 22, 8, 3, 6, 1, 45], 150],
+       "output":  [47, 54]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[34, 99, 43, 62, 68, 54, 23, 86, 60, 64, 46, 58, 67, 76, 34, 71, 99, 68, 15, 1, 11, 62, 96, 43, 5, 1, 5, 1, 10, 16, 16, 3, 16, 100, 87, 46, 82, 30, 30, 45, 55, 97, 57, 98, 43, 80, 82, 12, 13, 47, 47, 89, 9, 1, 79, 65], 213],
+       "output":  [19, 23]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[80, 6, 14, 45, 19, 63, 41, 23, 57, 46, 11, 45, 17, 37, 42, 61], 141],
+       "output":  [2, 5]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[85, 9, 16, 66, 35, 50, 42, 72, 94, 41, 25, 60, 75, 65, 56, 23, 27, 93, 83, 38, 73, 36, 26, 33, 70, 32, 70, 52], 95],
+       "output":  [21, 23]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[11, 90, 51, 26, 1, 41, 74, 69, 60, 26], 156],
+       "output":  [-1, -1]
+   },
+   {
+       "desc":    "Generic case",
+       "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+       "input":   [[39, 38, 28, 57, 51, 53, 23, 58, 23, 77, 2, 7, 96, 21, 38, 16, 59, 8, 63, 76, 39, 59, 32, 9, 70, 57, 37, 65, 38, 38, 54, 97, 77, 14, 64, 84, 81, 63, 24, 28, 71, 42, 71, 61, 6, 16, 99, 8, 76, 56, 97, 91, 35, 57, 91, 15, 46, 42, 72, 94, 69, 94, 36, 74, 37, 33], 303],
+       "output":  [20, 26]
+   }
+]

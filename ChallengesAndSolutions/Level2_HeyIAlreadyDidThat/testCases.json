@@ -1,0 +1,86 @@
+[
+    {
+        "desc":    "Corner Case:  Min input range",
+        "source":  "Problem statement",
+        "input":   ["210022", 3],
+        "output":  3
+    },
+    {
+        "desc":    "Small typical value",
+        "source":  "Problem statement",
+        "input":   ["1211", 10],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["9238732", 10],
+        "output":  8
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["6235332", 7],
+        "output":  6
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["101101110", 2],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["16301521", 8],
+        "output":  3
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["3332", 4],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["21666", 8],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["3677850", 9],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["60", 7],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["0710029", 10],
+        "output":  8
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["0100100", 2],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["222122", 3],
+        "output":  3
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   ["42202", 6],
+        "output":  2
+    }
+]

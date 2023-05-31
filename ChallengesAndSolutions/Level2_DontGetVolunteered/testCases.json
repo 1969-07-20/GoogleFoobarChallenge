@@ -1,0 +1,86 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [0,1],
+        "output":  3
+    },
+    {
+        "desc":   "Generic case",
+        "source": "Problem statement",
+        "input":  [19, 36],
+        "output": 1
+    },
+    {
+        "desc":   "From one corner to the diagonal corner",
+        "source": "Problem statement",
+        "input":  [56, 7],
+        "output": 6
+    },
+    {
+        "desc":   "From one corner to square adjacent to opposite corner along same row/columnr",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [63, 8],
+        "output": 5
+    },
+    {
+        "desc":   "Move to a square 4 away on row/column",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [10, 34],
+        "output": 3
+    },
+    {
+        "desc":   "Move to an adjacent square",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [0, 8],
+        "output": 3
+    },
+    {
+        "desc":   "Move to an adjacent square",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [6, 7],
+        "output": 3
+    },
+    {
+        "desc":   "Move to an adjacent square",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [63, 55],
+        "output": 3
+    },
+    {
+        "desc":   "Move to an adjacent square",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [49, 48],
+        "output": 3
+    },
+    {
+        "desc":   "Move to an adjacent square",
+        "source": "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":  [0, 8],
+        "output": 3
+    },
+    {
+        "desc":   "Generic case",
+        "source": "https://github.com/zaneaw/Volunteered/blob/main/solution.py",
+        "input":  [0, 62],
+        "output": 5
+    },
+    {
+        "desc":   "Corner case - no moves",
+        "source": "https://github.com/rudisimo/google-foobar/blob/master/solutions/dont_get_volunteered/test.py",
+        "input":  [0, 0],
+        "output": 0
+    },
+    {
+        "desc":   "Generic case",
+        "source": "https://github.com/argcag/foobar2/blob/main/foobar2.py",
+        "input":  [56, 42],
+        "output": 4
+    },
+    {
+        "desc":   "Generic case",
+        "source": "https://github.com/JDMatrix/Google_Foobar/blob/master/Level_2/Dont_Get_Volunteered/solution.py",
+        "input":  [63, 46],
+        "output": 1
+    }
+]

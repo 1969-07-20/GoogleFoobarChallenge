@@ -1,0 +1,104 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[4, 30, 50]],
+        "output":  [12, 1]
+    },
+    {
+        "desc":    "Corner case:  No solution",
+        "source":  "Problem statement",
+        "input":   [[4, 17, 50]],
+        "output":  [-1, -1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/wrbyepct/Gearing-up-for-destruction/blob/main/solution.py",
+        "input":   [[1, 51]],
+        "output":  [100, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/wrbyepct/Gearing-up-for-destruction/blob/main/solution.py",
+        "input":   [[25, 105, 145, 170]],
+        "output":  [130, 3]
+    },
+    {
+        "desc":    "Corner case:  No solution",
+        "source":  "https://github.com/wrbyepct/Gearing-up-for-destruction/blob/main/solution.py",
+        "input":   [[1, 9, 10, 11]],
+        "output":  [-1, -1]
+    },
+    {
+        "desc":    "Corner case:  No solution",
+        "source":  "https://github.com/wrbyepct/Gearing-up-for-destruction/blob/main/solution.py",
+        "input":   [[2, 10, 11, 13]],
+        "output":  [-1, -1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://stackoverflow.com/questions/40465866/google-foobar-gearing-up-for-destruction/45626410#45626410",
+        "input":   [[1, 31]],
+        "output":  [20, 1]
+    },
+    {
+        "desc":    "Corner case:  No solution",
+        "source":  "https://stackoverflow.com/questions/40465866/google-foobar-gearing-up-for-destruction/45626410#45626410",
+        "input":   [[1, 31, 71]],
+        "output":  [-1, -1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://stackoverflow.com/questions/40465866/google-foobar-gearing-up-for-destruction/45626410#45626410",
+        "input":   [[1, 31, 71, 91]],
+        "output":  [20, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://stackoverflow.com/questions/40465866/google-foobar-gearing-up-for-destruction/45626410#45626410",
+        "input":   [[4, 9, 17, 31, 40]],
+        "output":  [4, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[6, 36, 66, 96]],
+        "output":  [20, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[0, 51, 102, 145, 172, 203, 243, 279, 322, 369, 415, 447, 479, 511]],
+        "output":  [22, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[12, 44, 68, 74]],
+        "output":  [28, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[15, 59, 103, 146, 170, 191, 229, 277]],
+        "output":  [100, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[18, 61, 95]],
+        "output":  [18, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[8, 22, 50, 87, 112, 133, 165, 197, 236, 274, 305, 351, 401, 440, 471, 490, 512, 550, 575, 582]],
+        "output":  [16, 3]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "https://github.com/1969-07-20/GoogleFoobarChallenge",
+        "input":   [[18, 47, 62, 87, 123, 140, 149, 184, 229, 268, 308, 348, 397, 425, 455, 490]],
+        "output":  [16, 1]
+    }
+]

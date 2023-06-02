@@ -1,4 +1,4 @@
-FoobarTester:  version 0.1.0 (2023-05-29a)
+OfflineTester:  version 0.1.1 (2023-05-31a)
 
 Challenge:  Level1_Re-ID
 
@@ -88,25 +88,25 @@ TEST CASE 0:
   solution8:  pass       23571
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.07e-05) FOR TEST CASE 0
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.10e-05 sec) FOR TEST CASE 0
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  1.13e-05   1.06e+00     .          |+          .           .           .           .
- solution2:  7.14e-06   6.68e-01     .   +------|           .           .           .           .
- solution3:  5.81e-01   5.43e+04     .          |---------------------------------------------->>
- solution4:  7.25e-06   6.78e-01     .    +-----|           .           .           .           .
- solution5:  1.09e-05   1.01e+00     .          |+          .           .           .           .
- solution6:  7.17e-06   6.71e-01     .   +------|           .           .           .           .
- solution7:  1.75e+00   1.63e+05     .          |---------------------------------------------->>
- solution8:  1.05e-05   9.85e-01     .          +           .           .           .           .
+ solution1:  1.14e-05   1.03e+00     .          |+          .           .           .           .
+ solution2:  7.41e-06   6.71e-01     .    +-----|           .           .           .           .
+ solution3:  5.93e-01   5.37e+04     .          |---------------------------------------------->>
+ solution4:  7.26e-06   6.57e-01     .   +------|           .           .           .           .
+ solution5:  1.12e-05   1.01e+00     .          +           .           .           .           .
+ solution6:  7.37e-06   6.67e-01     .   +------|           .           .           .           .
+ solution7:  1.87e+00   1.69e+05     .          |---------------------------------------------->>
+ solution8:  1.09e-05   9.90e-01     .          +           .           .           .           .
                                      /          x           x           x           x           x
                                      2          1           2           4           8           1
                                                                                                 6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.07e-05 kb) FOR TEST CASE 0
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (3.92e-01 kb) FOR TEST CASE 0
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -141,25 +141,25 @@ TEST CASE 1:
   solution8:  pass       71113
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.11e-05) FOR TEST CASE 1
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.12e-05 sec) FOR TEST CASE 1
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  1.20e-05   1.08e+00     .          |-+         .           .           .           .
- solution2:  7.23e-06   6.51e-01     .   +------|           .           .           .           .
- solution3:  5.87e-01   5.29e+04     .          |---------------------------------------------->>
- solution4:  7.19e-06   6.47e-01     .   +------|           .           .           .           .
- solution5:  1.06e-05   9.57e-01     .          +           .           .           .           .
- solution6:  7.36e-06   6.63e-01     .   +------|           .           .           .           .
- solution7:  1.76e+00   1.58e+05     .          |---------------------------------------------->>
- solution8:  1.16e-05   1.04e+00     .          |+          .           .           .           .
+ solution1:  1.19e-05   1.06e+00     .          |+          .           .           .           .
+ solution2:  7.25e-06   6.46e-01     .   +------|           .           .           .           .
+ solution3:  5.89e-01   5.26e+04     .          |---------------------------------------------->>
+ solution4:  7.21e-06   6.43e-01     .   +------|           .           .           .           .
+ solution5:  1.05e-05   9.40e-01     .         +|           .           .           .           .
+ solution6:  7.20e-06   6.41e-01     .   +------|           .           .           .           .
+ solution7:  1.84e+00   1.64e+05     .          |---------------------------------------------->>
+ solution8:  1.19e-05   1.06e+00     .          |+          .           .           .           .
                                      /          x           x           x           x           x
                                      2          1           2           4           8           1
                                                                                                 6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.11e-05 kb) FOR TEST CASE 1
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (4.45e-01 kb) FOR TEST CASE 1
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -194,25 +194,25 @@ TEST CASE 2:
   solution8:  TIMEOUT    None
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (2.49e-03) FOR TEST CASE 2
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (2.52e-03 sec) FOR TEST CASE 2
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  3.97e-01   1.59e+02     .      .      .       .      |---------------------------->>
- solution2:  7.29e-06   2.92e-03     <<---------------------------|      .       .      .       .
- solution3:  5.84e-01   2.34e+02     .      .      .       .      |---------------------------->>
- solution4:  7.24e-06   2.90e-03     <<---------------------------|      .       .      .       .
- solution5:  2.49e-03   1.00e+00     .      .      .       .      +      .       .      .       .
- solution6:  7.36e-06   2.95e-03     <<---------------------------|      .       .      .       .
- solution7:  1.75e+00   7.03e+02     .      .      .       .      |---------------------------->>
+ solution1:  4.05e-01   1.61e+02     .      .      .       .      |---------------------------->>
+ solution2:  7.40e-06   2.93e-03     <<---------------------------|      .       .      .       .
+ solution3:  5.93e-01   2.35e+02     .      .      .       .      |---------------------------->>
+ solution4:  7.23e-06   2.86e-03     <<---------------------------|      .       .      .       .
+ solution5:  2.52e-03   1.00e+00     .      .      .       .      +      .       .      .       .
+ solution6:  7.22e-06   2.86e-03     <<---------------------------|      .       .      .       .
+ solution7:  1.87e+00   7.40e+02     .      .      .       .      |---------------------------->>
  solution8:  --------   --------     .      .      .       .      .      .       .      .       .
                                      /      /      /       /      x      x       x      x       x
                                      1      8      4       2      1      2       4      8       1
                                      6                                                          6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (2.49e-03 kb) FOR TEST CASE 2
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.02e+01 kb) FOR TEST CASE 2
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -247,25 +247,25 @@ TEST CASE 3:
   solution8:  pass       37983
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (4.16e-05) FOR TEST CASE 3
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (4.21e-05 sec) FOR TEST CASE 3
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  6.55e-05   1.57e+00     .       .       .        |----+  .        .       .        .
- solution2:  7.25e-06   1.74e-01     .   +--------------------|       .        .       .        .
- solution3:  5.86e-01   1.41e+04     .       .       .        |-------------------------------->>
- solution4:  7.29e-06   1.75e-01     .   +--------------------|       .        .       .        .
- solution5:  1.77e-05   4.25e-01     .       .     +----------|       .        .       .        .
- solution6:  7.22e-06   1.74e-01     .   +--------------------|       .        .       .        .
- solution7:  1.74e+00   4.19e+04     .       .       .        |-------------------------------->>
- solution8:  1.08e-04   2.59e+00     .       .       .        |----------+     .       .        .
+ solution1:  6.62e-05   1.57e+00     .       .       .        |----+  .        .       .        .
+ solution2:  7.39e-06   1.76e-01     .   +--------------------|       .        .       .        .
+ solution3:  5.92e-01   1.40e+04     .       .       .        |-------------------------------->>
+ solution4:  7.43e-06   1.76e-01     .   +--------------------|       .        .       .        .
+ solution5:  1.80e-05   4.27e-01     .       .     +----------|       .        .       .        .
+ solution6:  7.25e-06   1.72e-01     .  +---------------------|       .        .       .        .
+ solution7:  1.84e+00   4.37e+04     .       .       .        |-------------------------------->>
+ solution8:  1.10e-04   2.61e+00     .       .       .        |----------+     .       .        .
                                      /       /       /        x       x        x       x        x
                                      8       4       2        1       2        4       8        1
                                                                                                 6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (4.16e-05 kb) FOR TEST CASE 3
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.02e+00 kb) FOR TEST CASE 3
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -300,25 +300,25 @@ TEST CASE 4:
   solution8:  pass       99710
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.22e-03) FOR TEST CASE 4
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (1.23e-03 sec) FOR TEST CASE 4
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  2.33e-03   1.91e+00     .      .      .       .      |------+       .      .       .
- solution2:  7.23e-06   5.92e-03     <<---------------------------|      .       .      .       .
- solution3:  5.88e-01   4.81e+02     .      .      .       .      |---------------------------->>
- solution4:  7.31e-06   5.99e-03     <<---------------------------|      .       .      .       .
- solution5:  1.14e-04   9.32e-02     .   +------------------------|      .       .      .       .
- solution6:  7.22e-06   5.91e-03     <<---------------------------|      .       .      .       .
- solution7:  1.76e+00   1.44e+03     .      .      .       .      |---------------------------->>
- solution8:  1.96e-02   1.60e+01     .      .      .       .      |---------------------------->>
+ solution1:  2.34e-03   1.91e+00     .      .      .       .      |------+       .      .       .
+ solution2:  7.44e-06   6.07e-03     <<---------------------------|      .       .      .       .
+ solution3:  5.91e-01   4.82e+02     .      .      .       .      |---------------------------->>
+ solution4:  7.27e-06   5.93e-03     <<---------------------------|      .       .      .       .
+ solution5:  1.14e-04   9.33e-02     .   +------------------------|      .       .      .       .
+ solution6:  7.27e-06   5.93e-03     <<---------------------------|      .       .      .       .
+ solution7:  1.87e+00   1.52e+03     .      .      .       .      |---------------------------->>
+ solution8:  1.98e-02   1.62e+01     .      .      .       .      |---------------------------->>
                                      /      /      /       /      x      x       x      x       x
                                      1      8      4       2      1      2       4      8       1
                                      6                                                          6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.22e-03 kb) FOR TEST CASE 4
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.01e+01 kb) FOR TEST CASE 4
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -353,7 +353,7 @@ TEST CASE 5:
   solution8:  pass       61816
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (4.09e-02) FOR TEST CASE 5
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (4.09e-02 sec) FOR TEST CASE 5
 
                         Time /
  SOLUTION    Time (s)   Median
@@ -361,22 +361,22 @@ LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION
  solution1:  8.09e-02   1.98e+00     .      .      .       .      |------+       .      .       .
  solution2:  7.28e-06   1.78e-04     <<---------------------------|      .       .      .       .
  solution3:  5.93e-01   1.45e+01     .      .      .       .      |---------------------------+ .
- solution4:  7.34e-06   1.80e-04     <<---------------------------|      .       .      .       .
- solution5:  9.23e-04   2.26e-02     <<---------------------------|      .       .      .       .
- solution6:  7.36e-06   1.80e-04     <<---------------------------|      .       .      .       .
- solution7:  1.77e+00   4.32e+01     .      .      .       .      |---------------------------->>
- solution8:  1.91e+00   4.67e+01     .      .      .       .      |---------------------------->>
+ solution4:  7.44e-06   1.82e-04     <<---------------------------|      .       .      .       .
+ solution5:  9.43e-04   2.30e-02     <<---------------------------|      .       .      .       .
+ solution6:  7.43e-06   1.81e-04     <<---------------------------|      .       .      .       .
+ solution7:  1.86e+00   4.55e+01     .      .      .       .      |---------------------------->>
+ solution8:  1.92e+00   4.69e+01     .      .      .       .      |---------------------------->>
                                      /      /      /       /      x      x       x      x       x
                                      1      8      4       2      1      2       4      8       1
                                      6                                                          6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (4.09e-02 kb) FOR TEST CASE 5
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.03e+01 kb) FOR TEST CASE 5
 
                          Peak /
  SOLUTION    Peak (kb)   Median
  ---------   ---------   --------     <-- ECONOMICAL                                  WASTEFUL -->
- solution1:  5.93e+02    5.78e+01     .      .      .       .      |---------------------------->>
+ solution1:  5.93e+02    5.79e+01     .      .      .       .      |---------------------------->>
  solution2:  8.20e-02    8.00e-03     <<---------------------------|      .       .      .       .
  solution3:  1.02e+01    9.96e-01     .      .      .       .      +      .       .      .       .
  solution4:  8.20e-02    8.00e-03     <<---------------------------|      .       .      .       .
@@ -406,25 +406,25 @@ TEST CASE 6:
   solution8:  pass       24511
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.60e-02) FOR TEST CASE 6
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (8.81e-02 sec) FOR TEST CASE 6
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  1.71e-01   1.98e+00     .      .      .       .      |------+       .      .       .
- solution2:  7.36e-06   8.56e-05     <<---------------------------|      .       .      .       .
- solution3:  5.91e-01   6.88e+00     .      .      .       .      |--------------------+.       .
- solution4:  7.29e-06   8.48e-05     <<---------------------------|      .       .      .       .
- solution5:  1.46e-03   1.70e-02     <<---------------------------|      .       .      .       .
- solution6:  7.33e-06   8.52e-05     <<---------------------------|      .       .      .       .
- solution7:  1.77e+00   2.06e+01     .      .      .       .      |---------------------------->>
- solution8:  4.78e+00   5.56e+01     .      .      .       .      |---------------------------->>
+ solution1:  1.75e-01   1.98e+00     .      .      .       .      |------+       .      .       .
+ solution2:  7.59e-06   8.61e-05     <<---------------------------|      .       .      .       .
+ solution3:  5.97e-01   6.77e+00     .      .      .       .      |-------------------+ .       .
+ solution4:  7.52e-06   8.54e-05     <<---------------------------|      .       .      .       .
+ solution5:  1.48e-03   1.69e-02     <<---------------------------|      .       .      .       .
+ solution6:  7.48e-06   8.50e-05     <<---------------------------|      .       .      .       .
+ solution7:  1.88e+00   2.13e+01     .      .      .       .      |---------------------------->>
+ solution8:  4.78e+00   5.43e+01     .      .      .       .      |---------------------------->>
                                      /      /      /       /      x      x       x      x       x
                                      1      8      4       2      1      2       4      8       1
                                      6                                                          6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (8.60e-02 kb) FOR TEST CASE 6
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.03e+01 kb) FOR TEST CASE 6
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -459,25 +459,25 @@ TEST CASE 7:
   solution8:  TIMEOUT    None
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (2.45e-03) FOR TEST CASE 7
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (2.46e-03 sec) FOR TEST CASE 7
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  3.95e-01   1.61e+02     .      .      .       .      |---------------------------->>
- solution2:  7.46e-06   3.04e-03     <<---------------------------|      .       .      .       .
- solution3:  5.98e-01   2.44e+02     .      .      .       .      |---------------------------->>
- solution4:  7.36e-06   3.00e-03     <<---------------------------|      .       .      .       .
- solution5:  2.45e-03   1.00e+00     .      .      .       .      +      .       .      .       .
- solution6:  7.33e-06   2.99e-03     <<---------------------------|      .       .      .       .
- solution7:  1.78e+00   7.24e+02     .      .      .       .      |---------------------------->>
+ solution1:  3.87e-01   1.58e+02     .      .      .       .      |---------------------------->>
+ solution2:  7.37e-06   3.00e-03     <<---------------------------|      .       .      .       .
+ solution3:  5.90e-01   2.40e+02     .      .      .       .      |---------------------------->>
+ solution4:  7.37e-06   3.00e-03     <<---------------------------|      .       .      .       .
+ solution5:  2.46e-03   1.00e+00     .      .      .       .      +      .       .      .       .
+ solution6:  7.38e-06   3.01e-03     <<---------------------------|      .       .      .       .
+ solution7:  1.86e+00   7.59e+02     .      .      .       .      |---------------------------->>
  solution8:  --------   --------     .      .      .       .      .      .       .      .       .
                                      /      /      /       /      x      x       x      x       x
                                      1      8      4       2      1      2       4      8       1
                                      6                                                          6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (2.45e-03 kb) FOR TEST CASE 7
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (1.02e+01 kb) FOR TEST CASE 7
 
                          Peak /
  SOLUTION    Peak (kb)   Median
@@ -512,25 +512,25 @@ TEST CASE 8:
   solution8:  pass       93137
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (2.06e-05) FOR TEST CASE 8
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION EXECUTION TIME TO MEDIAN EXECUTIION TIME (2.01e-05 sec) FOR TEST CASE 8
 
                         Time /
  SOLUTION    Time (s)   Median
  ---------   --------   --------     <-- FASTER                                        SLOWER -->
- solution1:  2.78e-05   1.35e+00     .        .         |---+     .         .         .         .
- solution2:  7.34e-06   3.56e-01     .    +-------------|         .         .         .         .
- solution3:  5.90e-01   2.86e+04     .        .         |-------------------------------------->>
- solution4:  7.38e-06   3.58e-01     .    +-------------|         .         .         .         .
- solution5:  1.34e-05   6.51e-01     .        .   +-----|         .         .         .         .
- solution6:  7.35e-06   3.56e-01     .    +-------------|         .         .         .         .
- solution7:  1.77e+00   8.60e+04     .        .         |-------------------------------------->>
- solution8:  3.25e-05   1.57e+00     .        .         |------+  .         .         .         .
+ solution1:  2.71e-05   1.35e+00     .        .         |---+     .         .         .         .
+ solution2:  7.22e-06   3.59e-01     .    +-------------|         .         .         .         .
+ solution3:  5.90e-01   2.94e+04     .        .         |-------------------------------------->>
+ solution4:  7.24e-06   3.60e-01     .    +-------------|         .         .         .         .
+ solution5:  1.31e-05   6.53e-01     .        .   +-----|         .         .         .         .
+ solution6:  7.20e-06   3.58e-01     .    +-------------|         .         .         .         .
+ solution7:  1.83e+00   9.13e+04     .        .         |-------------------------------------->>
+ solution8:  3.13e-05   1.56e+00     .        .         |-----+   .         .         .         .
                                      /        /         x         x         x         x         x
                                      4        2         1         2         4         8         1
                                                                                                 6
 
 
-LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (2.06e-05 kb) FOR TEST CASE 8
+LOG SCALE (BASE 2) PLOT OF RATIO OF SOLUTION PEAK MEMORY USAGE TO MEDIAN PEAK MEMORY USAGE (6.60e-01 kb) FOR TEST CASE 8
 
                          Peak /
  SOLUTION    Peak (kb)   Median

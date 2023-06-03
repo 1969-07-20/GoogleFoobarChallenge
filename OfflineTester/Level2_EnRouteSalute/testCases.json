@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [">----<"],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["<<>><"],
+        "output":  4
+    }
+]

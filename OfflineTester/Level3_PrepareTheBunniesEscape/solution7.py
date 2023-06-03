@@ -1,0 +1,51 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/oneshan/foobar/blob/master/prepare_the_bunnies_escape/solution.py"
+
+
+"""
+To get the fewest steps, use BFS to traverse the maze.
+Each step, there are possible four direction (up, down, left, right)
+Since we can break the wall once, use a bool wallBefore to memory this status
+"""
+
+
+def answer(maze):
+    h = len(maze)
+    w = len(maze[0])
+
+    visit = set()
+    step = 1
+    queue = [(0, 0, 0)]
+    while queue:
+        size = len(queue)
+        for _ in range(size):
+            i, j, wallBefore = queue.pop(0)
+            # Reach the end
+            if i == h - 1 and j == w - 1:
+                return step
+            # The position with status is visited, do nothing
+            if (i, j, wallBefore) in visit:
+                continue
+            # The position is a wall and we have broken the other wall before, do nothing
+            if wallBefore & maze[i][j]:
+                continue
+            # Record the position and status
+            visit.add((i, j, wallBefore | maze[i][j]))
+            # Add next positions into the queue
+            if i < h - 1:
+                queue.append([i+1, j, wallBefore | maze[i][j]])
+            if j < w - 1:
+                queue.append([i, j+1, wallBefore | maze[i][j]])
+            if i > 0:
+                queue.append([i-1, j, wallBefore | maze[i][j]])
+            if j > 0:
+                queue.append([i, j-1, wallBefore | maze[i][j]])
+        step += 1
+    return step

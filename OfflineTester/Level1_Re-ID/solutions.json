@@ -1,0 +1,42 @@
+[
+    {
+        "file":   "Level1_Re-ID.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_Re-ID.solution8",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

@@ -1,0 +1,527 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level5_DisorderlyEscape/disorderlyEscape.py"
+
+
+from math import factorial
+
+"""
+The code in this file computes answers to the Disorderly Escape challenge.  The
+function solution(w, h, s) is called with arguments 'w', 'h' and 's' which are
+integers giving the number of rows, number of columns and number of states for
+the star grid.  The return value is the number of distinct star grid
+configurations in the form of a string.
+
+The challenge involves determining the number of unique grids subject to
+permutation of rows and columns.  After giving this a half day of thought I
+realized it involved determining the number of equivalence classes.  I was very
+fortunate that my very first Google search struck paydirt.  The search was:
+
+"number of equivalence classes of a rectangle subject to row and column exchanges"
+
+One of the top search results was
+
+https://math.stackexchange.com/questions/1941503/number-of-equivalence-classes-of-matrices-under-switching-rows-and-columns
+
+which quickly led to the following links:
+
+https://math.stackexchange.com/questions/4085977/cycle-index-for-s-2-times-s-4
+https://en.wikipedia.org/wiki/Cycle_index#Symmetric_group_Sn
+
+This solution to the Disorderly Escape challenge implements the mathematics
+outlined at the links above.  The above links distill the mathematical machinery
+for using the Polya Enumeration Theorem to solve the class of problem at the
+heart of the Disorderly Escape challenge.  More on the Polya Enumeration Theorem
+can be found at
+
+https://en.wikipedia.org/wiki/Polya_enumeration_theorem
+https://mathworld.wolfram.com/PolyaEnumerationTheorem.html
+
+One of the uses of the Polya Enumeration Theorem is to find the number of
+equivalence classes for coloring problems involving groups.  This is done by
+finding the cycle index polynomial associated with the group and then
+substituting the number of colors for each variable in the polynomial and
+evaluating.
+
+The set of all possible permutations of n items is represented by Sn, the
+symmetric group of degree n.  Closed form formulas exist for the cyclic
+indexes of symmetric groups.  The URL
+
+https://en.wikipedia.org/wiki/Cycle_index
+
+has formulas for the cycle index of several types of groups including symmetric
+groups.  This entry has a recurrence relation which expresses the cycle index
+polynomial of Sn in terms of the cycle index polynomials for the cycle index
+polynomials of S0 through Sn-1.
+
+               n
+Z(Sn) = (1/n) Sum x_l Z(Sn-l)
+              l=1
+
+In the Disorderly Escape challenge both rows and columns may be permuted.  The
+permutations of the w columns is represented by the symmetric group Sw and the
+permutations of the h rows by the symmetric group Sh.  The result of permuting
+both rows and columns is represented by the the group Sw x Sh.  Z(Sw x Sh), the
+cycle index Sw x Sh can be found by taking the 'product' of Z(Sw) and Z(Sh), the
+cycle indexes of Sw and Sh, respectively using an abstract algebra.  This
+abstract algebra is implemented in this file.  Details of the algebra can be
+found at the link:
+
+https://math.stackexchange.com/questions/4085977/cycle-index-for-s-2-times-s-4
+
+===============================================================================
+===============================================================================
+
+The following is a qualitative explanation for the mathematics behind cycle
+index polynomials and the mapping onto the Disorderly Escape challenge.  The
+rest of this discussion is intended for a deeper understanding of the algorithm
+implemented here.  It is not necessary for a high level understanding of the
+code in this file.
+
+Cycle Decomposition of Permutations:
+------------------------------------
+Every permutation of n elements can be decomposed into a set of one or more
+cyclic permutations where each element belong to one and only one cyclic
+permutation.  (Instances of an element mapping onto itself are treated as
+separate cyclic permutations of length one.)  Since, for any given permutation,
+each element is part of one and only one cyclic permutation, the sum of the
+lengths of the cyclic permutations in the decomposition always adds to n.
+
+The decomposition of permutations of n elements range between the extremes of n
+cycles of length 1 to 1 cycle of length n.  To reiterate, the lengths of the
+cyclic permutations always sums to n.
+
+Abstract Away Identity of Elements in Permutations:
+---------------------------------------------------
+One of the abstractions that goes with cycle index is to abstract out the
+assignment of specific elements to cyclic permutations and consider only the
+lengths of cyclic permutations and their multiplicity, i.e. the number cyclic
+permutations of any given length.  Thus, for the elements {a, b, c}, all
+permutations that can be decomposed into cycles of length one and length two
+(e.g. (a)(bc) and (ab)(c)) are equivalent for the purposes of cycle index - they
+belong to the class of permutations decomposable into one cycle of length 1 and
+one cycle of length 2.
+
+Cycles Map to Variables in Cycle Index Polynomial:
+--------------------------------------------------
+The cycle index formulation assigns a separate variable to each length of cyclic
+permutation in the decomposition into cyclic permutations.  For notational
+convenience, let the variables representing cyclic permutations take the form of
+'x_l' where x is an arbitrary variable name and the l subscript indicates the
+variable represents cyclic permutations of length l.
+
+Multiplicity of Cycles Maps to Variable Exponent in Cycle Index Polynomial:
+---------------------------------------------------------------------------
+A class of decomposition of permutations into a set of cyclic permutations is
+represented by a term in the cycle index polynomial.  The term will be the
+product of the variables representing the cyclic permutations raised to a
+power equal to their multiplicities, i.e. number of cyclic permutations of that
+length.  For the case above of one cycle of length 1 and one cycle of length
+2 the term representing that case would be x_1 x_2 (where juxtaposition of
+variables implies multiplication as in first year algebra).  For the class of
+permutations of which (a)(bc)(d) is a member, the corresponding term in the
+index polynomial would be x_1 x_2 x_2 = (x_1)^2 x_2.  The exponent of 2 for
+the x_1 variable reflects the presence of two cycles of length 1.
+
+Classes of Permutations Map to Terms of Cycle Index Polynomial:
+---------------------------------------------------------------
+The previous paragraph enables one to interpret terms of a cycle index
+polynomial as classes of permutation with common form when decomposed into a set
+of cyclic permutations.  The set of terms in the cycle index polynomial reflect
+all the possible forms the permutations can be decomposed into cyclic
+permutations.  The numeric coefficient of a term give the number of permutations
+of each class of permutations.
+
+Composition of Permutations Map to Product of Cycle Index Polynomials:
+----------------------------------------------------------------------
+In the Disorderly Escape challenge, both rows and columns are subject to
+permutation independently.  I.e. for any given permutation of rows, the columns
+are subject to any possible permutation, and vice versa.  The cycle index
+polynomial when rows and columns are subject to independent permutation is just
+the "product" of the cycle index polynomials for row permutations and column
+permutations.
+
+Similarities and Differences of Cycle Index Polynomials and First Year Algebra:
+-------------------------------------------------------------------------------
+The algebra for taking the product of these polynomials has both similarities
+and differences with basic first year algebra.  Like first year algebra,
+multiplying two polynomials involves taking the outer product of terms in the
+two polynomials with coefficients of the terms multiplied using standard
+arithmetic.  Also, like first year algebra, polynomials are simplified by
+combining "like" terms additively where the set of variables in two terms as
+well as their power determine whether they are "like" terms or not.
+
+Taking Product of Two Terms of Cycle Index Polynomials:
+-------------------------------------------------------
+But taking the product of two terms of cycle index polynomials differs
+significantly from first year algebra.  First, the product of all possible
+combinations of variables from the two terms must be considered.  Second,
+the product of any two variables can result in a different type of variable
+and usually does.
+
+Taking Product of Two Variables of Cycle Index Polynomials:
+-----------------------------------------------------------
+Consider taking the product of x_m and x_n.  The variable x_m represent cyclic
+permutations of length m and x_n cyclic permutations of length n.  The product
+of x_m and x_n should represent the result of a cyclic permutation of length
+m of rows followed by a cyclic permutation of length n on columns.  Without
+proof, I assert the result is GCD(m,n) cyclic permutations of length LCM(m,n)
+where LCM is the least common multiple function and GCD is the greatest common
+divisor function.
+
+If p and q are the exponents of x_m and x_n in the terms being multiplied then
+the result of composing the p cyclic permutations of length m of rows with the
+q cyclic permutations of length n of columns is p * q * GCD(m,n) cyclic
+permutations of length m * n / GCD(m,n).  This is just for one combination of
+x_m and x_n.  When multiplying terms, all combinations contribute
+multiplicatively to the result.
+
+Evaluating Cycle Index Polynomial to Find Number of Equivalence Classes:
+------------------------------------------------------------------------
+The above explains the connection between cycle index polynomials and cyclic
+permutations of rows and columns.  I conclude with a discussion of why the
+number of equivalence classes is obtained when the cycle index polynomial is
+evaluated.  Evaluation is done by replacing each of the variables with the
+number of states (colors) gives the number of unique star grids when grids are
+equivalent if one can be obtained from the other by permuting rows and columns.
+
+Each variable in the cycle index polynomial represents a cyclic permutation.
+By definition, a cyclic permutation maps an element to its neighbor, and by
+repeated application of the permutation, to all other members of the cyclic
+permutation.  Since they are invariant under the permutation, all elements in
+a cyclic permutation must have the same state (color).  The state assigned to
+one cyclic permutation, however, does not constrain the state that can be
+assigned to other cyclic permutations in the decomposition.  Because states
+can be assigned to them independently, there are s * s ways to assign states
+to any pair of distinct cyclic permutations where the number of possible states
+is s.  Be extension, setting all variables in the cycle index polynomial gives
+the number of distinct star maps when two maps are considered equivalent if
+one can be obtained from the other by permuting rows and columns.
+"""
+
+
+def gcd(a, b):
+    """gcd() finds the greatest common divisor of integer arguments 'a' and 'b'.
+    The return value is the greatest common divisor.
+
+    This function is a utility function used by the function cycle_product().
+
+    The algorithm uses the Euclidean algorithm as found at the link:
+    https://en.wikipedia.org/wiki/Euclidean_algorithm"""
+
+    while(not b == 0):
+        t = b
+        b = a % b
+        a = t
+
+    return a
+
+
+def cycle_product(len0, exp0, len1, exp1):
+    """cycle_product() computes the result of the product of two cycle terms.
+    The arguments 'len0', 'exp0', 'len1', and 'exp1' are integers taking on the
+    length and exponent (multiplicity) of the cycles.  The function returns
+    the length and exponent of the resulting cycle.
+
+    This function is a utility function used by the function term_product().
+
+    The mechanics of the taking the product of two cycle terms can be found at:
+    https://math.stackexchange.com/questions/4085977/cycle-index-for-s-2-times-s-4
+    """
+
+    gcd2 = gcd(len0, len1)
+
+    len2 = len0 * len1 // gcd2
+    exp2 = exp0 * exp1 * gcd2
+
+    return (len2, exp2)
+
+
+def term_product(term0, term1):
+    """term_product() computes the result of multiplying two terms of the product
+    of two cycle index polynomials.  Input arguments 'term0' and 'term1' are
+    dictionaries representing the terms whose product is being computed which is
+    communicated to the caller via the return value of the function call.
+
+    This function is a utility function used by the function poly_product().
+
+    The mechanics of taking the product can be found at the link:
+    https://math.stackexchange.com/questions/4085977/cycle-index-for-s-2-times-s-4
+    """
+
+    ord0 = len(term0['exp'])
+    ord1 = len(term1['exp'])
+
+    term2 = {
+        'num': term0['num'] * term1['num'],
+        'exp': [0] * (ord0 * ord1),
+    }
+
+    #  Loop over cycle lengths in term0
+    for idx0 in range(ord0):
+
+        #  Skip cycle length if the exponent is 0
+        if 0 == term0['exp'][idx0]:
+            continue
+
+        #  Get the length and exponent of term 0 cycle
+        len0 = idx0 + 1
+        exp0 = term0['exp'][idx0]
+
+        #  Loop over cycle lengths in term1
+        for idx1 in range(ord1):
+
+            #  Skip cycle length if the exponent is 0
+            if 0 == term1['exp'][idx1]:
+                continue
+
+            #  Get the length and exponent of term 1 cycle
+            len1 = idx1 + 1
+            exp1 = term1['exp'][idx1]
+
+            [len2, exp2] = cycle_product(len0, exp0, len1, exp1)
+
+            idx2 = len2 - 1
+
+            term2['exp'][idx2] += exp2
+
+    return term2
+
+
+def get_signature(term):
+    """get_signature() creates a 'signature' for a term in a cycle
+    index polynomial.  The signature facilitates identifying like terms
+    which should be combined when simplifying a polynomial.
+
+    This function is a utility function used by simplify_poly()."""
+
+    order = len(term['exp'])
+
+    sig_value = 0
+
+    for idx in range(order):
+        sig_value = (order * order) * sig_value + term['exp'][order-1-idx]
+
+    return sig_value
+
+
+def simplify_poly(poly):
+    """simplify_poly() simplifies a polynomial by combining like terms.  The
+    single argument 'poly' is the polynomial to be simplified.  The function's
+    return value is the result after simplification.
+
+    This function is a utility function used by two functions poly_product(),
+    and create_sym_group_polynomials(max_ord)."""
+
+    num_terms = len(poly['terms'])
+
+    #  Make lists of all terms with the same 'signatures'
+    signatures = {}
+
+    for idx in range(num_terms):
+        term = poly['terms'][idx]
+
+        signature = get_signature(term)
+
+        if signature in signatures:
+            signatures[signature].append(idx)
+        else:
+            signatures[signature] = [idx]
+
+    #  Combine like terms (i.e. terms with common signatures)
+    new_terms = []
+
+    for signature in sorted(signatures.keys()):
+        idx0 = signatures[signature][0]
+
+        order = len(poly['terms'][idx0]['exp'])
+
+        new_term = {
+            'num': 0,
+            'exp': [0] * order,
+        }
+
+        for idx in range(order):
+            new_term['exp'][idx] = poly['terms'][idx0]['exp'][idx]
+
+        for idx in signatures[signature]:
+            new_term['num'] += poly['terms'][idx]['num']
+
+        new_terms.append(new_term)
+
+    poly['terms'] = new_terms
+
+
+def poly_product(poly0, poly1):
+    """poly_product() computes the product of two cycle index polynomials.  The
+    arguments 'poly0' and 'poly1' are the cycle index polynomials are the operand
+    polynomials.  The return value of the function is the product.
+
+    The mechanics of taking the product can be found at the link:
+    https://math.stackexchange.com/questions/4085977/cycle-index-for-s-2-times-s-4
+    """
+
+    num_term0 = len(poly0['terms'])
+    num_term1 = len(poly1['terms'])
+
+    poly2 = {
+        'order': poly0['order'] * poly1['order'],
+        'den': poly0['den'] * poly1['den'],
+        'terms': []
+    }
+
+    #  Loop over terms in poly0
+    for idx0 in range(num_term0):
+
+        #  Get term from poly0
+        term0 = poly0['terms'][idx0]
+
+        #  Loop over terms in poly1
+        for idx1 in range(num_term1):
+
+            #  Get term from poly1
+            term1 = poly1['terms'][idx1]
+
+            #  'Multiply' terms
+            term2 = term_product(term0, term1)
+
+            #  Save result of term multiplication
+            poly2['terms'].append(term2)
+
+    #  Now that all the cross products have been calculated, combine like terms
+    simplify_poly(poly2)
+
+    return poly2
+
+
+def create_sym_group_polynomials(max_ord):
+    """The function create_sym_group_polynomials() creates the cycle index
+    polynomials for symmetric groups up to the specified order.  The input
+    argument 'max_ord' is the maximum order to create.  The return value of
+    the function is a list whose elements are the polynomials.
+
+    Symmetric group polynomials created using the recurrence relation found in
+    https://en.wikipedia.org/wiki/Cycle_index#Symmetric_group_Sn."""
+
+    #  Create list hold polynomials (in order)
+    sym_grp_polynomials = []
+
+    #  Loop over order of symmetric groups
+    for order in range(1, max_ord+1):
+
+        #  Create new polynomial container
+        new_poly = {
+            'order': order,
+            'den': factorial(order),
+            'terms': []
+        }
+
+        #  Add term for permutation of length order
+        new_term = {
+            'num': new_poly['den'] // order,
+            'exp': [0] * order,
+        }
+
+        new_term['exp'][order-1] = 1
+
+        new_poly['terms'].append(new_term)
+
+        #  Add contributions from polynomials of lower orders
+        for poly in sym_grp_polynomials:
+
+            poly_order = len(poly['terms'][0]['exp'])
+
+            #  Loop over terms of lower order polynomial
+            for term in poly['terms']:
+
+                #  Clone term
+                new_term = {
+                    'num': term['num'],
+                    'exp': [0] * order,
+                }
+
+                new_term['exp'][0:poly_order] = term['exp'][0:poly_order]
+
+                #  Account for multiplication by x_l
+                new_term['exp'][order - poly_order - 1] += 1
+
+                #  Adjust numerator to be compatible with new_poly denominator
+                new_term['num'] *= (new_poly['den'] // (order * poly['den']))
+
+                #  Append new term to polynomial
+                new_poly['terms'].append(new_term)
+
+        #  Combine like terms
+        simplify_poly(new_poly)
+
+        #  Save in list of polynomials for symmetric groups
+        sym_grp_polynomials.append(new_poly)
+
+    #  Return list of cycle index polynomials for symmetric groups up to order
+    #  'max_ord'
+    return sym_grp_polynomials
+
+
+def evaluate(poly, num_states):
+    """Function evaluate() evaluates a cycle index polynomial to calculate the
+    number of equivalence classes that when each element of the grid can take
+    any of the specified number of states.  The input argument 'poly' has the
+    cycle index polynomial and 'num_states' is an integer with the number of
+    possible states each element of the grid can take."""
+
+    num_terms = len(poly['terms'])
+
+    #  Loop over terms in poly
+    num = 0
+    for idx0 in range(num_terms):
+
+        #  Get term from poly
+        term = poly['terms'][idx0]
+
+        prod = term['num']
+
+        for idx1 in range(len(term['exp'])):
+            exp = term['exp'][idx1]
+            prod *= (num_states ** exp)
+
+        num += prod
+
+    return num // poly['den']
+
+
+def solution(num_col, num_row, num_states):
+    """Function solution() computes the number of equivalence classes which
+    result when each element of a star grid can be in the specified number
+    of states.  The input arguments 'num_col' 'num_row' and 'num_states' are
+    the (integer) number of rows, number of columns and number of states,
+    of the star grid, respectively."""
+
+    #  Obtain the cycle index polynomials for permutations of rows and columns
+    max_order = max(num_row, num_col)
+
+    sym_grp_polynomials = create_sym_group_polynomials(max_order)
+
+    row_polynomial = sym_grp_polynomials[num_row-1]
+    col_polynomial = sym_grp_polynomials[num_col-1]
+
+    #  Multiply the cycle index polynomials to obtain the cycle index polynomial
+    #  for the net result of permuting both rows and columns
+    poly = poly_product(row_polynomial, col_polynomial)
+
+    #  Evaluate cycle index polynomial for the number of states each grid
+    #  element can take
+    result = evaluate(poly, num_states)
+
+    return str(result)
+
+
+if __name__ == '__main__':
+    res = solution(2, 3, 4)
+
+    print(f"result={res}")

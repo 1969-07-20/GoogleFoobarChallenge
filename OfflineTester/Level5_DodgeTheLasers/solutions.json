@@ -1,0 +1,47 @@
+[
+    {
+        "file":   "Level5_DodgeTheLasers.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution3",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution4",
+        "entry":  "sum_of_floors_multiples_root2",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DodgeTheLasers.solution9",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

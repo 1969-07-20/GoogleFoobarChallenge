@@ -1,0 +1,47 @@
+[
+    {
+        "file":   "Level5_DisorderlyEscape.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_DisorderlyEscape.solution9",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

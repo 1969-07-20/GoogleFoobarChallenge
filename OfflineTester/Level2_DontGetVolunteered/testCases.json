@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [0,1],
+        "output":  3
+    },
+    {
+        "desc":   "Generic case",
+        "source": "Problem statement",
+        "input":  [19, 36],
+        "output": 1
+    },
+    {
+        "desc":   "From one corner to the diagonal corner",
+        "source": "Problem statement",
+        "input":  [56, 7],
+        "output": 6
+    }
+]

@@ -1,0 +1,20 @@
+[
+   {
+       "desc":    "Typical case",
+       "source":  "Problem statement",
+       "input":   [[1, 2, 3, 4], 15],
+       "output":  [-1, -1]
+   },
+   {
+       "desc":    "Typical case",
+       "source":  "Problem statement",
+       "input":   [[4, 3, 10, 2, 8], 12],
+       "output":  [2, 3]
+   },
+   {
+       "desc":    "Corner case:  Message at the very beginning",
+       "source":  "Problem statement",
+       "input":   [[4, 3, 5, 7, 8], 12],
+       "output":  [0, 2]
+   }
+]

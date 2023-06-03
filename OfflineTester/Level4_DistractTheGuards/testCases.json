@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[1, 1]],
+        "output":  2
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[1, 7, 3, 21, 13, 19]],
+        "output":  0
+    }
+]

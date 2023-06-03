@@ -1,0 +1,87 @@
+[
+    {
+        "file":   "Level2_GearingUpForDestruction.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution2",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionC",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionD",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionE",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionF",
+        "entry":  "solutionNader",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionG",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_GearingUpForDestruction.solutionH",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[[true, true, false, true, false, true, false, true, true, false], [true, true, false, false, false, false, true, true, true, false], [true, true, false, false, false, false, false, false, false, true], [false, true, false, false, false, false, true, true, false, false]]],
+        "output":  11567
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[[true, false, true], [false, true, false], [true, false, true]]],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[[true, false, true, false, false, true, true, true], [true, false, true, false, false, false, true, false], [true, true, true, false, false, false, true, false], [true, false, true, false, false, false, true, false], [true, false, true, false, false, true, true, true]]],
+        "output":  254
+    }
+]

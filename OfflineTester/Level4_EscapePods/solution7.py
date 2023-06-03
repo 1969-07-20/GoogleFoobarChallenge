@@ -1,0 +1,65 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/JDMatrix/Google_Foobar/blob/master/Level_4/Escape_Pods/solution.py"
+
+
+def solution(entrances, exits, path):
+    source = [0] * len(path[0])
+    for i, val in enumerate(entrances):
+        if i in entrances: source[i] = 4000000
+
+    source = [0] + source + [0]
+    capacities = []
+    for i, val in enumerate(path):
+        capacities.append(([0] + val + [0]))
+
+    for i, val in enumerate(exits):
+        capacities[val][-1] = 4000000
+
+    capacities.insert(0, source)
+    capacities.append(([0] * len(capacities[0])))
+
+    return max_flow(capacities, 0, len(capacities) - 1)
+
+
+def bfs(c, f, s, t):
+    n = len(c)
+    queue = [s]
+    global level
+    level = n * [0]
+    level[s] = 1
+    while queue:
+        k = queue.pop(0)
+        for i in range(n):
+            if (f[k][i] < c[k][i]) and (level[i] == 0):
+                level[i] = level[k] + 1
+                queue.append(i)
+    return level[t] > 0
+
+
+def dfs(c, F, k, cp):
+    tmp = cp
+    if k == len(c) - 1:
+        return cp
+    for i in range(len(c)):
+        if (level[i] == level[k] + 1) and (F[k][i] < c[k][i]):
+            f = dfs(c, F, i, min(tmp, c[k][i] - F[k][i]))
+            F[k][i] = F[k][i] + f
+            F[i][k] = F[i][k] - f
+            tmp = tmp - f
+    return cp - tmp
+
+
+def max_flow(c, s, t):
+    n = len(c)
+    f = [n * [0] for _ in range(n)]
+    flow = 0
+    while bfs(c, f, s, t):
+        flow = flow + dfs(c, f, s, 100000)
+    return flow

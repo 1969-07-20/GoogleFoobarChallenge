@@ -1,0 +1,52 @@
+[
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PleasePassTheCodedMessages.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

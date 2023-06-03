@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution2",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution4",
+        "entry":  "reduce_to_one_dividing_by_one_or_pm_one",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FuelInjectionPerfection.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

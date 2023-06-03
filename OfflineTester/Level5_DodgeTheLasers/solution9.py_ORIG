@@ -1,0 +1,35 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/oneshan/foobar/blob/master/dodge_the_lasers/solution.py"
+
+
+# beatty sequence sum
+# https://math.stackexchange.com/questions/2052179/how-to-find-sum-i-1n-left-lfloor-i-sqrt2-right-rfloor-a001951-a-beatty-s
+from decimal import Decimal, getcontext
+getcontext().prec = 101
+sqrt2m1 = Decimal(2).sqrt() - 1
+
+
+def answer(str_n):
+    n = long(str_n)
+
+    def s(n):
+        if n == 1:
+            return 1
+        if n < 1:
+            return 0
+        n1 = long(sqrt2m1 * n)
+        return n * n1 + n * (n + 1) // 2 - n1 * (n1 + 1) // 2 - s(n1)
+
+    return str(s(n))
+
+
+if __name__ == "__main__":
+    print("4208", answer("77"))
+    print("19", answer("5"))

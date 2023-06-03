@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Generic case:  Unique element in first list",
+        "source":  "Problem statement",
+        "input":   [[13, 5, 6, 2, 5], [5, 2, 5, 13]],
+        "output":  6
+    },
+    {
+        "desc":    "Generic case:  Unique element in second list",
+        "source":  "Problem statement",
+        "input":   [[14, 27, 1, 4, 2, 50, 3, 1], [2, 4, -4, 3, 1, 1, 14, 27, 50]],
+        "output":  -4
+    },
+    {
+        "desc":    "Corner case:  minimum length input",
+        "source":  "Problem statement",
+        "input":   [[27, 0], [27]],
+        "output":  0
+    }
+]

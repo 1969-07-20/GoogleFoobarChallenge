@@ -1,0 +1,98 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level2_PowerHungry/powerHungry_2020.py"
+
+
+"""  Solution to 'Power Hungry' puzzle.
+
+Description of algorithm:
+   The maximum product of the input values is achieved by multiplying
+      a) all positive inputs (1, being the multiplicative identity, is
+         a NoOp and therefore optional; it will be included in order
+         to save the logic of checking for it.)
+      b) the largest magnitude pairs of negative inputs.  If there is
+         an odd number of negative inputs, the one with the smallest
+         magnitude will not be included in the product.
+
+    Since 0 times any number is 0, any 0 will not be included in the
+    product.  Due to the commutative property of multiplication, the
+    products can be computed in any order.
+
+    The above can be summarized as the answer is the product of all
+    non-zero values except in the case where there are an odd number
+    of negative values, the smallest magnitude negative number is
+    excluded also.  Since division is the inverse operation of
+    multiplication we can multiply all non-zero numbers together and
+    divide out the smallest negative number if there are an odd number
+    of negative numbers (which manifests itself as a negative product).
+
+Time and space complexity of the solution:
+    The solution consists of a scan of the input where each input is
+    visited once and O(1) work is performed on each of the N input
+    elements.  This is followed by O(1) work to handle the possibility
+    of an odd number of negative elements.  The solution requires O(1)
+    additional space beyond the input.  Therefore the solution has
+    O(N) time and O(N) space complexity.
+
+Assumptions/restrictions:
+    None
+
+This solution is completely of my own conception and execution.
+"""
+
+def solution(xs):
+    """Compute max array power level by multiping the power output of
+    the appropriate subset of panel power outputs."""
+
+    #  Scan input, multiplying all non-zero values and identifying the
+    #  negative element with least magnitude
+    prod = 1
+    least_neg = 0
+    num_pos = 0
+    num_neg = 0
+
+    for elem in xs:
+
+        #  Compute the product of all non-zero elements
+        if elem != 0:
+            prod *= elem
+
+            if elem > 0:
+                num_pos += 1
+            else:
+                num_neg += 1
+
+        #  Identify the negative element with least magnitude
+        if elem < 0:
+            if ((-elem) < (-least_neg)) or (least_neg == 0):
+                least_neg = elem
+
+
+    #  If the product is negative, then there are an odd number of
+    #  negative elements.  Divide by the negative element with least
+    #  magnitude to get the product with maximum magnitude.
+    if prod < 0:
+        prod /= least_neg
+
+
+    #  Handle corner cases:
+
+    #  1)  Only one panel, the answer is that panel's output, even if
+    #      it is negative.  (Problem statement specifies a non-empty
+    #      subset of panels.)
+    if len(xs) == 1:
+        prod = xs[0]
+
+    #  2) all panels have zero output with exception of possibly one
+    #     with negative output -- maximum power output is 0
+    elif (num_pos == 0) and (num_neg <= 1):
+        prod = 0
+
+    #  Return the calculated power output
+    return str(int(prod))

@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[2, 0, 2, 2, 0]],
+        "output":  "8"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[-2, -3, 4, -5]],
+        "output":  "60"
+    }
+]

@@ -1,0 +1,49 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level2_BunnyWorkerLocations/bunnyWorkerLocations.py"
+
+
+""" This file implements a solution to the 'Bunny Workers Location' challenge.
+
+Let r be the row (y-coordinate) of a bunny's cell and c be the column
+(x-coordinate).  The following observations form the foundation to the solution
+to the Bunny Worker Locations challenge.
+
+1) The IDs of bunnies increases sequentially along diagonals from upper left to
+   lower right.
+2) The length of each diagonal increases by one.
+3) Let n be the length of a diagonal on which a cell at (c,r) lies.  The length
+   of the diagonal is n = c - r - 1.
+4) The ID of the bunny occupying cell (c,r) is the column number plus the sum
+   of the length of diagonals of length 1 to n-1.
+5) Let N be the sum of lengths of diagonals of length from 1 to n-1.  This well-
+   known sum is N = (n) * (n-1) / 2.
+6) Observations 4 and 5 allow us to write an expression for the ID of the bunny
+   at cell (c,r) in terms of n and c:
+
+   ID(c,r) = c + (n) * (n-1) / 2
+
+7) Observation 3 allows us to replace n in the above equation with (c + r - 1)
+   to express the ID in terms of c and r only.
+
+   ID(c,r) = c + (c + r - 1) * ((c + r - 1) - 1 ) / 2
+           = c + (c + r - 1) * (c + r - 2) / 2
+
+8) Simplifying the above gives:
+
+   ID(c,r) = (c*c + r*r + 2*c*r - c - 3*r + 2) / 2
+"""
+
+
+def solution(c, r):
+    """Function solution(c,r) determines the ID of the bunny in the cell
+    located at column c, row r.
+    """
+    return str(int((c*c + r*r + 2*c*r - c - 3*r + 2) / 2))
+

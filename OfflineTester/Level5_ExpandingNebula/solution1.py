@@ -1,0 +1,244 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level5_ExpandingNebula/expandingNebula.py"
+
+
+"""
+The code in this file computes answers to the Expanding Nebula challenge.  The
+function solution(grid) is called with argument 'grid' which is a 2D array of
+boolean values encoding the state of the nebula at time step i+1.  The function
+returns the number of states at time step i which could have given rise to the
+nebula at time step i+1 subject to the rules which control the evolution of the
+nebula as given in the problem statement.
+
+This challenge actually was one of the easier challenges.  A video on the
+YouTube channel Vsauce2 that I saw a few weeks ago provided a mental framework
+which made solving this challenge straight forward.  The URL for the video is
+
+https://www.youtube.com/watch?v=s4tyO4V2im8
+
+The key enabler from that video is the mental construct of imagining a system
+evolving through a series of states in a systematic manner.  Given the state of
+two adjacent columns at the previous time step, the state of the column on the
+left in th current time step is fixed.  This is also true of the pair of columns
+formed when dropping the left column of the original pair and adding the next
+column to the right.  This forms a series of inter-linking constraints which can
+be viewed as a state machine going through a series of states while processing
+pairs of columns from left to right.
+
+While, for a particular pair of adjacent columns at time i fix the state of the
+left column at time step i+1, the mapping is not one-to-one.  It is possible
+that other states of the adjacent column could result in the same current state
+of the column when combined with the previous state of the column.  But the
+multiplicity will be highly constrained.  The algorithm here exploits this fact
+to achieve great reduction in the time complexity of the algorithm.
+
+This fixed relationship between pairs of adjacent columns on the previous time
+step and the state of the left column in the current time step can be
+rearranged.  The algorithm here rearranges the relationship so that the state
+of a column in the previous and current time steps constrain the state of the
+column to the right in the previous time step.
+
+This rearrangement of the relationship enables marching across columns from the
+left to the right to determine the number of ways the state of the column on the
+right can be reached from all feasible states of the leftmost column.
+
+The method to count the number of ways is as follows.  Remember from above the
+state machine encodes the combined state of a column for the previous and
+current time step.  The state machine evolves while processing columns from left
+to right. For each possible state of the column under consideration, a count is
+maintained for the number of ways the state machine can reach that state
+starting from the leftmost column.
+
+To start things off the count needs to be initialized for the leftmost column.
+For the left most column, each state that can result in the state of the left
+most column in the current time step is assigned a value of 1. All other states
+are assigned a value of zero.
+
+Using the count for the states of the left-most column the algorithm processes
+columns from left to right.  When processing the j+1 column, we know the count
+for each of the states of column j.  To get the count for the states of column
+j+1 each state of column j is processed one at a time.  The count for a given
+state is added to the count of each state of column j+1 that can be reached
+given the state of column j at the current and previous timestep. Since multiple
+states of column j+1 can be reached from a given state of column j, the count
+for the count for a state may be added to multiple states of column j+1.
+
+The count of states progresses until the rightmost column of the input grid is
+processed.  The sum over all column states of the count of the number of ways to
+reach that state gives the number of configurations of the nebula at the previous
+time step which could result in the state of the nebula given as the input to
+solution().
+"""
+
+
+def solution(grid):
+    """solution() returns the number of previous states of the grid that will
+    result in the nebula being in a state represented by the grid passed into
+    solution() via its argument 'grid'.
+
+    solution() calls supporting functions create_state_map() and
+    encode_grid_columns()."""
+
+    num_rows = len(grid)
+    num_cols = len(grid[0])
+
+    num_old_states = 2**(num_rows + 1)
+
+    #  Create the mapping from (old_state, new_state) for column i to old_state for column i+1
+    state_map = create_state_map(num_rows)
+
+    #  Encode the columns of the input grid
+    grid_states = encode_grid_columns(grid)
+
+    #  Initialize the count for the grid states
+    idx_new = grid_states[0]
+
+    count_old = [0] * num_old_states
+
+    for idx in range(num_old_states):
+        if 0 < len(state_map[idx][idx_new]):
+            count_old[idx] = 1
+
+    #  March across columns from left to right keeping track of number of possibilities
+    for idx_col in range(num_cols):
+        count_new = [0] * num_old_states
+
+        idx_new = grid_states[idx_col]
+
+        #  Loop over states of column in previous time step
+        for idx_old in range(num_old_states):
+
+            #  Propagate the count for the state to the states for the adjacent column
+            for idx in state_map[idx_old][idx_new]:
+                count_new[idx] += count_old[idx_old]
+
+        count_old = count_new
+
+    #  Compute final tally by summing over states and return
+    return sum(count_old)
+
+
+def create_state_map(num_rows):
+    """create_state_map() creates a two-dimensional array.  The array relates
+    the possible states of a column at the previous step to the possible states
+    of the same column at the current step.  Each row of the array corresponds
+    to the state of a column at the previous step.  Each column of the array
+    corresponds to the state of the column at the current step.
+
+    For each combination of previous and current states of the column, the
+    array has a list of states of the column to the immediate right which could
+    have produced the current state of the column when combined with the
+    previous state of this column.
+
+    Many combinations of previous and current states of a column are not
+    possible, no matter the state of the adjacent column previously.  In
+    these cases the list will be the empty list.
+
+    create_state_map() calls supporting function decode_old_states()."""
+
+    #  Create encoding of old states
+    old_states = decode_old_states(num_rows)
+
+    num_new_states = 2**num_rows
+    num_old_states = 2 * num_new_states
+
+    state_map = [[[] for x in range(num_new_states)] for y in range(num_old_states)]
+
+    #  Process each combination of possible states of the left column and ...
+    for idx_col0 in range(num_old_states):
+
+        #  ... the right column
+        for idx_col1 in range(num_old_states):
+            new_state = []
+
+            #  Apply the evolution rule to each row going down the column
+            for idx_new in range(num_rows):
+                count = 0
+
+                if old_states[idx_col0][idx_new]:
+                    count += 1
+
+                if old_states[idx_col1][idx_new]:
+                    count += 1
+
+                if old_states[idx_col0][idx_new+1]:
+                    count += 1
+
+                if old_states[idx_col1][idx_new+1]:
+                    count += 1
+
+                if 1 == count:
+                    new_state.append(True)
+                else:
+                    new_state.append(False)
+
+            #  Now that we figured out the state of each row in the
+            #  column encode its state as an integer
+            idx_new = 0
+            while new_state:
+                if new_state.pop():
+                    idx_new = idx_new + idx_new + 1
+                else:
+                    idx_new = idx_new + idx_new
+
+            #  idx_col0 combined with idx_new maps onto idx_col1
+            state_map[idx_col0][idx_new].append(idx_col1)
+
+    return state_map
+
+
+def encode_grid_columns(grid):
+    """encode_grid_columns() grid returns a list of integers, one integer for
+    each column in grid.  The integers are the numbers if the boolean values
+    in the grid are treated as if they are the binary digits in a base two
+    representation of the integers."""
+
+    num_rows = len(grid)
+    num_cols = len(grid[0])
+
+    states = []
+
+    for idx_col in range(num_cols):
+        state = 0
+        for idx in range(num_rows):
+            if grid[idx][idx_col]:
+                state = state + state + 1
+            else:
+                state = state + state
+
+        states.append(state)
+
+    return states
+
+
+def decode_old_states(num_rows):
+    """decode_old_states() returns a two-dimensional array of boolean values.
+    The rows of the array correspond to one of the possible states for a column
+    of the grid.  The columns of the array correspond to the rows of the grid."""
+
+    num_old_states = 2**(num_rows + 1)
+
+    old_states = []
+    for idx_old in range(num_old_states):
+        state = []
+        val = idx_old
+        for idx in range(num_rows + 1):
+            val_new = val // 2
+
+            if val == 2 * val_new:
+                state.append(False)
+            else:
+                state.append(True)
+
+            val = val_new
+
+        old_states.append(state)
+
+    return old_states

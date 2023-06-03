@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [[4, 30, 50]],
+        "output":  [12, 1]
+    },
+    {
+        "desc":    "Corner case:  No solution",
+        "source":  "Problem statement",
+        "input":   [[4, 17, 50]],
+        "output":  [-1, -1]
+    }
+]

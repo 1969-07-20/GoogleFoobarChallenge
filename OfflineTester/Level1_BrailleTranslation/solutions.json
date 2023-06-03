@@ -1,0 +1,67 @@
+[
+    {
+        "file":   "Level1_BrailleTranslation.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solution9",
+        "entry":  "translate_to_braille",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solutionA",
+        "entry":  "BrailleTranslation",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solutionC",
+        "entry":  "braille_converter",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_BrailleTranslation.solutionD",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

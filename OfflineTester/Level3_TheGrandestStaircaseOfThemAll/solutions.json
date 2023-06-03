@@ -1,0 +1,67 @@
+[
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution3",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution4",
+        "entry":  "The_Grandest_Staircase_Of_Them_All",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solutionC",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_TheGrandestStaircaseOfThemAll.solutionD",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

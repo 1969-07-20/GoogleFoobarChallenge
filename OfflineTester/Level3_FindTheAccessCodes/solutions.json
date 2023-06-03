@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level3_FindTheAccessCodes.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_FindTheAccessCodes.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

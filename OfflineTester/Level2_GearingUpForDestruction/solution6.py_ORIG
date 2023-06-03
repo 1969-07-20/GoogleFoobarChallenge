@@ -1,0 +1,96 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/wrbyepct/Gearing-up-for-destruction/blob/main/solution.py"
+
+
+from fractions import Fraction
+test_1 = [1, 51]
+test_2 = [4, 30, 50]
+test_3 = [4, 17, 50]
+test_4 = [25, 105, 145, 170]
+test_5 = [1, 9, 10, 11]
+test_6 = [2, 10, 11, 13]
+
+"""
+Important question! 
+    Does every gear has a valid radius?
+"""
+
+
+def solution(the_list):
+    distance_list = get_distance_for_every_two_pegs(the_list)
+
+    # The sum is the first and last gear relationship:
+    #     it's either G1 + Gn(for even number of gears), or G1 - Gn(for odd number of gears)
+    alternating_sum = get_alternating_sum(distance_list)
+    # Rules:
+    #     1. The first gear must be greater than the last gear, and they are all positive integers
+    #     2. It's impossible for G1 + Gn or G1 - Gn to be less than 1
+    #     3. The ratio of G1 has to be greater than 1
+    #     4. The smallest gear size is 1
+
+    # G1 + Gn or G1 - Gn is never supposed to be less than 1
+    if alternating_sum <= 0:
+        return [-1, -1]
+    # G1, Gn relationship:
+    #     If pegs are even size, 3Gn (or G1 + Gn) = alternating sum
+    #     else Gn (or G1 - Gn) = alternating sum
+    first_gear_in_fraction = Fraction(alternating_sum * 2, 3) if list_is_even(the_list) \
+        else Fraction(alternating_sum * 2)
+
+    return [-1, -1] if found_invalid_radius(first_gear_in_fraction, distance_list) \
+        else [first_gear_in_fraction.numerator, first_gear_in_fraction.denominator]
+
+
+def list_is_even(the_list):
+    """
+    Returns True if given list is even size; otherwise returns False
+    """
+    return len(the_list) % 2 == 0
+
+
+def get_distance_for_every_two_pegs(the_list):
+    """
+    Given a list of integers, returns a list of list[i + 1] - list[i]
+    """
+    list_range = [i for i in range(len(the_list) - 1)]
+    return list(map(lambda i: the_list[i + 1] - the_list[i], list_range))
+
+
+def get_alternating_sum(distance_list):
+    """
+    Given a list of real numbers, returns list[i] + (- list[i+1]) + list[i+2] + .....
+    """
+    distance_alternating_sum = 0
+    toggle = 1
+    for distance in distance_list:
+        distance_alternating_sum += (distance * toggle)
+        toggle *= -1
+    return distance_alternating_sum
+
+
+def found_invalid_radius(first_gear, distance_list):
+    """
+    Given the radius of the first gear, and the distance list, deduce the radius of every gear
+    If there's a radius less than 1, returns True; otherwise returns False
+    """
+    checking_gear = first_gear
+    for distance in distance_list:
+        checking_gear = distance - checking_gear
+        if checking_gear < 1:
+            return True
+    return False
+
+
+print(solution(test_1))
+print(solution(test_2))
+print(solution(test_3))
+print(solution(test_4))
+print(solution(test_5))
+print(solution(test_6))

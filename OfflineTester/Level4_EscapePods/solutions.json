@@ -1,0 +1,47 @@
+[
+    {
+        "file":   "Level4_EscapePods.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_EscapePods.solution9",
+        "entry":  "maximum_flow_on_graph",
+        "dep":    []
+    }
+]

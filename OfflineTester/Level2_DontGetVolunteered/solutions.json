@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level2_DontGetVolunteered.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_DontGetVolunteered.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

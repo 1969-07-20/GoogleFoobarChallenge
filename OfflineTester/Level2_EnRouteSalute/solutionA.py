@@ -1,0 +1,42 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://medium.com/@johnfengphd/google-foobar-challenge-en-route-salute-86b47642015b"
+
+
+#  Mod:
+#  - Indented comment block to make Python parser happy.
+
+def solution(s):
+    """
+    Solution to the En Route Salute challenge
+    
+    Args:
+      s (str): A string of <, >, -, characters that represent
+        the walker soldiers and spaces in a hallway
+    
+    Returns:
+      (int): Number of salutes done by soldiers who intersect
+    """
+    # Index the positions of every '<' and '>'
+    right_positions = []
+    left_positions = []
+    for pos, char in enumerate(s):
+        if (char == '>'):
+            right_positions.append(pos)
+        elif (char == '<'):
+            left_positions.append(pos)
+
+    # Count the number of crossings that happen
+    num_crossings = 0
+    for rp in right_positions:
+        for lp in left_positions:
+            if lp > rp:
+                num_crossings += 1
+
+    return 2*num_crossings    # 2 salutes for every crossing

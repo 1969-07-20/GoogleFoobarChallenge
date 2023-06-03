@@ -1,0 +1,108 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level3_BombBaby/bombBaby.py"
+
+
+#  Mod
+#  - Changed floating point division to integer division
+
+
+"""  This file implements a solution to the 'Bomb Baby!' puzzle.
+
+Description of algorithm:
+    Observation:  The two possible operations are to either
+    a) increase the number of Mach bombs by the number of Facula bombs or
+    b) increase the number of Facula bombs by the number of Mach bombs.
+
+    In either case, when the number of bombs of type B are increased by the
+    number of bombs of type A, we know that number of B will be greater than
+    the number of type A.  This tells us unambiguously which type of bomb was
+    increased in number in the last generation and the amount by which it
+    increased.  This allows us to compute the number of bombs in the previous
+    generation.  The same logic applies to all generations, allowing us to
+    roll the generations back to to the first generation.
+
+    The algorithm is as follows:  Repeatedly subtract the lesser number of
+    bombs from the greater.  If the given combination of initial bombs is
+    reached (M=1 and F=1 in our case) then the combination is achievable in
+    the number of steps, otherwise it is impossible to realize.
+
+    In order to avoid repeated subtraction of one value from other, such as would
+    be the case if M=1 and F=100000, division with remainders will be used to
+    combine repeated subtraction into one operation.
+
+Time and space complexity of the solution:
+    The operations taken in the solution are nearly identical to the operations
+    in the Euclidean algorithm:  iteratively find the remainder when the larger
+    is divided by the smaller number until the ending conditions is reached.
+
+    The Euclidean algorithm requires at most 5 iterations per base-10 digit
+    of the smaller number (https://en.wikipedia.org/wiki/Euclidean_algorithm).
+    Thus this solution has O(log(S)) time complexity and O(log(S) + log(B))
+    space complexity where S is the NUMERIC value of the smaller input and
+    B is the NUMERIC value of the larger input.
+
+Assumptions/restrictions:
+    None
+
+This solution is completely of my own conception and execution.
+"""
+
+
+def solution(M_str, F_str):
+    """Compute the minimum number of generations to compute exactly M Mach and
+    F Facula bombs."""
+
+    #  Convert input strings into (long) ints
+    m = int(M_str)
+    f = int(F_str)
+
+    #  Run the generations of bombs backward until the initial configuration
+    #  reached or an error condition is reached.
+    m0 = 1
+    f0 = 1
+    num_gen = 0
+    while (m > m0) or (f > f0):
+
+        #  If the number of Mach bombs is greater, the last operation was the
+        #  number of Mach bombs was increased by the number of Facula bombs.
+        if m > f:
+            num_gen += (m // f)
+
+            m = m % f
+
+            #  Patch up case where too many were subtracted
+            if (f == m0) and (m == 0):
+                num_gen -= 1
+                m = f
+
+        #  If the number of Facula bombs is greater, the last operation was the
+        #  number of Facula bombs was increased by the number of Mach bombs.
+        else:
+            num_gen += (f // m)
+
+            f = f % m
+
+            #  Patch up case where too many were subtracted
+            if (m == f0) and (f == 0):
+                num_gen -= 1
+                f = m
+
+
+        #  Abort on error condition
+        if (m == 0) or (f == 0):
+            return 'impossible'
+
+
+    #  If the initial conditions have been realized, report number of generations.
+    if (m == m0) and (f == f0):
+        return str(num_gen)
+
+    #  Other wise return 'impossible'
+    return 'impossible'

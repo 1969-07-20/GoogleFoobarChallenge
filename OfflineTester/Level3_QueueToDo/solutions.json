@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level3_QueueToDo.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution3",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solutionA",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_QueueToDo.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

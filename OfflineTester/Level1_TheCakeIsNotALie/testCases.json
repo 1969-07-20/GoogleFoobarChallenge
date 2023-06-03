@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["abcabcabcabc"],
+        "output":  4
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["abccbaabccba"],
+        "output":  2
+    }
+]

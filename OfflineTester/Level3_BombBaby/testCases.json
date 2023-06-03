@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["4", "7"],
+        "output":  "4"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["2", "1"],
+        "output":  "1"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["2", "4"],
+        "output":  "impossible"
+    }
+]

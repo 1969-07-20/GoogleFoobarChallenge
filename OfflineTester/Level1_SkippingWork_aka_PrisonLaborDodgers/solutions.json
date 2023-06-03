@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SkippingWork_aka_PrisonLaborDodgers.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

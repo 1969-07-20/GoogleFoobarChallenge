@@ -1,0 +1,42 @@
+[
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_HeyIAlreadyDidThat.solution8",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

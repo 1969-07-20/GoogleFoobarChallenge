@@ -1,0 +1,62 @@
+[
+    {
+        "file":   "Level2_EnRouteSalute.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution2",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution4",
+        "entry":  "En_Route_Salute",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_EnRouteSalute.solutionC",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

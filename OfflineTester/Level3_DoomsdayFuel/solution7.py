@@ -1,0 +1,274 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/zaneaw/Doomsday_Fuel/blob/main/markov.py"
+
+
+from fractions import Fraction
+
+
+# Find the number of transient states
+def trans_num(m):
+    if len(m) == 0:
+        raise Exception("Error")
+    for row in range(len(m)):
+        for col in range(len(m[row])):
+            if m[row][col] != 0:
+                # if m
+                break
+        else:
+            return row
+    raise Exception("Error")
+
+# Create a t x t matrix (q) and a t x r matrix (r)
+# where t is the number of transient states
+# and r is the number of absorptive states
+
+
+def split_m(m):
+    t = trans_num(m)
+    if t == 0:
+        raise Exception("Error")
+
+    q = []
+    for row in range(t):
+        q_row = []
+        for col in range(t):
+            q_row.append(m[row][col])
+        q.append(q_row)
+    if q == []:
+        raise Exception("Error")
+
+    r = []
+    for row in range(t):
+        r_row = []
+        for col in range(t, len(m[row])):
+            r_row.append(m[row][col])
+        r.append(r_row)
+    if r == []:
+        raise Exception("Error")
+    return q, r
+
+
+# Create an identity matrix that's the same size as the amount of transient states
+def identity_m(t):
+    m = []
+    for x in range(t):
+        row = []
+        for y in range(t):
+            row.append(int(x == y))
+        m.append(row)
+    return m
+
+
+def is_zero(m):
+    for row in range(len(m)):
+        for col in range(len(m[r])):
+            if m[row][col] != 0:
+                return False
+        return True
+
+# Flip the i rows for the j columns and vice versa
+
+
+def flip(m, i, j):
+    n = []
+    s = len(m)
+
+    if s != len(m[0]):
+        raise Exception("Cannot swap non-square matrix")
+
+    if i == j:
+        return m
+
+    for row in range(s):
+        n_row = []
+        temp_row = m[row]
+        if row == i:
+            temp_row = m[j]
+        if row == j:
+            temp_row = m[i]
+        for col in range(s):
+            temp_col = temp_row[col]
+            if col == i:
+                temp_col = temp_row[j]
+            if col == j:
+                temp_col = temp_row[i]
+            n_row.append(temp_col)
+        n.append(n_row)
+    return n
+
+# Order the matrix for proper Fundamental Matrix setup
+
+
+def order(m):
+    s = len(m)
+    zero_row = -1
+
+    for row in range(s):
+        sum = 0
+        for col in range(s):
+            sum += m[row][col]
+        if sum == 0:
+            zero_row = row
+        if sum != 0 and zero_row > -1:
+            n = flip(m, row, zero_row)
+            return order(n)
+    return m
+
+
+# normalize the matrix
+def normalize(m):
+    n = []
+    for row in range(len(m)):
+        sum = 0
+        cols = len(m[row])
+        for col in range(cols):
+            sum += m[row][col]
+
+        n_row = []
+
+        if sum == 0:
+            n_row = m[row]
+        else:
+            for col in range(cols):
+                n_row.append(Fraction(Fraction(m[row][col]).limit_denominator(), Fraction(sum).limit_denominator()))
+        n.append(n_row)
+    return n
+
+
+# Subtract the 2 matrices, (I - Q)^-1 * R
+def subtract(i, q):
+    if len(i) != len(i[0]) or len(q) != len(q[0]):
+        raise Exception("Error")
+
+    if len(i) != len(q) or len(i[0]) != len(q[0]):
+        raise Exception("Error")
+
+    s = []
+    for row in range(len(i)):
+        s_row = []
+        for col in range(len(i[row])):
+            s_row.append(i[row][col] - q[row][col])
+        s.append(s_row)
+    return s
+
+
+# Multiply the matrices
+def multiply(a, b):
+    if a == [] or b == []:
+        raise Exception("Error")
+
+    if len(a[0]) != len(b):
+        raise Exception("Error")
+
+    m = []
+    rows = len(a)
+    cols = len(b[0])
+    iters = len(a[0])
+
+    for row in range(rows):
+        m_row = []
+        for col in range(cols):
+            sum = 0
+            for i in range(iters):
+                sum += a[row][i] * b[i][col]
+            m_row.append(sum)
+        m.append(m_row)
+    return m
+
+
+# Transpose the matrix
+def transpose_m(m):
+    t = []
+    for r in range(len(m)):
+        tRow = []
+        for c in range(len(m[r])):
+            if c == r:
+                tRow.append(m[r][c])
+            else:
+                tRow.append(m[c][r])
+        t.append(tRow)
+    return t
+
+
+def matrix_min(m, i, j):
+    return [row[:j] + row[j+1:] for row in (m[:i]+m[i+1:])]
+
+# matrix determinant
+
+
+def matrix_deter(m):
+    # base case for 2x2 matrix
+    if len(m) == 2:
+        return m[0][0]*m[1][1]-m[0][1]*m[1][0]
+
+    d = 0
+    for c in range(len(m)):
+        d += ((-1)**c)*m[0][c]*matrix_deter(matrix_min(m, 0, c))
+
+    return d
+
+# matrix inversion
+
+
+def matrix_inv(m):
+    d = matrix_deter(m)
+
+    if len(m) == 2:
+        return [[m[1][1]/d, -1*m[0][1]/d],
+                [-1*m[1][0]/d, m[0][0]/d]]
+
+    # find matrix of cofactors
+    cofactors = []
+    for r in range(len(m)):
+        cofactorRow = []
+        for c in range(len(m)):
+            minor = matrix_min(m, r, c)
+            cofactorRow.append(((-1)**(r+c)) * matrix_deter(minor))
+        cofactors.append(cofactorRow)
+    cofactors = transpose_m(cofactors)
+    for r in range(len(cofactors)):
+        for c in range(len(cofactors)):
+            cofactors[r][c] = cofactors[r][c]/d
+    return cofactors
+
+# Match the denominators and change the numerators accordingly
+
+
+def match(b):
+    numerators = []
+    max_d = 0
+    for x in b:
+        if x.denominator > max_d:
+            max_d = x.denominator
+
+    for x in b:
+        if x.denominator == 1 and x.numerator == 0:
+            numerators.append(0)
+        elif x.denominator != max_d:
+            diff = max_d / x.denominator
+            numerators.append(int(x.numerator * diff))
+        elif x.denominator == max_d:
+            numerators.append(x.numerator)
+    numerators.append(max_d)
+
+    return numerators
+
+
+def solution(m):
+    m = order(m)
+    n = normalize(m)
+    q, r = split_m(n)
+    i = identity_m(len(q))
+    s = subtract(i, q)
+    v = matrix_inv(s)
+    b = multiply(v, r)
+    x = match(b[0])
+
+    return x

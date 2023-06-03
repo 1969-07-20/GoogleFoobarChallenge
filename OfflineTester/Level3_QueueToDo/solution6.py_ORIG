@@ -1,0 +1,21 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://codereview.stackexchange.com/questions/149440/google-foobar-xor-checksum-challenge (301_Moved_Permanently)"
+
+
+def xor_in_range(a, b):
+    return reduce(operator.xor, xrange(a, b), 0)
+
+
+def answer(start, length):
+    return reduce(
+        operator.xor,
+        (xor_in_range(begin, begin+length-i)
+          for i, begin in enumerate(xrange(start, start + length * length, length))),
+        0)

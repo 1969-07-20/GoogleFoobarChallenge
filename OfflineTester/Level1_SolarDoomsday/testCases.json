@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [12],
+        "output":  [9, 1, 1, 1]
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   [15324],
+        "output":  [15129, 169, 25, 1]
+    }
+]

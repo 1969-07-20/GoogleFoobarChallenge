@@ -1,0 +1,52 @@
+[
+    {
+        "file":   "Level1_SolarDoomsday.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_SolarDoomsday.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

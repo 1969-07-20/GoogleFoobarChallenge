@@ -1,0 +1,42 @@
+[
+    {
+        "file":   "Level4_DistractTheGuards.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_DistractTheGuards.solution8",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

@@ -1,0 +1,27 @@
+''' Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/Harshax64/Foobar-Challenge-Power-Hungry-code/blob/master/solution.py"
+
+
+def solution(xs):
+    prod=1
+    negs= [n for n in xs if n < 0]
+    posi = [n for n in xs if n > 0]
+    if len(negs) % 2 == 0:
+       pass
+    elif len(negs) % 2!=0:
+        negs.sort()
+        negs.pop()
+    elif len(negs) or len(posi) == 1:
+        return str(prod)
+    a=posi+negs
+    if a:
+        for x in a:
+            prod *= x
+        print(prod)
+    return '0'

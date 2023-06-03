@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["vmxibkgrlm"],
+        "output":  "encryption"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["wrw blf hvv ozhg mrtsg'h vkrhlwv?"],
+        "output":  "did you see last night's episode?"
+    },
+    {
+        "desc":    "Generic case",
+        "source":  "Problem statement",
+        "input":   ["Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!"],
+        "output":  "Yeah! I can't believe Lance lost his job at the colony!!"
+    }
+]

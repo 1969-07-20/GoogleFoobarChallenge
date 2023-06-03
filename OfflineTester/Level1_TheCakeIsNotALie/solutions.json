@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solutionA",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_TheCakeIsNotALie.solutionB",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

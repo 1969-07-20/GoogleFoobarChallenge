@@ -1,0 +1,77 @@
+[
+    {
+        "file":   "Level3_DoomsdayFuel.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution4",
+        "entry":  "solution",
+        "dep":    ["numpy"]
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution5",
+        "entry":  "solution",
+        "dep":    ["numpy"]
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution6",
+        "entry":  "solution",
+        "dep":    ["numpy"]
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution8",
+        "entry":  "solution",
+        "dep":    ["numpy"]
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solutionA",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solutionC",
+        "entry":  "solution",
+        "dep":    ["numpy"]
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solutionD",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solutionE",
+        "entry":  "solution",
+        "dep":    ["numpy"]
+    },
+    {
+        "file":   "Level3_DoomsdayFuel.solutionF",
+        "entry":  "absorbing_probabilities",
+        "dep":    []
+    }
+]

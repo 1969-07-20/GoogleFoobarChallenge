@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Corner Case:  Min input range",
+        "source":  "Problem statement",
+        "input":   [3],
+        "output":  1
+    },
+    {
+        "desc":    "Corner Case:  Only one way",
+        "source":  "Problem statement",
+        "input":   [4],
+        "output":  1
+    },
+    {
+        "desc":    "Generic case:  small typical value",
+        "source":  "Problem statement",
+        "input":   [5],
+        "output":  2
+    }
+]

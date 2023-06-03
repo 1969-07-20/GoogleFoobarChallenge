@@ -1,0 +1,67 @@
+[
+    {
+        "file":   "Level2_PowerHungry.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solutionC",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_PowerHungry.solutionD",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

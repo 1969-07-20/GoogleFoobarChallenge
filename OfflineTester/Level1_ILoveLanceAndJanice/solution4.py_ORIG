@@ -1,0 +1,31 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://www.wikipython.com/short-program-examples/i-love-lance-janice"
+
+
+
+def answer(s):
+    forward_lc = "abcdefghijklmnopqrstuvwxyz"
+    listbackward = []
+    for letter in range(0, len(forward_lc)):
+        listbackward.append(forward_lc[letter])
+    listforward = listbackward.copy()
+    listbackward.reverse()
+    decoded_list=[]
+    for letter in s:
+        if ord(letter)>=97 and ord(letter) <= 122:
+            index=listbackward.index(letter)
+            decoded_list.append(listforward[index])
+        else:
+            decoded_list.append(letter)
+    decoded_str="".join(decoded_list)
+    return decoded_str
+ 
+myanswer = answer("Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!")
+print(myanswer)

@@ -1,0 +1,22 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/fox0088/I-love-Lance-Janice/blob/master/ILoveLance%26Janice.py"
+
+
+def solution(msg):
+    kv={}
+    decrypted=[]
+    for i,j in zip(range(97,123),range(122,96,-1)):
+        kv[chr(i)]=chr(j)
+    
+    for c in msg:
+        if c in kv:
+            c=kv[c]
+        decrypted.append(c)
+    return ''.join(decrypted)

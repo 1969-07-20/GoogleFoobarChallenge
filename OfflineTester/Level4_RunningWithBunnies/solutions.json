@@ -1,0 +1,42 @@
+[
+    {
+        "file":   "Level4_RunningWithBunnies.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution2",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level4_RunningWithBunnies.solution8",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

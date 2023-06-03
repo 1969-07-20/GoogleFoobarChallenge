@@ -1,0 +1,154 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://gitlab.com/-/snippets/2017450"
+
+
+"""
+    Google Foobar - Level 5 - Expanding Nebula
+ 
+    Please do not use to cheat Google Foobar, it is only provided as reference
+    to those who want it and so I can show off that I completed Level 5 of
+    Foobar. (Although I was stupid and didn't save any of my previous
+    solutions.)
+
+    Also I would like to point out that I originally thought this would be the
+    way to complete the challenge but assumed it was the "brute force" method,
+    since I am kind-of generating all of the pre-images, just not saving them,
+    etc.
+
+    Turns out, after I gave up trying to solve the problem using calculus
+    and modified elem. cellular automata formulas, and wrote/submitted this
+    method, I looked up other people's solutions to the problem and they
+    described the "brute-force" method as one where they generate every possible
+    M+1xN+1 array and process them all to see what they become after 1 unit of
+    time...Yeah, I think I should stop second guessing myself until after I
+    either spend too much time or verify my initial solution...
+
+    Solution written in python created by Simon Weizman
+    (email provided is not the one used for the foobar account)
+
+    :author: Simon Weizman <contact@simon.weizman.us>
+    :license: The Unlicense <https://unlicense.org>  
+"""
+from collections import defaultdict
+
+PRESTATES = {
+    1: (
+        ((1,0),(0,0)),
+        ((0,1),(0,0)),
+        ((0,0),(1,0)),
+        ((0,0),(0,1))
+    ),
+    0: (
+        ((0, 1), (0, 1)),
+        ((0, 1), (1, 1)),
+        ((1, 0), (1, 1)),
+        ((1, 1), (0, 0)),
+        ((1, 1), (1, 0)),
+        ((0, 1), (1, 0)),
+        ((0, 0), (0, 0)),
+        ((1, 0), (1, 0)),
+        ((1, 0), (0, 1)),
+        ((1, 1), (0, 1)),
+        ((0, 0), (1, 1)),
+        ((1, 1), (1, 1))
+    )
+}
+
+def col_preimg_generator(c1, c2):
+    for pre_c1 in c1:
+        for pre_c2 in c2:
+            if pre_c1[-1] == pre_c2[0]:
+                yield tuple(pre_c1)+(pre_c2[1],)
+
+
+def get_col_preimages(col):
+    preimages = PRESTATES[col[0]]
+    for _, cell in filter(lambda k: k[0]>0, enumerate(col)):
+        preimages = col_preimg_generator(preimages, PRESTATES[cell])
+    return tuple([tuple(zip(*pre)) for pre in preimages])
+
+
+def solution(g):
+    rot_g = tuple(zip(*g))
+    preimages = defaultdict(int)
+    for p in get_col_preimages(rot_g[0]):
+        preimages[p[1]] += 1
+    for _, col in filter(lambda k: k[0]>0, enumerate(rot_g)):
+        nxt_preimages = {}
+        for p in get_col_preimages(col):
+            if p[0] in preimages:
+                nxt_preimages[p[1]] = preimages[p[0]] + (nxt_preimages[p[1]] if p[1] in nxt_preimages else 0)
+        preimages = nxt_preimages
+    return sum(preimages.values())
+
+""" Tests """
+import unittest
+
+case1 = [[True, True, False, True, False, True, False, True, True, False], [True, True, False, False, False, False, True, True, True, False], [True, True, False, False, False, False, False, False, False, True], [False, True, False, False, False, False, True, True, False, False]]
+
+# 3 rows, 3 columns
+case2 = [[True, False, True], [False, True, False], [True, False, True]]
+
+# 5 rows, 8 columns
+case3 = [[True, False, True, False, False, True, True, True], [True, False, True, False, False, False, True, False], [True, True, True, False, False, False, True, False], [True, False, True, False, False, False, True, False], [True, False, True, False, False, True, True, True]]
+
+# 9 rows, 50 columns
+casestressed = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+         0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+        [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1,
+         1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+        [0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
+         1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0],
+        [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1,
+         0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1]
+    ]
+
+class FoobarTest(unittest.TestCase):
+    
+    def test_python_case_one(self):
+        self.assertEqual(
+            solution(case1), 
+            11567
+        )
+        
+    
+    def test_python_case_two(self):
+        self.assertEqual(
+            solution(case2),
+            4
+        )
+    
+    
+    def test_python_case_three(self):
+        self.assertEqual(
+            solution(case3),
+            254
+        )
+        
+    def test_python_case_stressed(self):
+        """ I don't know the solution to this one, as it was made to ensure it
+        wouldn't have memory issues, but I can assume that if memory or time is
+        not an issue, it solved this case successfully."""
+        self.assertIsInstance(solution(casestressed), int)
+        
+if __name__ == "__main__":
+    unittest.main()
+

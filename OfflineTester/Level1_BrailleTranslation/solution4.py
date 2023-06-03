@@ -1,0 +1,37 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/Njeri-Marg/GoogleFooBarChallenge/blob/main/level1solution.py"
+
+
+def braille_dictt():
+    plain_text="The quick brown fox jumps over the lazy dog"
+    output="000001011110110010100010000000111110101001010100100100101000000000110000111010101010010111101110000000110100101010101101000000010110101001101100111100011100000000101010111001100010111010000000011110110010100010000000111000100000101011101111000000100110101010110110"
+    
+    braille={}
+    delimiter=6
+    caps=output[:delimiter]
+    braille["caps"]=caps
+    output=output[delimiter:]
+    
+    for char in plain_text:
+        char=char.lower()#convert all characters to lower case
+        first_six=output[:delimiter]
+        output=output[delimiter:]
+        braille[char]=first_six
+    return braille
+        
+        
+def solution(s):
+    final_string=""
+    for char in s:
+        if char.isupper():
+            final_string+=braille_dictt()["caps"]+braille_dictt()[char.lower()]
+        else:
+            final_string+=braille_dictt()[char]
+    return final_string

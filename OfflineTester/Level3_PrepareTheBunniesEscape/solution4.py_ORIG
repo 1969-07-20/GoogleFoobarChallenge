@@ -1,0 +1,39 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://zhuanlan.zhihu.com/p/470029242"
+
+
+from collections import deque 
+def solution(map):
+    m, n = len(map), len(map[0])
+    directions = [(-1, 0), (0, -1), (1, 0), (0, 1)]
+    def bfs(i, j):
+        matrix = [[None] * n for _ in range(m)]
+        matrix[i][j] = 1
+        
+        queue = deque([(i, j)])
+        while queue:
+            x, y = queue.popleft()
+            for dx, dy in directions:
+                new_x, new_y = x + dx, y + dy
+                if 0 <= new_x < m and 0 <= new_y < n:
+                    if matrix[new_x][new_y] is None:
+                        matrix[new_x][new_y] = matrix[x][y] + 1
+                        if map[new_x][new_y] == 1: continue
+                        queue.append((new_x, new_y))
+        return matrix
+    
+    start = bfs(0, 0)
+    end = bfs(m - 1, n - 1)
+    res = float('inf')
+    for i in range(m):
+        for j in range(n):
+            if start[i][j] and end[i][j]:
+                res = min(res, start[i][j] + end[i][j] - 1)
+    return res

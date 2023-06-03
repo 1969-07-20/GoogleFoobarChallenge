@@ -1,0 +1,139 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level1_TheCakeIsNotALie/theCakeIsNotALie.py"
+
+
+"""  This file computes solutions to the "Cake Doesn't Lie" challenge.
+
+Ths strategy is to try different values of n which evenly divide the length of
+the string representing the M&M's on the cake.  For each length, the solution
+tests each substring of that length to see if they are identical.
+
+It would be straight-forward to try all lengths of substrings and return the
+one with the shortest identical substrings.  But this method would try many
+lengths which can be easily eliminated by other means.
+
+This solution tries to reduce the number of substring lengths which are
+considered.  One consequence of the stipulation in the problem statement that
+after cutting the case, the sequence of M&M's must be identical is that the
+number of cuts must evenly divide each type of M&M.  This has the potential to
+greatly reduce the number of cuts that need to be considered.
+
+This solution counts the number of each type of M&M.  Then it computes the
+prime factorization of each count.  Then it determines which factors are common
+to each factorization.  Finally, it iterates over all possible non-empty subsets
+of the common factors and computes n, the product of the factors in the subset
+to determine the number of pieces of cake to consider.  It then examines each of
+the sequences of M&M's after cutting the cake into n pieces.  It returns the
+largest n which produce identical subsequences of M&M's.
+"""
+
+
+from itertools import chain, combinations
+import re
+
+
+#  From https://docs.python.org/3/library/itertools.html#itertools-recipes
+#  From https://stackoverflow.com/questions/464864/get-all-possible-2n-combinations-of-a-list-s-elements-of-any-length
+#  From https://stackoverflow.com/questions/1482308/how-to-get-all-subsets-of-a-set-powerset
+def powerset(iterable):
+    """Function powerset (iterable) returns all possible non-empty subsets of
+    iterable.  This function comes from the above URLs.
+
+    powerset([1,2,3]) --> (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)
+    """
+    s = list(iterable)  # allows duplicate elements
+    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1, 0, -1))
+
+
+def factor(n):
+    """Function factor(n) returns a set, the elements of which are the factors
+    of n.  Since we know that the maximum number of characters in a string is
+    200, for the sake of simplicity this function uses a hardwired list of
+    primes less than 200.
+    """
+
+    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
+              61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127,
+              131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193,
+              197, 199]
+
+    factors = set()
+
+    val = n
+    idx = 0
+    cnt = 0
+    while val > 1:
+        if 0 == val % primes[idx]:
+            cnt = cnt + 1
+            factors.add("%d-%d" % (primes[idx], cnt))
+
+            #  The previous like encodes the factor as a unique string because
+            #  sets cannot have multiple identical elements but the multiplicity
+            #  of a factor can be greater than one.
+
+            val /= primes[idx]
+        else:
+            idx += 1
+            cnt = 0
+
+    return factors
+
+
+def solution(s):
+    """Function solution(s) computes solutions to the 'The Cake is not a Lie'
+    challenge.  This function returns the maximum number of ways to divide
+    string s into identical substrings.
+    """
+
+    #  Count the number of each type of M&M's
+    char_count = {}
+    for c in s:
+        if c in char_count:
+            char_count[c] += 1
+        else:
+            char_count[c] = 1
+
+    #  Factor the counts of each type of M&M
+    factor_list = []
+
+    for c in char_count.keys():
+        factor_list.append(factor(char_count[c]))
+
+    #  Find the intersection of factors of each character count
+    factors = set.intersection(*factor_list)
+
+    #  Iterate over the powerset of set of common factors
+    max_parts = 1
+    for combo in powerset(factors):
+
+        #  Convert the strings into factors and find the product
+        num_parts = 1
+        for e in combo:
+            f = int(re.sub('-\d+', '', e))
+
+            num_parts *= f
+
+        #  Test if the num_parts subsets are all identical
+        identical = True
+        num_mm = int(len(s) / num_parts)
+        for j in range(1, num_parts):
+            if s[0:num_mm] != s[(j*num_mm):((j+1)*num_mm)]:
+                identical = False
+                break
+
+        #  If all subsets are identical, update max_parts if appropriate
+        if identical:
+            if max_parts < num_parts:
+                max_parts = num_parts
+
+    #  Return solution
+    return max_parts
+
+

@@ -1,0 +1,47 @@
+[
+    {
+        "file":   "Level5_ExpandingNebula.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution2",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level5_ExpandingNebula.solution9",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

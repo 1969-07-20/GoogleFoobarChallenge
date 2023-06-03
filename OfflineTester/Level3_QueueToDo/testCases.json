@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Generic case - line length 3",
+        "source":  "Problem statement",
+        "input":   [0, 3],
+        "output":  2
+    },
+    {
+        "desc":    "Generic case - line length 4",
+        "source":  "Problem statement",
+        "input":   [17, 4],
+        "output":  14
+    }
+]

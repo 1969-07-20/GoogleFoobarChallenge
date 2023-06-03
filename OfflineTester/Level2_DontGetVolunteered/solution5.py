@@ -1,0 +1,135 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/eric-meehan/Dont-Get-Volunteered---Python/blob/main/Dont%20Get%20Volunteered%20-%20Python/main.py"
+
+
+#  Mod:
+#  - Replaced main() with solution().
+
+
+"""
+ Eric Meehan
+ 2020-11-19
+ 
+ Class representation of a chess board that can be of any size
+ """
+ 
+class ChessBoard():
+    def __init__(self, Length, Width):
+        # Initialize a chess board to the provided length and width
+        self.Length = Length
+        self.Width = Width
+        self.Board = [[n + (self.Width * i) for n in range(Width)] for i in range (Length)]
+        
+    def NumericPosition(self, x, y):
+        # Converts coordinates to a numeric position
+        return self.Board[y][x]
+    
+    def CoordinatePosition(self, x):
+        # Converts a numeric position to coordinates
+        for i in range(self.Length):
+            for n in range(self.Width):
+                if self.Board[i][n] == x:
+                    return (n, i)
+                    
+    def IsOnBoard(self, x, y):
+        return x >= 0 and x < self.Width and y >= 0 and y < self.Length
+
+
+"""
+ Eric Meehan
+ 2020-11-19
+ 
+ Class representation of a knight
+ """
+
+class Knight():
+    def __init__(self, Source):
+        # Initialize the knight with a starting position
+        # CurrentPosition represents all of the possible current positions, so it is initialized as an array
+        self.CurrentPosition = [Source]
+        # Store the number of moves made by the piece
+        self.MovesMade = 0
+        
+    def __ne__(self, Destination):
+        # Performs a binary search on CurrentPosition for the Destination
+        First = 0
+        Last = len(self.CurrentPosition) - 1
+        while First <= Last:
+            Middle = int((First + Last) / 2)
+            if self.CurrentPosition[Middle] == Destination:
+                return False
+            elif self.CurrentPosition[Middle] > Destination:
+                Last = Middle - 1
+            else:
+                First = Middle + 1
+        return True
+
+    def ExplorePossibleMoves(self, Board):
+        # Uses the CurrentPosition list to find possible moves
+        # Duplicate CurrentPosition to allow that list to be manipulated
+        SourcePosition = self.CurrentPosition
+        # Empty CurrentPosition
+        self.CurrentPosition = []
+        # Iterate over the CurrentPosition list
+        for each in SourcePosition:
+            coordinates = Board.CoordinatePosition(each)
+            if (Board.IsOnBoard(coordinates[0] + 1, coordinates[1] + 2)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] + 1, coordinates[1] + 2))
+            if (Board.IsOnBoard(coordinates[0] + 1, coordinates[1] - 2)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] + 1, coordinates[1] - 2))
+            if (Board.IsOnBoard(coordinates[0] - 1, coordinates[1] - 2)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] - 1, coordinates[1] - 2))
+            if (Board.IsOnBoard(coordinates[0] - 1, coordinates[1] + 2)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] - 1, coordinates[1] + 2))
+            if (Board.IsOnBoard(coordinates[0] + 2, coordinates[1] + 1)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] + 2, coordinates[1] + 1))
+            if (Board.IsOnBoard(coordinates[0] + 2, coordinates[1] - 1)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] + 2, coordinates[1] - 1))
+            if (Board.IsOnBoard(coordinates[0] - 2, coordinates[1] - 1)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] - 2, coordinates[1] - 1))
+            if (Board.IsOnBoard(coordinates[0] - 2, coordinates[1] + 1)):
+                self.CurrentPosition.append(Board.NumericPosition(coordinates[0] - 2, coordinates[1] + 1))
+        # Sort the CurrentPosition list
+        self.SortCurrentPosition()
+        # Increment MovesMade
+        self.MovesMade += 1
+                
+    def SortCurrentPosition(self):
+        # Use a bubble sort to organize CurrentPosition
+        for i in range(len(self.CurrentPosition)):
+            for n in range(len(self.CurrentPosition) - i - 1):
+                if self.CurrentPosition[n] > self.CurrentPosition[n + 1]:
+                    temp = self.CurrentPosition[n]
+                    self.CurrentPosition[n] = self.CurrentPosition[n + 1]
+                    self.CurrentPosition[n + 1] = temp
+
+    
+"""
+ Eric Meehan
+ 2020-11-19
+ Don't Get Volunteered
+"""
+
+# from ChessBoard import ChessBoard
+# from Knight import Knight
+import sys
+
+def solution(Source, Destination):
+    Length = 8
+    Width = 8
+
+    # Define the ChessBoard
+    Board = ChessBoard(Length, Width)
+    # Instantiate the Knight
+    knight = Knight(Source)
+    # Generate a tree of possible moves until the destination is reached
+    while knight != Destination:
+        knight.ExplorePossibleMoves(Board)
+    return (knight.MovesMade)

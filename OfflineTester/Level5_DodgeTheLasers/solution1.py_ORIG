@@ -1,0 +1,208 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/1969-07-20/GoogleFoobarChallenge/blob/master/ChallengesAndSolutions/Level5_DodgeTheLasers/dodgeTheLasers.py"
+
+
+""" This file implements a solution to the 'Dodge the Lasers' puzzle.
+
+Description of algorithm
+     The continued fraction representation of sqrt(2) is key to this solution.
+     I obtained key concepts upon which this solution founded from the following
+     three Wikipedia pages:
+
+     https://en.wikipedia.org/wiki/Square_root_of_2
+     https://en.wikipedia.org/wiki/Pell_number
+     https://en.wikipedia.org/wiki/Continued_fraction
+
+     One property of continued fractions, is that the convergents of an infinite
+     continued fraction are the rational numbers best approximating the
+     irrational number the continued fraction represents out of the set of
+     rational numbers with the convergents' denominator or smaller.  (A
+     convergent is the rational number obtained by limiting the number of terms
+     in the continued fraction.)  This is important in the context of this
+     puzzle.
+
+     For this problem, it is advantageous to view multiplying sqrt(2) by some
+     integer n as the result of adding sqrt(2) to itself n times.  Consider
+     a rational number approximation of sqrt(2).  The denominator can be viewed
+     as the number of times sqrt(2) is added to itself such that the integer
+     part of the sum is equal to the numerator.
+
+     The optimality property of the convergents of sqrt(2)'s continued fraction
+     imply that the numerator is exactly the integer portion of the sum of
+     sqrt(2) when sqrt(2) is added to itself exactly the denominator times.
+     Furthermore, since the convergent is the best approximation among rational
+     numbers with that denominator or smaller, it must be the case that a carry
+     has taken place from the fractional part to the integer part that is not
+     predicted by lower order convergents.
+
+     When examining the pattern of carries from the fractional part to the
+     integer part when sqrt(2) is added to itself, one sees that the pattern of
+     carries before a convergent gets repeated verbatim afterward.  If the
+     location of the convergent is closer to 0 than it is to the next
+     convergent, then the pattern before the convergent may be repeated more
+     than once.  Since this includes the location of carries induced by lower
+     order convergents, we are able to use a recursive approach to determine
+     where (in terms of the number of times sqrt(2) is added to itself) take
+     place.  Since we know where the carries from the fractional to integer
+     portion take place, we have a recursive method of determining the value
+     of floor(n * sqrt(2)) and its cumulative sums.
+
+     So far it has been established that knowing the convergents of the
+     continued fraction representation of sqrt(2) enables us to calculate
+     the value of floor(n * sqrt(2)) and therefore the cumulative sums
+     also.  The convergents of sqrt(2)'s continued fraction follow the Pell
+     sequence which is similar to the Fibanacci sequence.  A simple recurrence
+     relation gives the sqrt(2)'s convergents:  If p/q is a term of the
+     sequence, then the next term is (p + 2*q) / (p + q).  The first convergent
+     is 1/1.  Given that the numerators and denominators increase exponentially
+     fast very little computation is required to compute all the convergents for
+     summing sqrt(2) very numbers of times, even 10^100 times.
+
+
+Time and space complexity of the solution:
+
+    If N is the value for which the solution is sought, the time complexity of
+    this solution is O(log(N)^2) and the space complexity is O(log(N)).  The
+    following substantiates this claim.
+
+    The solution has three phases (1) compute the breakpoints which are given
+    by the convergents of sqrt(2), (2) compute the cumulative sums for each
+    breakpoint and (3) sum cumulative sums at breakpoints to find the
+    cumulative sum for the desired value of N.
+
+    The numerator and denominator of the convergents increase exponentially
+    fast, so O(log N) convergents need to be computed, each requiring O(1) work.
+    Phase 1 has O(log N) time and space complexity.
+
+    In phase 3, each of the O(log N) breakpoints, is visited once.  The amount
+    of work performed for each breakpoint is upper bounded by a constant, so
+    phase 3 also has O(log N) time and space complexity.
+
+    In phase 2, the cumulative sum for each of the O(log N) breakpoints is
+    calculated.  However, in calculating the cumulative sum for breakpoint i,
+    it is possible that the cumulative sum for breakpoints 0 to i-1 may be
+    be accessed.  Therefore, the third phase has O(log(N)^2) time complexity
+    and O(log N) space complexity.
+
+    Phase 2 dominates the complexity of this solution giving the time and
+    space complexity stated at the beginning of this section.
+
+Assumptions/restrictions:
+    None beyond the limitations stated in the problem statement.
+
+With the exception of accessing the Wikipedia pages listed above, related to the
+continued fraction approximation of sqrt(2) listed above, this solution is
+completely of my own conception and execution.
+"""
+
+#  Compute breakpoints of sums of sqrt(2).  A breakpoint is a value of n where
+#  the carries from the fractional part to integer part of n * sqrt(2) is not
+#  predicted by smaller values of n.  These are determined by the convergents
+#  of sqrt(2).  The recurrence relation for computing the convergents of
+#  sqrt(2) can be found at:  https://en.wikipedia.org/wiki/Square_root_of_2
+
+def get_breakpoints(n):
+    """Using the recurrence relation for the convergents of sqrt(2) to compute
+    the breakpoints of sums of sqrt(2)."""
+
+    breakpoints = {}
+
+    p = 1
+    q = 1
+
+    done = False
+    even = True
+
+    while not done:
+        if even:
+            if q <= n:
+                breakpoints[q] = p
+            else:
+                done = True
+
+        else:
+            if p <= n:
+                breakpoints[p] = 2 * q
+            else:
+                done = True
+
+        p, q = p + 2 * q, p + q
+
+        even = not even
+
+    return breakpoints
+
+
+def calc_cum_sums(end, keys, breakpoints, cum_sums):
+    """Recursively calculate cumulative sums up to end."""
+
+    cum_sum = 0
+
+    #  Add up contribution of sub-breakpoint intervals
+    loc = 0
+
+    offset = 0
+
+    # Loop over previous sub-breakpoint intervals from biggest to smallest
+    j = len(keys) - 1
+    while j >= 0:
+        key0 = keys[j]
+
+        #  Repeat this sub-breakpoint interval as many times as possible
+        stride = key0
+        while loc + stride <= end:
+            cum_sum += cum_sums[key0]
+            loc += stride
+
+            cum_sum += offset * stride
+            offset += breakpoints[key0]
+
+        j -= 1
+
+    return cum_sum
+
+
+def solution(str_n):
+    """Solve the Dodge the Lasers puzzle and return the answer."""
+
+    #  Convert input string to a number
+    n = int(str_n)
+
+
+    #  Construct list of breakpoints up to n from convergents of sqrt(2)
+    breakpoints = get_breakpoints(n)
+
+    keys = sorted(breakpoints.keys())
+
+
+    #  Construct list of cumulative sums for each breakpoint interval
+    #  (This calculates cumulative sums for whole breakpoint intervals.)
+    cum_sums = {}
+
+    for i in range(len(keys)):
+
+        key = keys[i]
+
+        cum_sum = calc_cum_sums(key-1, keys[:i], breakpoints, cum_sums)
+
+        cum_sums[key] = cum_sum + breakpoints[key]
+
+
+
+    #  Construct answer
+    #  (This uses the cumulative sums for whole breakpoint intervals to calculate
+    #  the arbitrary location which may not be on a whole interval boundary.)
+    cum_sum = calc_cum_sums(n, keys, breakpoints, cum_sums)
+
+    return str(cum_sum)
+
+
+# print solution('5')
+# print solution('77')

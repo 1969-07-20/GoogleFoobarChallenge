@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_PrepareTheBunniesEscape.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

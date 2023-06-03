@@ -1,0 +1,52 @@
+[
+    {
+        "file":   "Level2_IonFluxRelabeling.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution2",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution3",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solution9",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_IonFluxRelabeling.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

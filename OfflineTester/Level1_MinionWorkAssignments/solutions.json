@@ -1,0 +1,52 @@
+[
+    {
+        "file":   "Level1_MinionWorkAssignments.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution8",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_MinionWorkAssignments.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

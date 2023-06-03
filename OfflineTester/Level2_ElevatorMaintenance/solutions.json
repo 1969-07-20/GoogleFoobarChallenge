@@ -1,0 +1,42 @@
+[
+    {
+        "file":   "Level2_ElevatorMaintenance.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution4",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_ElevatorMaintenance.solution8",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

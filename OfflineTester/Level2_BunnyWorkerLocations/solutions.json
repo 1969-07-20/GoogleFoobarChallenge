@@ -1,0 +1,37 @@
+[
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution3",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution6",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level2_BunnyWorkerLocations.solution7",
+        "entry":  "answer",
+        "dep":    []
+    }
+]

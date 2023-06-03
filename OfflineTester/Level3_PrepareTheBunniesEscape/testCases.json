@@ -1,0 +1,14 @@
+[
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[[0, 1, 1, 0], [0, 0, 0, 1], [1, 1, 0, 0], [1, 1, 1, 0]]],
+        "output":  7
+    },
+    {
+        "desc":    "Typical case",
+        "source":  "Problem statement",
+        "input":   [[[0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0], [0, 1, 1, 1, 1, 1], [0, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0]]],
+        "output":  11
+    }
+]

@@ -1,0 +1,44 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://stackoverflow.com/questions/40465866/google-foobar-gearing-up-for-destruction/45626410#45626410 (NotDijkstra)"
+
+
+define solution(pegs):
+    n = len(pegs)
+    if n<2:
+        return (-1,-1)
+    an = 0 # This contains, at each step the value of the sequence a_k
+    pm_one = -1 # The alternating sign in the formulas above.
+    # This and the next will get the bounds for the radii.
+    max_even_a = -float("inf") 
+    min_odd_a = float("inf")
+    for i in range(n-1):
+        an -= pm_one*(pegs[i+1]-pegs[i])
+        pm_one *=-1
+        if not i&1:
+            min_odd_a = min(min_odd_a, an)
+        else:
+            max_even_a = max(max_even_a, an)
+    # In the formulas above the numerator has a (-1)^{n+1} factor. 
+    # Here the sign has been cancelled with the sign of the denominator.
+    numerator = 2*an 
+    denominator = abs(1+2*pm_one)
+    # The inequalities in the explanation are here written as integers.
+    # Note that here denominator is positive. So, passing it to the other side
+    # doesn't change the sign of the inequality.
+    # Of course, the inequalities have here the negated sign and an OR
+    # because we are detecting when they fail.
+    if numerator < denominator*(max_even_a+1) \
+        or numerator > denominator*(min_odd_a-1):
+        return (-1,-1)
+    # Sometimes the denominator is 3. If it can be cancelled we do so.
+    if pm_one == 1 and numerator%3 == 0:
+        numerator //=3
+        denominator = 1
+    return (numerator, denominator)

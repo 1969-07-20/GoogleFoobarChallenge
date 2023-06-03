@@ -1,0 +1,20 @@
+[
+    {
+        "desc":    "Corner case: 1) null output and 2) minimum value of n",
+        "source":  "Problem statement",
+        "input":   [[1, 2, 3], 0],
+        "output":  []
+    },
+    {
+        "desc":    "Generic case, values in list in ascending order",
+        "source":  "Problem statement",
+        "input":   [[1, 2, 2, 3, 3, 3, 4, 5, 5], 1],
+        "output":  [1, 4]
+    },
+    {
+        "desc":    "Generic case, values in list not sorted",
+        "source":  "Problem statement",
+        "input":   [[5, 10, 15, 10, 7], 1],
+        "output":  [5, 15, 7]
+    }
+]

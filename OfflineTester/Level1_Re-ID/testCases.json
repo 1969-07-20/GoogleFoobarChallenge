@@ -1,0 +1,14 @@
+[
+    {
+        "desc":  "Corner Case:  Min input range",
+        "source": "Problem statement",
+        "input":  [0],
+        "output":  "23571"
+    },
+    {
+        "desc":  "Generic Case:  Small typical value",
+        "source": "Problem statement",
+        "input":  [3],
+        "output":  "71113"
+    }
+]

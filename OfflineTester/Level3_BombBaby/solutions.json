@@ -1,0 +1,62 @@
+[
+    {
+        "file":   "Level3_BombBaby.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution3",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution5",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution7",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level3_BombBaby.solutionC",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

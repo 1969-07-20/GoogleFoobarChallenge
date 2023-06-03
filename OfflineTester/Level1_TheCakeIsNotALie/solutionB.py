@@ -1,0 +1,30 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://jasonqsy.github.io/algorithm/2018/01/06/Google-foobar.html"
+
+
+#  Mod:
+#  - Changed floating point division to integer division.
+
+
+def answer(s):
+    best = 1
+    # lets try from len(subarray) n to 1
+    for i in range(len(s)):
+        length = len(s) // (i + 1)
+        succ = True
+        for j in range(len(s)):
+            if s[j] != s[j % length]:
+                succ = False
+                break
+
+        if succ:
+            best = i + 1
+
+    return best

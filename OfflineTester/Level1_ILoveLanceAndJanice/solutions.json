@@ -1,0 +1,57 @@
+[
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution1",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution2",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution3",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution4",
+        "entry":  "answer",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution5",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution6",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution7",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution8",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solution9",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solutionA",
+        "entry":  "solution",
+        "dep":    []
+    },
+    {
+        "file":   "Level1_ILoveLanceAndJanice.solutionB",
+        "entry":  "solution",
+        "dep":    []
+    }
+]

@@ -1,0 +1,96 @@
+'''
+Excepting possible very minor changes to adapt the software to the local
+circumstances, the contents of this file following this header were downloaded
+from the website given by the following URL.  That website should be consulted
+regarding copyright and licensing terms, if any, governing the contents making
+up the remainder of this file.
+'''
+
+source_url = "https://github.com/deep-woods/2021-Oct-Foobar/blob/main/Problems/Level%201%20Minion%20Labor%20Shifts.py"
+
+
+example_case = [5, 10, 15, 10, 7]
+
+test_case1 = [1, 2, 3]
+test_case2 = [1, 2, 2, 3, 3, 3, 4, 5, 5]
+
+
+# Key challenge: frequency count
+# Elements' order matters.
+
+# Actual Code submitted ---------------------------------------
+
+def solution(data, n):
+    data_frequency = {}
+    adjusted_roster = []
+
+    for d in data:
+        if d not in data_frequency:
+            data_frequency[d] = 1
+        else:
+            data_frequency[d] += 1
+
+    for d in data:
+        if data_frequency[d] > n:
+            continue
+        else:
+            adjusted_roster.append(d)
+
+    return adjusted_roster
+
+
+print(solution(example_case, 1))
+print(solution(test_case1, 0))
+print(solution(test_case2, 1))
+
+
+
+# Visible Quality Assuarance Check ------------------------------
+
+data_frequency = {}
+adjusted_roster = []
+
+for d in [5, 10, 15, 10, 7]:
+    if d not in data_frequency:
+        data_frequency[d] = 1
+    else:
+        data_frequency[d] += 1
+
+idx = 1
+for d in [5, 10, 15, 10, 7]:
+    print(f"***** loop {idx} *****")
+    if data_frequency[d] > 1:
+        print('element ', d)
+        print('data_frequency[d]: ', data_frequency[d], "\n\n")
+    else:
+        adjusted_roster.append(d)
+        print('element ', d)
+        print('adjusted_roster: ', adjusted_roster, "\n\n")
+    idx += 1
+
+
+'''
+***** loop 1 *****
+element  5
+adjusted_roster:  [5] 
+
+
+***** loop 2 *****
+element  10
+data_frequency[d]:  2 
+
+
+***** loop 3 *****
+element  15
+adjusted_roster:  [5, 15] 
+
+
+***** loop 4 *****
+element  10
+data_frequency[d]:  2 
+
+
+***** loop 5 *****
+element  7
+adjusted_roster:  [5, 15, 7] 
+'''
